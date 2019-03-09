@@ -1,0 +1,106 @@
+{
+    "typeOfUser": [
+        {
+            "id": 1,
+            "type": "user"
+        },
+        {
+            "id": 2,
+            "type": "powerUser"
+        }
+    ],
+    "users": [
+        {"id": 1,
+        "username": "janet",
+        "password": "123",
+        "typeOfUserId": 2,
+        "nameFirst": "Janet",
+        "nameLast": "Woods",
+        "clubId": 1,
+        "phone": "859-360-9552",
+        "email": "janetnwoods@gmail.com"
+    },
+        {
+        "id": 2,
+        "username": "Rob",
+        "password": "123",
+        "typeOfUserId": 1,
+        "nameFirst": "Rob",
+        "nameLast": "Woods",
+        "clubId": 1,
+        "phone": "859-227-0982",
+        "email": "rcw6236@yahoo.com"
+    },
+        {
+        "id": 3,
+        "username": "Margo",
+        "password": "123",
+        "typeOfUserId": 1,
+        "nameFirst": "Margo",
+        "nameLast": "MacFarlane",
+        "clubId": 1,
+        "phone": "555-111-4444",
+        "email": "margo@yahoo.com"
+    },
+    {
+        "id": 4,
+        "username": "Ann",
+        "password": "123",
+        "typeOfUserId": 2,
+        "nameFirst": "Ann",
+        "nameLast": "Woods",
+        "clubId": 1,
+        "phone": "555-227-1111",
+        "email": "ann@yahoo.com"
+    },
+    {
+        "id": 5,
+        "username": "Wanda",
+        "password": "123",
+        "typeOfUserId": 2,
+        "nameFirst": "Wanda",
+        "nameLast": "Lemon",
+        "clubId": 1,
+        "phone": "555-555-1111",
+        "email": "Wanda@yahoo.com"
+    },
+    {
+        "id": 6,
+        "username": "Stone",
+        "password": "123",
+        "typeOfUserId": 2,
+        "nameFirst": "Stone",
+        "nameLast": "Lemon",
+        "clubId": 1,
+        "phone": "555-222-3333",
+        "email": "stone@yahoo.com"
+    }
+    ],
+    "clubs": [
+        {"id": 1,
+        "clubName": "Wheeler Dealers",
+        "stateId": 1,
+        "presidentId": 3,
+        "vicePresidentId": 4,
+        "secretaryId": 5,
+        "otherOfficerId": 6,
+        "regionId": 1,
+        "usualLocationId": 1
+     },
+     {"id": 2,
+        "clubName":"Red River Ramblers",
+        "stateId": 2,
+        "presidentId": 3,
+        "vicePresidentId": 4,
+        "secretaryId": 5,
+        "otherOfficerId": 6,
+        "regionId": 1,
+        "usualLocationId": 2
+     }
+    ],
+    "regions":[
+        {"id": 1,
+        "nameRegion": }
+    ]
+
+}
