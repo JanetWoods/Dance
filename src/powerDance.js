@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import IsAuth from "./components/auth/isAuth"
 
-export default class Dance extends Component {
+export default class PowerDance extends Component {
 
     isAuthenticated = () => sessionStorage.getItem("credentials" !== null)
 

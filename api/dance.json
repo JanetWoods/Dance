@@ -11,7 +11,7 @@
     ],
     "users": [
         {"id": 1,
-        "username": "janet",
+        "username": "Janet",
         "password": "123",
         "typeOfUserId": 2,
         "nameFirst": "Janet",
@@ -97,10 +97,5 @@
         "regionId": 1,
         "usualLocationId": 2
      }
-    ],
-    "regions":[
-        {"id": 1,
-        "nameRegion": }
     ]
-
 }

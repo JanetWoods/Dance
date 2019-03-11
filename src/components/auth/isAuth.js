@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import { Route } from "react-router-dom"
 import UserAccessLayer from "../userAccessLayer";
-import Login from "../auth"
+import Login from "./login"
 
-class IsAuth extends Component {
+export default class IsAuth extends Component {
     render() {
         return (
             <React.Fragment>
