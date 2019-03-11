@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import NavBar from "./nav/nav"
 import ApplicationViews from "./applicationViews"
 import userMgr from "../modules/userMgr";
+import PowerBar from "./nav/powerBar"
 
 export default class PowerAccessLayer extends Component {
     state= {
@@ -17,12 +18,9 @@ export default class PowerAccessLayer extends Component {
     render() {
         return(
             <React.Fragment>
-                <NavBar setAuth={this.props.setAuth}
+                <PowerBar setAuth={this.props.setAuth}
                 setPower={this.props.setPower} activeUser={this.state.activeUser}/>
-                <ApplicationViews
-                activeUserId={this.activeUserId}
-                activeUser={this.state.activeUser}
-                />
+
             </React.Fragment>
         )
     }

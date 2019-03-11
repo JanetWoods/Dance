@@ -5,7 +5,8 @@ export default class Dance extends Component {
 
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
-    isPowerUser = () => sessionStorage.getItem("Type") !== null
+    isPowerUser = () => sessionStorage.getItem("Type") === "PowerUser"
+
     state = {authTrigger: this.isAuthenticated(),
             authPower: this.isPowerUser()}
 
