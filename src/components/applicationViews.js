@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import { Route } from "react-router-dom"
 import DanceEvent from "./dance/danceEvent"
+import danceMgr from "../modules/danceMgr"
 
 export default class ApplicationViews extends Component {
     state={
@@ -13,18 +14,31 @@ export default class ApplicationViews extends Component {
 
     aUserId = this.props.activeUserId()
 
+    addDance = dance => {
+        return danceMgr.addTask(dance)
+          .then(() => {
+            return danceMgr.getAll()
+          })
+          .then(tasks =>
+            this.setState({
+              tasks: tasks
+            }))
+      }
     componentDidMount(){
-        const newState={}
+        const newState = {}
         console.log("component mounted.")
 
         //get everything from the managers.
         //then set state
+        danceMgr.getAll()
+        .then((dances)=>{newState.dances = dances})
+        .then(()=> this.setState(newState))
     }
     render(){
         console.log(this.props.activeUser.username)
         return(
             <React.Fragment >
-                <Route path="/DanceEvent" render={props => {
+                <Route path="/" render={props => {
                     return<DanceEvent {...props}
                     dances={this.state.dances}/>
                 }}/>

@@ -1,9 +1,9 @@
 import React, { Component } from "react"
+import NavBar from "./nav/nav"
 import ApplicationViews from "./applicationViews"
 import userMgr from "../modules/userMgr";
-import NavBar from "./nav/nav";
 
-export default class UserAccessLayer extends Component {
+export default class PowerAccessLayer extends Component {
     state= {
         activeUser: {}
     }
@@ -13,17 +13,16 @@ export default class UserAccessLayer extends Component {
         )
     }
     activeUserId=()=>parseInt(sessionStorage.getItem("credentials"))
-    userType=()=>(sessionStorage.getItem("Type"))
 
     render() {
         return(
             <React.Fragment>
-                <NavBar setAuth={this.props.setAuth} activeUser={this.state.activeUser}
-                setPower={this.props.setPower}/>
+                <NavBar setAuth={this.props.setAuth}
+                setPower={this.props.setPower} activeUser={this.state.activeUser}/>
                 <ApplicationViews
                 activeUserId={this.activeUserId}
                 activeUser={this.state.activeUser}
-                setPower={this.props.setPower}/>
+                />
             </React.Fragment>
         )
     }
