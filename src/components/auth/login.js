@@ -26,6 +26,7 @@ export default class Login extends Component {
                     userMgr.addUser(newUser).then(user => {
                         sessionStorage.setItem("credentials", parseInt(user.id))
                         this.props.setAuth()
+                        this.props.setPower()
                     })
                 }
             })
@@ -43,7 +44,7 @@ export default class Login extends Component {
                         if (!user.length) {
                             alert("Wrong username or password")
                         } else {
-                            let typeOfUser = ""
+                            let typeOfUser = null
                             if (parseInt(user[0].typeOfUserId) === 2) {
                                 typeOfUser = "PowerUser"
                                 sessionStorage.setItem("credentials", parseInt(user[0].id))
@@ -51,13 +52,14 @@ export default class Login extends Component {
                                 sessionStorage.setItem("username", user[0].username)
                             }
                             if (parseInt(user[0].typeOfUserId) === 1) {
-                                typeOfUser = "public"
+                                typeOfUser = null
                                 sessionStorage.setItem("credentials", parseInt(user[0].id))
                                 sessionStorage.setItem("username", user[0].username)
                                 sessionStorage.setItem("Type", typeOfUser)
                             }
 
                             this.props.setAuth()
+                            this.props.setPower()
                         }
                     }
                 )

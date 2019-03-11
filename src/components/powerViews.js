@@ -3,7 +3,7 @@ import { Route } from "react-router-dom"
 import DanceEvent from "./dance/danceEvent"
 import danceMgr from "../modules/danceMgr"
 
-export default class ApplicationViews extends Component {
+export default class PowerViews extends Component {
     state={
         dances:[],
         users:[],
@@ -38,7 +38,7 @@ export default class ApplicationViews extends Component {
         console.log(this.props.activeUser.username)
         return(
             <React.Fragment >
-                <Route path="/" render={props => {
+                <Route exactPath="/DanceEvents" render={props => {
                     return<DanceEvent {...props}
                     dances={this.state.dances}/>
                 }}/>
