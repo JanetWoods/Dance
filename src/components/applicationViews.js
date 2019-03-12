@@ -1,8 +1,7 @@
 import React, {Component} from "react"
 import { Route } from "react-router-dom"
-import DanceEvent from "./dance/danceEvent"
 import danceMgr from "../modules/danceMgr"
-
+import DanceList from "./dance/danceList"
 export default class ApplicationViews extends Component {
     state={
         dances:[],
@@ -12,35 +11,32 @@ export default class ApplicationViews extends Component {
         typeOfEvents:[]
     }
 
-    aUserId = this.props.activeUserId()
+    aUserId = this.props.activeUser.id
 
-    addDance = dance => {
-        return danceMgr.addTask(dance)
-          .then(() => {
-            return danceMgr.getAll()
-          })
-          .then(tasks =>
-            this.setState({
-              tasks: tasks
-            }))
-      }
     componentDidMount(){
         const newState = {}
-        console.log("component mounted.")
+        console.log("component mounted, Application View.")
 
         //get everything from the managers.
         //then set state
         danceMgr.getAll()
-        .then((dances)=>{newState.dances = dances})
+        .then(dances => newState.dances = dances)
         .then(()=> this.setState(newState))
-    }
+}
+
     render(){
-        console.log(this.props.activeUser.username)
+        console.log("application View to you: ", this.props.activeUser.username)
         return(
             <React.Fragment >
-                <Route path="/" render={props => {
-                    return<DanceEvent {...props}
+                <Route exact path="/" render={props => {
+                    return <DanceList {...props}
                     dances={this.state.dances}/>
+                }}/>
+                <Route exact path="/DanceList" render={props => {
+
+                    return <DanceList
+                    dances={this.state.dances}
+                    {...props}/>
                 }}/>
             </React.Fragment>
         )

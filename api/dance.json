@@ -98,5 +98,88 @@
         "usualLocationId": 2
      }
     ],
-    "dances":[]
+    "regions":[
+        {
+           "id":1,
+           "nameRegion":"Blue",
+           "regionPresidentId": 3,
+           "regionVicePresidentId": 4,
+            "regionSecretaryId": 5,
+            "regionOtherOfficerId":6,
+            "regionWebSite":" "
+        }
+    ],
+    "locations":[
+        {
+            "id":1,
+            "nameLocation": "NicholasVille Rec Center",
+            "street": "xxstreet",
+            "city":"Nicholasville",
+            "zip":"44440",
+            "stateId":1,
+            "locationNotes": "The large blue building"
+        }
+    ],
+    "states":[
+        {
+            "id":1,
+            "stateShort":"KY",
+            "stateLong":"Kentucky"
+        },
+        {
+            "id":2,
+            "stateShort":"TN",
+            "stateLong":"Tennesse"
+        }
+    ],
+    "dances":[
+        {
+            "id": 1,
+            "whenDate":"13-Mar-2019",
+            "dinnerTime": "7:00",
+            "danceTime": "7:30",
+            "endTime": "10:00",
+            "cost":"$7.00",
+            "danceNotes":"Plenty of parking in back",
+            "typeofEventId":2,
+            "locationId":1
+        },
+        {
+            "id": 2,
+            "whenDate":"15-Mar-2019",
+            "dinnerTime": "7:00",
+            "danceTime": "7:30",
+            "endTime": "10:00",
+            "cost":"$0.00",
+            "danceNotes":"Wear Red",
+            "typeofEventId":2,
+            "locationId":1
+        }
+    ],
+    "typesOfEvents":[
+    {
+        "id":1,
+        "nameType":"Club Dance"
+    },
+    {
+        "id":2,
+        "nameType":"Class"
+    },
+    {
+        "id":3,
+        "nameType":"Benefit"
+    },
+    {
+        "id":4,
+        "nameType":"Convention"
+    },
+    {
+        "id":5,
+        "nameType":"Workshop"
+    },
+    {
+        "id":6,
+        "nameType":"Special"
+    }
+    ]
 }

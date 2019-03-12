@@ -59,7 +59,6 @@ export default class Login extends Component {
                             }
 
                             this.props.setAuth()
-                            this.props.setPower()
                         }
                     }
                 )

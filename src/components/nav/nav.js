@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from "reactstrap"
+// import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 export default class NavBar extends Component {
@@ -12,13 +12,13 @@ export default class NavBar extends Component {
     }
     render(){
         return(
-            <nav pills >
+            <nav>
                 <ul>
                     <li className="nav-item">
                         <Link className="nav-link" to="/DanceEvent">Dance Events</Link>
                     </li>
-                    <li>
-                        <h2>  See Anything NOW? </h2>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/DanceList">Dances</Link>
                     </li>
                 </ul>
                 <p className="nav-link"> Hi {this.props.activeUser.username}</p>

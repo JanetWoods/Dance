@@ -15,10 +15,13 @@ export default class PowerBar extends Component {
     }
     render(){
         return(
-            <nav pills >
+            <nav>
                 <ul>
                     <li className="nav-item">
                         <h2>  You are seeing the power bar, more to follow.... </h2>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/DanceList">Dances</Link>
                     </li>
                 </ul>
                 <p className="nav-link"> Welcome {this.props.activeUser.username}, Thank You for keeping us up-to-date!</p>

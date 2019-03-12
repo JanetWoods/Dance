@@ -17,11 +17,10 @@ export default class Dance extends Component {
         this.setState({authPower: this.isPowerUser()})
     }
     render(){
-        return <React.Fragment>
-            <IsAuth isAuthenticated={this.isAuthenticated} setAuth={this.setAuth}
-            setPower={this.setPower}
-            isPowerUser={this.isPowerUser}/>
-
+        return (
+        <React.Fragment>
+            <IsAuth isAuthenticated={this.isAuthenticated} setAuth={this.setAuth}/>
         </React.Fragment>
+        )
     }
 }
