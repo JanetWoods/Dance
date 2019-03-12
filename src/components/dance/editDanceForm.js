@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 
-
-
-export default class NewEventForm extends Component {
+export default class editDanceForm extends Component {
 
   state = {
     whenDate: "",
@@ -14,19 +12,20 @@ export default class NewEventForm extends Component {
     typeOfEventId: 0,
     locationId: 0
   }
+
   handleFieldChange = evt => {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   }
-  makeNewEvent = dance => {
+  editDanceForm = dance => {
     // evt.preventDefault()
 
     if (this.state.danceTime === "") {
       alert("When does it start?")
     }
     else {
-      const newEvent = {
+      const newDance = {
         danceNotes: this.state.danceNotes,
         whenDate: this.state.whenDate,
         dinnerTime: this.state.dinnerTime,

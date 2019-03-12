@@ -20,6 +20,9 @@ export default class NavBar extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/DanceList">Dances</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/dance/new">Add Event</Link>
+                    </li>
                 </ul>
                 <p className="nav-link"> Hi {this.props.activeUser.username}</p>
                 <button
