@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 
-
-
 export default class NewEventForm extends Component {
 
   state = {
     whenDate: "",
-    dinnerTime: "",
-    danceTime: "",
-    endTime: "",
-    cost: "",
+    dinnerTime: "19:00",
+    danceTime: "19:30",
+    endTime: "22:00",
+    cost: "7.00",
     danceNotes: "",
     typeOfEventId: 0,
     locationId: 0
@@ -19,8 +17,9 @@ export default class NewEventForm extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   }
-  makeNewEvent = dance => {
-    // evt.preventDefault()
+  makeNewEvent = evt => {
+
+    evt.preventDefault()
 
     if (this.state.danceTime == null) {
       alert("When does it start?")
@@ -37,9 +36,9 @@ export default class NewEventForm extends Component {
         locationId: this.state.typeOfEventId
       }
       this.props.addDance(newEvent)
-      .then(()=>{
-        this.props.history.push("/DanceList")
-      })
+        .then(() => {
+          this.props.history.push("/DanceList")
+        })
     }
   }
   render() {
@@ -53,62 +52,72 @@ export default class NewEventForm extends Component {
               id="whenDate" />
           </div>
           <div className="form-group">
+            <label htmlFor="typeOfEventId">Type of Event</label>
+            <select
+              name="typeOfEvent"
+              id="typeOfEventId"
+              onChange={this.handleFieldChange}
+              value={this.state.typeOfEventId}>
+              <option value="">Select Event/Dance Type</option>
+              {this.props.typesOfEvents.map(typeE => (
+                <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
+              ))}
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="location">Location</label>
+            <select
+              name="location"
+              id="locationId"
+              onChange={this.handleFieldChange}
+              value={this.state.locationId}>
+
+              <option value="">Select Location</option>
+              {this.props.locations.map(loc => (
+                <option key={loc.id} id={loc.id} value={loc.id}> {loc.nameLocation} </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="danceNotes">Need to know Notes about this dance:</label>
+            <input type="text"
+              onChange={this.handleFieldChange}
+              id="danceNotes" />
+          </div>
+          <div className="form-group">
             <label htmlFor="dinnerTime">Dinner Time: </label>
             <input type="time"
-            defaultValue ="19:00"
+              placeholder="19:00"
               onChange={this.handleFieldChange}
+              defaultValue={this.state.dinnerTime}
+              value={this.state.dinnerTime}
               id="dinnerTime" />
           </div>
           <div className="form-group">
             <label htmlFor="danceTime">Dance begins at: </label>
             <input type="time"
-            defaultValue ="19:30"
+              placeholder="19:30"
               onChange={this.handleFieldChange}
+              value={this.state.danceTime}
+              defaultValue={this.state.danceTime}
               id="danceTime" />
           </div>
           <div className="form-group">
             <label htmlFor="endTime">Dance Until: </label>
             <input type="time"
-            defaultValue ="22:00"
+              id="endTime"
+              placeholder="22:00"
               onChange={this.handleFieldChange}
-              id="endTime" />
+              value={this.state.endTime}
+              defaultValue={this.state.endTime} />
           </div>
           <div className="form-group">
             <label htmlFor="cost"> Cost </label>
             <input type="number"
-            defaultValue ="7.00"
               min="0"
               step="any"
               onChange={this.handleFieldChange}
               id="cost" />
-          </div>
-          <div className="form-group">
-          <label htmlFor="location">Location</label>
-          <select
-          name="location"
-          id="locationId"
-          onChange={this.handleFieldChange}
-          value={this.state.locationId}>
-
-          <option value="">Select Location</option>
-          {this.props.locations.map(loc => (
-            <option key={loc.id} id={loc.id} value={loc.id}> {loc.nameLocation} </option>
-          ))}
-          </select>
-          </div>
-
-          <div className="form-group">
-          <label htmlFor="typeOfEventId">Type of Event</label>
-          <select
-          name="typeOfEvent"
-          id="typeOfEventId"
-          onChange={this.handleFieldChange}
-          value={this.state.typeOfEventId}>
-          <option value="">Select Event/Dance Type</option>
-          {this.props.typesOfEvents.map(typeE => (
-            <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
-          ))}
-          </select>
           </div>
 
           <button

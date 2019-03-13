@@ -172,26 +172,14 @@
       "locationId": 1
     },
     {
-      "id": 2,
-      "whenDate": "15-Mar-2019",
-      "dinnerTime": "7:00",
-      "danceTime": "7:30",
-      "endTime": "10:00",
-      "cost": "$0.00",
-      "danceNotes": "Wear Red",
-      "typeofEventId": 2,
-      "locationId": 1
-    },
-    {
-      "danceNotes": "",
-      "whenDate": "2019-03-16",
-      "dinnerTime": "",
-      "danceTime": "",
-      "endTime": "",
-      "cost": "",
-      "typeOfEventId": "3",
-      "locationId": "3",
-      "id": 3
+      "danceNotes": "first 2 free",
+      "whenDate": "2019-03-23",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "0",
+      "typeOfEventId": "2",
+      "locationId": "2",
+      "id": 2
     }
   ],
   "typesOfEvents": [
