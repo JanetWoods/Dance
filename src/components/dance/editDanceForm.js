@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 export default class editDanceForm extends Component {
 
   state = {
@@ -18,11 +17,10 @@ export default class editDanceForm extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   }
-  editDanceForm = dance => {
+  makeNewEvent = evt => {
     // evt.preventDefault()
-
     if (this.state.danceTime === "") {
-      alert("When does it start?")
+      window.alert("When does it start?")
     }
     else {
       const newDance = {
@@ -35,6 +33,10 @@ export default class editDanceForm extends Component {
         typeOfEventId: this.state.typeOfEventId,
         locationId: this.state.typeOfEventId
       }
+      this.props.addDance(newDance)
+        .then(() => {
+          this.props.history.push("/DanceList")
+        })
     }
   }
   render() {
@@ -74,15 +76,14 @@ export default class editDanceForm extends Component {
               id="cost" />
           </div>
           <div className="form-group">
-          <label htmlFor="locationId">Location</label>
+            <label htmlFor="locationId">Location</label>
           </div>
 
           <button
-            type="submt"
+            type="submit"
             onClick={this.makeNewEvent}
             className="list-button">Add Dance Event
               </button>
-
         </form>
       </React.Fragment>
     )

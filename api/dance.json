@@ -130,6 +130,21 @@
             "id":2,
             "stateShort":"TN",
             "stateLong":"Tennesse"
+        },
+        {
+            "id":3,
+            "stateShort":"IN",
+            "stateLong":"Indiana"
+        },
+        {
+            "id":4,
+            "stateShort":"OH",
+            "stateLong":"Ohio"
+        },
+        {
+            "id":5,
+            "stateShort":"FL",
+            "stateLong":"Florida"
         }
     ],
     "dances":[

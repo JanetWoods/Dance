@@ -13,6 +13,7 @@ export default class UserAccessLayer extends Component {
         )
     }
     activeUserId=()=>parseInt(sessionStorage.getItem("credentials"))
+    userPower=()=>(sessionStorage.getItem("Type"))
 
     render() {
         return(
