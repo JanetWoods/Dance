@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
-import {Nav} from "reactstrap"
+import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from "reactstrap"
+import "./nav.css"
 
 
 export default class PowerBar extends Component {
@@ -16,9 +17,11 @@ export default class PowerBar extends Component {
         return(
             <nav>
                 <ul>
-
-                    <li>
-                        <h2>  You are seeing the power bar, more to come.... </h2>
+                    <li className="nav-item">
+                        <h2>  You are seeing the power bar, more to follow.... </h2>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/DanceList">Dances</Link>
                     </li>
                 </ul>
                 <p className="nav-link"> Welcome {this.props.activeUser.username}, Thank You for keeping us up-to-date!</p>

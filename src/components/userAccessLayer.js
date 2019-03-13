@@ -13,17 +13,20 @@ export default class UserAccessLayer extends Component {
         )
     }
     activeUserId=()=>parseInt(sessionStorage.getItem("credentials"))
-    userType=()=>(sessionStorage.getItem("Type"))
+    userPower=()=>(sessionStorage.getItem("Type"))
 
     render() {
         return(
             <React.Fragment>
-                <NavBar setAuth={this.props.setAuth} activeUser={this.state.activeUser}
-                setPower={this.props.setPower}/>
-                <ApplicationViews
-                activeUserId={this.activeUserId}
+                <NavBar setAuth={this.props.setAuth}
                 activeUser={this.state.activeUser}
                 setPower={this.props.setPower}/>
+
+                <ApplicationViews
+                setPower={this.props.setPower}
+                activeUserId={this.state.activeUserId}
+                activeUser={this.state.activeUser}
+                />
             </React.Fragment>
         )
     }
