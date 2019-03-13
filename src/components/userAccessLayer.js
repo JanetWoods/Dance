@@ -20,10 +20,10 @@ export default class UserAccessLayer extends Component {
             <React.Fragment>
                 <NavBar setAuth={this.props.setAuth}
                 activeUser={this.state.activeUser}
-                setPower={this.props.setPower}/>
+                setPower={this.state.userPower}/>
 
                 <ApplicationViews
-                setPower={this.props.setPower}
+                setPower={this.state.userPower}
                 activeUserId={this.state.activeUserId}
                 activeUser={this.state.activeUser}
                 />

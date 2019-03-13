@@ -26,6 +26,7 @@ export default class ApplicationViews extends Component {
     aUserId = this.props.activeUser.id
     userPower = this.props.userPower
 
+
     addDance = (event) => {
         return danceMgr.addDance(event)
             .then(() => {
@@ -135,7 +136,6 @@ export default class ApplicationViews extends Component {
     componentDidMount() {
         const newState = {}
         console.log("component mounted, Application View.")
-
         //get everything from the managers.
         //then set state
              danceMgr.getAll()
@@ -167,7 +167,7 @@ export default class ApplicationViews extends Component {
 
     render() {
         console.log("application View to you: ", this.props.activeUser.username)
-
+        console.log("userPower: ", this.props.userPower)
         return (
             <React.Fragment >
 
@@ -196,6 +196,7 @@ export default class ApplicationViews extends Component {
                     return <DanceList
                         dances={this.state.dances}
                         deleteDance={this.deleteDance}
+                        userPower={this.userPower}
                         {...props} />
                 }} />
             </React.Fragment>

@@ -7,6 +7,7 @@ export default class DanceEvent extends Component {
         return (
             <React.Fragment>
                 <div key={`dance-${this.props.dance.id}`} className="list-item">
+
                     <button className="list-button"
                         type="button"
                         onClick={() => {
