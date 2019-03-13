@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
-// import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
+import "./nav.css"
 
 export default class NavBar extends Component {
     logOut = () => {
@@ -12,7 +12,7 @@ export default class NavBar extends Component {
     }
     render(){
         return(
-            <nav>
+            <nav className="navBar">
                 <ul>
                     <li className="nav-item">
                         <Link className="nav-link" to="/DanceEvent">Dance Events</Link>

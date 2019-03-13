@@ -27,5 +27,14 @@ export default {
             },
             body: JSON.stringify(club)
         }).then(data => data.json())
+    },
+    updateClub(club) {
+        return fetch(`${settings.remoteURL}/clubs/${club.id}`,{
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(club)
+        }).then(data => data.json())
     }
 }

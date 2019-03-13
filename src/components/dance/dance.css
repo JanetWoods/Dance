@@ -1,0 +1,19 @@
+.form-newEvent{
+flex-basis: 50%;
+flex-direction: column;
+}
+.list-button{
+    margin: 5px 0px 0px 5px;
+    padding: 0px 5px 6px 5px;
+    height: 1.7em;
+    width: 6em;
+    margin-left: 20px;
+}
+/* .list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    align-content: left;
+    margin: 15px 15px 15px 15px;
+} */

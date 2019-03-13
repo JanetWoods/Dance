@@ -1,3 +1,18 @@
 .navBar{
-    background-color: aquamarine;
+    display: flex;
+    color: blueviolet;
+    align-content: space-around;
+    flex-basis: row;
+}
+.nav-item{
+display: flex;
+flex-direction: column;
+align-content: space-around;
+}
+.nav-link{
+    flex-direction: column;
+    align-content: space-between;
+}
+.visited{
+    color: aqua;
 }
