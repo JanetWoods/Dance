@@ -1,200 +1,223 @@
 {
-    "typeOfUser": [
-        {
-            "id": 1,
-            "type": "user"
-        },
-        {
-            "id": 2,
-            "type": "powerUser"
-        }
-    ],
-    "users": [
-        {"id": 1,
-        "username": "Janet",
-        "password": "123",
-        "typeOfUserId": 2,
-        "nameFirst": "Janet",
-        "nameLast": "Woods",
-        "clubId": 1,
-        "phone": "859-360-9552",
-        "email": "janetnwoods@gmail.com"
-    },
-        {
-        "id": 2,
-        "username": "Rob",
-        "password": "123",
-        "typeOfUserId": 1,
-        "nameFirst": "Rob",
-        "nameLast": "Woods",
-        "clubId": 1,
-        "phone": "859-227-0982",
-        "email": "rcw6236@yahoo.com"
-    },
-        {
-        "id": 3,
-        "username": "Margo",
-        "password": "123",
-        "typeOfUserId": 1,
-        "nameFirst": "Margo",
-        "nameLast": "MacFarlane",
-        "clubId": 1,
-        "phone": "555-111-4444",
-        "email": "margo@yahoo.com"
+  "typeOfUser": [
+    {
+      "id": 1,
+      "type": "user"
     },
     {
-        "id": 4,
-        "username": "Ann",
-        "password": "123",
-        "typeOfUserId": 2,
-        "nameFirst": "Ann",
-        "nameLast": "Woods",
-        "clubId": 1,
-        "phone": "555-227-1111",
-        "email": "ann@yahoo.com"
-    },
-    {
-        "id": 5,
-        "username": "Wanda",
-        "password": "123",
-        "typeOfUserId": 2,
-        "nameFirst": "Wanda",
-        "nameLast": "Lemon",
-        "clubId": 1,
-        "phone": "555-555-1111",
-        "email": "Wanda@yahoo.com"
-    },
-    {
-        "id": 6,
-        "username": "Stone",
-        "password": "123",
-        "typeOfUserId": 2,
-        "nameFirst": "Stone",
-        "nameLast": "Lemon",
-        "clubId": 1,
-        "phone": "555-222-3333",
-        "email": "stone@yahoo.com"
+      "id": 2,
+      "type": "powerUser"
     }
-    ],
-    "clubs": [
-        {"id": 1,
-        "clubName": "Wheeler Dealers",
-        "stateId": 1,
-        "presidentId": 3,
-        "vicePresidentId": 4,
-        "secretaryId": 5,
-        "otherOfficerId": 6,
-        "regionId": 1,
-        "usualLocationId": 1
-     },
-     {"id": 2,
-        "clubName":"Red River Ramblers",
-        "stateId": 2,
-        "presidentId": 3,
-        "vicePresidentId": 4,
-        "secretaryId": 5,
-        "otherOfficerId": 6,
-        "regionId": 1,
-        "usualLocationId": 2
-     }
-    ],
-    "regions":[
-        {
-           "id":1,
-           "nameRegion":"Blue",
-           "regionPresidentId": 3,
-           "regionVicePresidentId": 4,
-            "regionSecretaryId": 5,
-            "regionOtherOfficerId":6,
-            "regionWebSite":" "
-        }
-    ],
-    "locations":[
-        {
-            "id":1,
-            "nameLocation": "NicholasVille Rec Center",
-            "street": "xxstreet",
-            "city":"Nicholasville",
-            "zip":"44440",
-            "stateId":1,
-            "locationNotes": "The large blue building"
-        }
-    ],
-    "states":[
-        {
-            "id":1,
-            "stateShort":"KY",
-            "stateLong":"Kentucky"
-        },
-        {
-            "id":2,
-            "stateShort":"TN",
-            "stateLong":"Tennesse"
-        },
-        {
-            "id":3,
-            "stateShort":"IN",
-            "stateLong":"Indiana"
-        },
-        {
-            "id":4,
-            "stateShort":"OH",
-            "stateLong":"Ohio"
-        },
-        {
-            "id":5,
-            "stateShort":"FL",
-            "stateLong":"Florida"
-        }
-    ],
-    "dances":[
-        {
-            "id": 1,
-            "whenDate":"13-Mar-2019",
-            "dinnerTime": "7:00",
-            "danceTime": "7:30",
-            "endTime": "10:00",
-            "cost":"$7.00",
-            "danceNotes":"Plenty of parking in back",
-            "typeofEventId":2,
-            "locationId":1
-        },
-        {
-            "id": 2,
-            "whenDate":"15-Mar-2019",
-            "dinnerTime": "7:00",
-            "danceTime": "7:30",
-            "endTime": "10:00",
-            "cost":"$0.00",
-            "danceNotes":"Wear Red",
-            "typeofEventId":2,
-            "locationId":1
-        }
-    ],
-    "typesOfEvents":[
+  ],
+  "users": [
     {
-        "id":1,
-        "nameType":"Club Dance"
+      "id": 1,
+      "username": "Janet",
+      "password": "123",
+      "typeOfUserId": 2,
+      "nameFirst": "Janet",
+      "nameLast": "Woods",
+      "clubId": 1,
+      "phone": "859-360-9552",
+      "email": "janetnwoods@gmail.com"
     },
     {
-        "id":2,
-        "nameType":"Class"
+      "id": 2,
+      "username": "Rob",
+      "password": "123",
+      "typeOfUserId": 1,
+      "nameFirst": "Rob",
+      "nameLast": "Woods",
+      "clubId": 1,
+      "phone": "859-227-0982",
+      "email": "rcw6236@yahoo.com"
     },
     {
-        "id":3,
-        "nameType":"Benefit"
+      "id": 3,
+      "username": "Margo",
+      "password": "123",
+      "typeOfUserId": 1,
+      "nameFirst": "Margo",
+      "nameLast": "MacFarlane",
+      "clubId": 1,
+      "phone": "555-111-4444",
+      "email": "margo@yahoo.com"
     },
     {
-        "id":4,
-        "nameType":"Convention"
+      "id": 4,
+      "username": "Ann",
+      "password": "123",
+      "typeOfUserId": 2,
+      "nameFirst": "Ann",
+      "nameLast": "Woods",
+      "clubId": 1,
+      "phone": "555-227-1111",
+      "email": "ann@yahoo.com"
     },
     {
-        "id":5,
-        "nameType":"Workshop"
+      "id": 5,
+      "username": "Wanda",
+      "password": "123",
+      "typeOfUserId": 2,
+      "nameFirst": "Wanda",
+      "nameLast": "Lemon",
+      "clubId": 1,
+      "phone": "555-555-1111",
+      "email": "Wanda@yahoo.com"
     },
     {
-        "id":6,
-        "nameType":"Special"
+      "id": 6,
+      "username": "Stone",
+      "password": "123",
+      "typeOfUserId": 2,
+      "nameFirst": "Stone",
+      "nameLast": "Lemon",
+      "clubId": 1,
+      "phone": "555-222-3333",
+      "email": "stone@yahoo.com"
     }
-    ]
+  ],
+  "clubs": [
+    {
+      "id": 1,
+      "clubName": "Wheeler Dealers",
+      "stateId": 1,
+      "presidentId": 3,
+      "vicePresidentId": 4,
+      "secretaryId": 5,
+      "otherOfficerId": 6,
+      "regionId": 1,
+      "usualLocationId": 1
+    },
+    {
+      "id": 2,
+      "clubName": "Red River Ramblers",
+      "stateId": 2,
+      "presidentId": 3,
+      "vicePresidentId": 4,
+      "secretaryId": 5,
+      "otherOfficerId": 6,
+      "regionId": 1,
+      "usualLocationId": 2
+    }
+  ],
+  "regions": [
+    {
+      "id": 1,
+      "nameRegion": "Blue",
+      "regionPresidentId": 3,
+      "regionVicePresidentId": 4,
+      "regionSecretaryId": 5,
+      "regionOtherOfficerId": 6,
+      "regionWebSite": " "
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "nameLocation": "NicholasVille Rec Center",
+      "street": "xxstreet",
+      "city": "Nicholasville",
+      "zip": "44440",
+      "stateId": 1,
+      "locationNotes": "The large blue building"
+    },
+    {
+      "id": 2,
+      "nameLocation": "Odd Fellows",
+      "street": "Winchester Rd",
+      "city": "Lexington",
+      "zip": "44440",
+      "stateId": 1,
+      "locationNotes": "Upstairs"
+    }
+  ],
+  "states": [
+    {
+      "id": 1,
+      "stateShort": "KY",
+      "stateLong": "Kentucky"
+    },
+    {
+      "id": 2,
+      "stateShort": "TN",
+      "stateLong": "Tennesse"
+    },
+    {
+      "id": 3,
+      "stateShort": "IN",
+      "stateLong": "Indiana"
+    },
+    {
+      "id": 4,
+      "stateShort": "OH",
+      "stateLong": "Ohio"
+    },
+    {
+      "id": 5,
+      "stateShort": "FL",
+      "stateLong": "Florida"
+    }
+  ],
+  "dances": [
+    {
+      "id": 1,
+      "whenDate": "13-Mar-2019",
+      "dinnerTime": "7:00",
+      "danceTime": "7:30",
+      "endTime": "10:00",
+      "cost": "$7.00",
+      "danceNotes": "Plenty of parking in back",
+      "typeofEventId": 2,
+      "locationId": 1
+    },
+    {
+      "id": 2,
+      "whenDate": "15-Mar-2019",
+      "dinnerTime": "7:00",
+      "danceTime": "7:30",
+      "endTime": "10:00",
+      "cost": "$0.00",
+      "danceNotes": "Wear Red",
+      "typeofEventId": 2,
+      "locationId": 1
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-03-16",
+      "dinnerTime": "",
+      "danceTime": "",
+      "endTime": "",
+      "cost": "",
+      "typeOfEventId": "3",
+      "locationId": "3",
+      "id": 3
+    }
+  ],
+  "typesOfEvents": [
+    {
+      "id": 1,
+      "nameType": "Club Dance"
+    },
+    {
+      "id": 2,
+      "nameType": "Class"
+    },
+    {
+      "id": 3,
+      "nameType": "Benefit"
+    },
+    {
+      "id": 4,
+      "nameType": "Convention"
+    },
+    {
+      "id": 5,
+      "nameType": "Workshop"
+    },
+    {
+      "id": 6,
+      "nameType": "Special"
+    }
+  ]
 }

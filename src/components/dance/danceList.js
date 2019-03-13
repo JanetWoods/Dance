@@ -8,7 +8,8 @@ export default class DanceList extends Component {
                 <h2>Dances</h2>
                 {
                     this.props.dances.map(dance => {
-                        return <DanceEvent key={`dance-${dance.id}`} dance={dance}/>
+
+                    return<DanceEvent key={`dance-${dance.id}`} dance={dance}/>
                     })
                 }
             </React.Fragment>

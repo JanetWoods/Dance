@@ -1,7 +1,7 @@
 import settings from "./settings"
 
 export default {
-    get(id) {
+    getDance(id) {
         return fetch(`${settings.remoteURL}/dances/${id}`)
             .then(e => e.json())
     },
@@ -22,6 +22,15 @@ export default {
     addDance(dance) {
         return fetch(`${settings.remoteURL}/dances`,{
             method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(dance)
+        }).then(data => data.json())
+    },
+    updateDance(dance) {
+        return fetch(`${settings.remoteURL}/dances/${dance.id}`,{
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },

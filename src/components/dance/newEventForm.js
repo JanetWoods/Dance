@@ -22,20 +22,24 @@ export default class NewEventForm extends Component {
   makeNewEvent = dance => {
     // evt.preventDefault()
 
-    if (this.state.danceTime === "") {
+    if (this.state.danceTime == null) {
       alert("When does it start?")
     }
     else {
       const newEvent = {
         danceNotes: this.state.danceNotes,
         whenDate: this.state.whenDate,
-        dinnerTime: this.state.dinnerTime,
+        dinnerTime: this.state.dinnerTime.value,
         danceTime: this.state.danceTime,
         endTime: this.state.endTime,
         cost: this.state.cost,
         typeOfEventId: this.state.typeOfEventId,
         locationId: this.state.typeOfEventId
       }
+      this.props.addDance(newEvent)
+      .then(()=>{
+        this.props.history.push("/DanceList")
+      })
     }
   }
   render() {
@@ -51,31 +55,60 @@ export default class NewEventForm extends Component {
           <div className="form-group">
             <label htmlFor="dinnerTime">Dinner Time: </label>
             <input type="time"
+            defaultValue ="19:00"
               onChange={this.handleFieldChange}
               id="dinnerTime" />
           </div>
           <div className="form-group">
             <label htmlFor="danceTime">Dance begins at: </label>
             <input type="time"
+            defaultValue ="19:30"
               onChange={this.handleFieldChange}
               id="danceTime" />
           </div>
           <div className="form-group">
             <label htmlFor="endTime">Dance Until: </label>
             <input type="time"
+            defaultValue ="22:00"
               onChange={this.handleFieldChange}
               id="endTime" />
           </div>
           <div className="form-group">
             <label htmlFor="cost"> Cost </label>
             <input type="number"
+            defaultValue ="7.00"
               min="0"
               step="any"
               onChange={this.handleFieldChange}
               id="cost" />
           </div>
           <div className="form-group">
-          <label htmlFor="locationId">Location</label>
+          <label htmlFor="location">Location</label>
+          <select
+          name="location"
+          id="locationId"
+          onChange={this.handleFieldChange}
+          value={this.state.locationId}>
+
+          <option value="">Select Location</option>
+          {this.props.locations.map(loc => (
+            <option key={loc.id} id={loc.id} value={loc.id}> {loc.nameLocation} </option>
+          ))}
+          </select>
+          </div>
+
+          <div className="form-group">
+          <label htmlFor="typeOfEventId">Type of Event</label>
+          <select
+          name="typeOfEvent"
+          id="typeOfEventId"
+          onChange={this.handleFieldChange}
+          value={this.state.typeOfEventId}>
+          <option value="">Select Event/Dance Type</option>
+          {this.props.typesOfEvents.map(typeE => (
+            <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
+          ))}
+          </select>
           </div>
 
           <button

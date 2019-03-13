@@ -28,4 +28,13 @@ export default {
         )
             .then(e => e.json())
     },
+    updatelocation(location) {
+        return fetch(`${settings.remoteURL}/locations/${location.id}`,{
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(location)
+        }).then(data => data.json())
+    }
 }
