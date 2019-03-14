@@ -5,6 +5,7 @@ import clubMgr from "../../modules/clubMgr";
 
 export default class Account extends Component {
     state = {
+        id:parseInt(sessionStorage.getItem("credentials")),
         password: "",
         username: "",
         typeOfUserId: 1,
@@ -21,9 +22,10 @@ export default class Account extends Component {
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
-    handleUpdate = e => {
+    EditUser = e => {
         e.preventDefault()
         const updatedUser = {
+            id:this.props.match.params.id,
             username: this.state.username,
             password: this.state.password,
             typeOfUserId: this.state.typeOfUserId,
@@ -33,7 +35,9 @@ export default class Account extends Component {
             phone: this.state.phone,
             email: this.state.email
         }
-        userMgr.updateUser(updatedUser)
+        console.log("updated User: ", updatedUser)
+        this.props.updateUser(updatedUser)
+        .then(()=>this.props.history.push("/"))
     }
     componentDidMount(user) {
         userMgr.get(this.props.match.params.id)
@@ -49,7 +53,6 @@ export default class Account extends Component {
                 phone: user.phone,
                 email: user.email
             })
-
         })
     }
 
@@ -105,7 +108,7 @@ export default class Account extends Component {
                     autoFocus="" />
 
 
-                <label>Current Club: {this.props.yourClub}</label>
+
                 <div className="form-group">
                     <label htmlFor="club"> Select your club </label>
                     <select
@@ -122,7 +125,7 @@ export default class Account extends Component {
                     </select>
                 </div>
 
-                <button type="submit" onClick={this.handleUpdate}>
+                <button type="submit" onClick={this.EditUser}>
                     Save Changes
             </button>
             </form>

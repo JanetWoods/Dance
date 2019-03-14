@@ -28,25 +28,32 @@ export default class ApplicationViews extends Component {
     aUserId = this.props.activeUser.id
     userPower = this.props.userPower
 
-
     addDance = (event) => {
         return danceMgr.addDance(event)
-            .then(() => {
-                return danceMgr.getAll()
-            })
-            .then(dances => this.setState({
-                dances: dances
-            }))
+        .then(() => {
+            return danceMgr.getAll()
+        })
+        .then(dances => this.setState({
+            dances: dances
+        }))
     }
     deleteDance = (danceId) => {
         return danceMgr.deleteDance(danceId)
-            .then(() => {
-                return danceMgr.getAll()
+        .then(() => {
+            return danceMgr.getAll()
+        })
+        .then(dances => this.setState({
+            dances: dances
+        }))
+    }
+        getUser=(id)=> {
+            return userMgr.getUser(id)
+            .then((user)=>{
+                this.setState({
+                    user:user
+                })
             })
-            .then(dances => this.setState({
-                dances: dances
-            }))
-        }
+            }
 
     retrieveDance = (danceId) => {
         return danceMgr.getdance(danceId)
@@ -65,10 +72,10 @@ export default class ApplicationViews extends Component {
                 dances: dances
             }))
     }
-    updateUser = (user)=> {
-        return userMgr.updateUser(user)
-            .then(user => this.setState({
-                user: user
+    updateUser = (updatedUser, id)=> {
+        return userMgr.updateUser(updatedUser, id)
+            .then(users => this.setState({
+                users: users
             }))
     }
     addUser = (user => {
@@ -194,6 +201,7 @@ export default class ApplicationViews extends Component {
                     user={this.state.user}
                     clubs={this.state.clubs}
                     updateUser={this.updateUser}
+                    getUser={this.user}
                     />
                 }}/>
 
@@ -209,10 +217,12 @@ export default class ApplicationViews extends Component {
                         dances={this.state.dances}
                         addDance={this.addDance}
                         locations={this.state.locations}
-                        typesOfEvents={this.state.typesOfEvents}/>
+                        typesOfEvents={this.state.typesOfEvents}
+                        userPower = {this.props.userPower}/>
                 }} />
                 <Route exact path="/dances/edit/:id(\d+)" render={props => {
                     return <EditDanceForm {...props}
+                    userPower = {this.props.userPower}
                         dance={this.state.dance}
                         editDance={this.editDance}
                         getdance={this.getdance}
@@ -224,7 +234,7 @@ export default class ApplicationViews extends Component {
                     return <DanceList
                         dances={this.state.dances}
                         deleteDance={this.deleteDance}
-                        userPower={this.userPower}
+                        userPower={this.props.userPower}
                         {...props} />
                 }} />
 

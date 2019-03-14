@@ -5,6 +5,8 @@ import Sorry from "./sorry";
 import Register from "./register";
 
 export default class IsAuth extends Component {
+
+
     render() {
         return (
             <React.Fragment>
@@ -13,7 +15,8 @@ export default class IsAuth extends Component {
                     <UserAccessLayer {...this.props} />
                     : <React.Fragment>
                         <Login {...this.props} />
-                        <Register {...this.props} />
+
+                        <Register {...this.props} className="hidden"/>
                     </React.Fragment>}
             </React.Fragment>
         )

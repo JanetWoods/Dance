@@ -88,7 +88,7 @@
       "id": 7
     },
     {
-      "username": "Joyce",
+      "username": "Justina",
       "password": "123",
       "typeOfUserId": 1,
       "nameFirst": "",
@@ -194,16 +194,6 @@
       "locationId": 1
     },
     {
-      "danceNotes": "first 2 free",
-      "whenDate": "2019-03-23",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "0",
-      "typeOfEventId": "2",
-      "locationId": "2",
-      "id": 2
-    },
-    {
       "danceNotes": "Don't forget your Dancing Boots!",
       "whenDate": "2019-03-30",
       "danceTime": "19:30",
@@ -212,6 +202,16 @@
       "typeOfEventId": "1",
       "locationId": "1",
       "id": 3
+    },
+    {
+      "danceNotes": "Cost covers all dances and workshops from Friday at 6 Pm through Sunday 10 pm.",
+      "whenDate": "2019-03-15",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "25.00",
+      "typeOfEventId": "4",
+      "locationId": "4",
+      "id": 4
     }
   ],
   "typesOfEvents": [

@@ -14,11 +14,16 @@ flex-direction: column;
     width: 6em;
     margin-left: 20px;
 }
-/* .list-item{
+.list-item{
     display: flex;
     flex-direction: row;
     justify-content: left;
     flex-wrap: wrap;
-    align-content: left;
+    /* align-content: left; */
     margin: 15px 15px 15px 15px;
-} */
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
