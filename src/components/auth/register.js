@@ -1,18 +1,17 @@
 import React, { Component } from "react"
 import userMgr from "../../modules/userMgr"
 import "../dance/dance.css"
-import { Link } from 'react-router-dom'
 
-export default class Login extends Component {
+export default class Register extends Component {
     state = {
         password: "",
         username: "",
         typeOfUserId: 1,
-        nameFirst: "",
-        nameLast: "",
+        nameFirst:"",
+        nameLast:"",
         clubId: 0,
         phone: "",
-        email: ""
+        email:""
     }
     handleFieldChange = evt => {
         const stateToChange = {}
@@ -25,11 +24,11 @@ export default class Login extends Component {
             username: this.state.username,
             password: this.state.password,
             typeOfUserId: this.state.typeOfUserId,
-            nameFirst: this.state.nameFirst,
-            nameLast: this.state.nameLast,
+            nameFirst:this.state.nameFirst,
+            nameLast:this.state.nameLast,
             clubId: this.state.clubId,
             phone: this.state.phone,
-            email: this.state.email
+            email:this.state.email
         }
         if (this.state.username && this.state.password) {
             userMgr.searchUserName(this.state.username).then(users => {
@@ -81,8 +80,9 @@ export default class Login extends Component {
     }
     render() {
         return (
-            <form className="form-login">
-                <h1 className="h3 mb-3 font-weight-normal">Sign in</h1>
+            <form className="form-register">
+            <h1> </h1>
+                <h1 className="h3 mb-3 font-weight-normal">Register: </h1>
                 <label htmlFor="inputUserName">Username</label>
                 <input onChange={this.handleFieldChange}
                     type="username"
@@ -100,21 +100,38 @@ export default class Login extends Component {
                     autoFocus=""
                     required="" />
 
-                <button type="submit" onClick={this.handleLogin}>
-                    Sign in
-                </button>
+                <label htmlFor="inputNameFirst">First Name</label>
+                <input onChange={this.handleFieldChange}
+                    type="nameFirst"
+                    id="nameFirst"
+                    placeholder={`First Name`}
+                    autoFocus=""
+                    required="" />
 
+                <label htmlFor="inputNameLast">Last Name</label>
+                <input onChange={this.handleFieldChange}
+                    type="nameLast"
+                    id="nameLast"
+                    placeholder={`Last Name`}
+                    autoFocus=""
+                    required="" />
 
-                <p>No account yet? Register</p>
+                <label htmlFor="inputPhone">Phone Number</label>
+                <input onChange={this.handleFieldChange}
+                    type="phone"
+                    id="phone"
+                    placeholder={`Phone Number`}
+                    autoFocus=""/>
 
-                <button className="list-button"
-                    type="button"
-                    onClick={() => {
-                        this.props.history.push('/register')
-                    }} >
+                <label htmlFor="email">email</label>
+                <input onChange={this.handleFieldChange}
+                    type="email"
+                    id="email"
+                    placeholder={`Email Address`}
+                    autoFocus=""/>
+                <button type="submit" onClick={this.handleRegistration}>
                     Register
-                </button>
-
+            </button>
             </form>
         )
     }

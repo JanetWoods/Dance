@@ -66,15 +66,37 @@
       "email": "Wanda@yahoo.com"
     },
     {
-      "id": 6,
-      "username": "Stone",
+      "username": "Wanda",
       "password": "123",
       "typeOfUserId": 2,
-      "nameFirst": "Stone",
+      "nameFirst": "Wanda",
       "nameLast": "Lemon",
       "clubId": 1,
-      "phone": "555-222-3333",
-      "email": "stone@yahoo.com"
+      "phone": "555-555-1111",
+      "email": "Wanda@yahoo.com",
+      "id": 6
+    },
+    {
+      "username": "Wanda",
+      "password": "123",
+      "typeOfUserId": 2,
+      "nameFirst": "Wanda",
+      "nameLast": "Lemon",
+      "clubId": 1,
+      "phone": "555-555-1111",
+      "email": "Wanda@yahoo.com",
+      "id": 7
+    },
+    {
+      "username": "Justina",
+      "password": "123",
+      "typeOfUserId": 1,
+      "nameFirst": "",
+      "nameLast": "",
+      "clubId": 0,
+      "phone": "",
+      "email": "",
+      "id": 8
     }
   ],
   "clubs": [
@@ -172,14 +194,24 @@
       "locationId": 1
     },
     {
-      "danceNotes": "first 2 free",
-      "whenDate": "2019-03-23",
+      "danceNotes": "Don't forget your Dancing Boots!",
+      "whenDate": "2019-03-30",
       "danceTime": "19:30",
       "endTime": "22:00",
-      "cost": "0",
-      "typeOfEventId": "2",
-      "locationId": "2",
-      "id": 2
+      "cost": "7.00",
+      "typeOfEventId": "1",
+      "locationId": "1",
+      "id": 3
+    },
+    {
+      "danceNotes": "Cost covers all dances and workshops from Friday at 6 Pm through Sunday 10 pm.",
+      "whenDate": "2019-03-15",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "25.00",
+      "typeOfEventId": "4",
+      "locationId": "4",
+      "id": 4
     }
   ],
   "typesOfEvents": [

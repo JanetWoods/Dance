@@ -19,7 +19,8 @@ export default class Dance extends Component {
     render(){
         return (
         <React.Fragment>
-            <IsAuth isAuthenticated={this.isAuthenticated} setAuth={this.setAuth}/>
+            <IsAuth isAuthenticated={this.isAuthenticated} setAuth={this.setAuth}
+            isPowerUser={this.isPowerUser} setPower={this.setPower}{...this.props}/>
         </React.Fragment>
         )
     }

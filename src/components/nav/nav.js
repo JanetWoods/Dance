@@ -10,18 +10,16 @@ export default class NavBar extends Component {
         sessionStorage.clear("username")
         this.props.setAuth()
     }
+
     render(){
         return(
             <nav className="navBar">
                 <ul>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/DanceEvent">Dance Events</Link>
-                    </li>
-                    <li className="nav-item">
                         <Link className="nav-link" to="/DanceList">Dances</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/dance/new">Add Event</Link>
+                        <Link className="nav-link" to={`/account/user/${this.props.activeUser.id}`}>Your Account</Link>
                     </li>
                 </ul>
                 <p className="nav-link"> Hi {this.props.activeUser.username}</p>
