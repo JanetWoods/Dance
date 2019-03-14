@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import userMgr from "../../modules/userMgr"
 import "../dance/dance.css"
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default class Login extends Component {
     state = {
@@ -102,6 +102,17 @@ export default class Login extends Component {
 
                 <button type="submit" onClick={this.handleLogin}>
                     Sign in
+                </button>
+
+
+                <p>No account yet? Register</p>
+
+                <button className="list-button"
+                    type="button"
+                    onClick={() => {
+                        this.props.history.push('/register')
+                    }} >
+                    Register
                 </button>
 
             </form>

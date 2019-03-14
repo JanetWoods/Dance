@@ -10,11 +10,9 @@ export default class NavBar extends Component {
         sessionStorage.clear("username")
         this.props.setAuth()
     }
+
     render(){
         return(
-
-
-
             <nav className="navBar">
                 <ul>
                     <li className="nav-item">
