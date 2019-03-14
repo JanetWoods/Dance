@@ -66,15 +66,26 @@
       "email": "Wanda@yahoo.com"
     },
     {
-      "id": 6,
-      "username": "Stone",
+      "username": "Wanda",
       "password": "123",
       "typeOfUserId": 2,
-      "nameFirst": "Stone",
+      "nameFirst": "Wanda",
       "nameLast": "Lemon",
       "clubId": 1,
-      "phone": "555-222-3333",
-      "email": "stone@yahoo.com"
+      "phone": "555-555-1111",
+      "email": "Wanda@yahoo.com",
+      "id": 6
+    },
+    {
+      "username": "Wanda",
+      "password": "123",
+      "typeOfUserId": 2,
+      "nameFirst": "Wanda",
+      "nameLast": "Lemon",
+      "clubId": 1,
+      "phone": "555-555-1111",
+      "email": "Wanda@yahoo.com",
+      "id": 7
     }
   ],
   "clubs": [

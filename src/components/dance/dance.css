@@ -2,6 +2,11 @@
 flex-basis: 50%;
 flex-direction: column;
 }
+.form-register{
+    flex-basis: 50%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .list-button{
     margin: 5px 0px 0px 5px;
     padding: 0px 5px 6px 5px;

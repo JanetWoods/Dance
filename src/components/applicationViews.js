@@ -11,6 +11,8 @@ import regionMgr from "../modules/regionMgr"
 import stateMgr from "../modules/stateMgr"
 import typeOfUserMgr from "../modules/typeOfUserMgr"
 import userMgr from "../modules/userMgr"
+import Account from "./auth/account"
+import Register from "./auth/register"
 
 export default class ApplicationViews extends Component {
     state = {
@@ -63,6 +65,18 @@ export default class ApplicationViews extends Component {
                 dances: dances
             }))
     }
+    updateUser = (user)=> {
+        return userMgr.updateUser(user)
+            .then(user => this.setState({
+                user: user
+            }))
+    }
+    addUser = (user => {
+        return userMgr.addUser(user)
+        .then(user => this.setState({
+            user:user
+        }))
+    })
     addClub = (club) => {
         return clubMgr.updateClub(club)
             .then(() => {
@@ -175,6 +189,20 @@ export default class ApplicationViews extends Component {
                     return <DanceList {...props}
                         dances={this.state.dances} />
                 }} />
+                <Route exact path="/account/user/:id(\d+)" render={props => {
+                    return <Account {...props}
+                    user={this.state.user}
+                    clubs={this.state.clubs}
+                    updateUser={this.updateUser}
+                    />
+                }}/>
+
+                <Route exact path="/register" render={props => {
+                    return <Register {...props}
+                    users={this.state.users}
+                    addUser={this.addUser}
+                    clubs={this.state.clubs}/>
+                }}/>
 
                 <Route exact path="/dance/new" render={props => {
                     return <NewEventForm {...props}
@@ -199,6 +227,7 @@ export default class ApplicationViews extends Component {
                         userPower={this.userPower}
                         {...props} />
                 }} />
+
             </React.Fragment>
         )
     }
