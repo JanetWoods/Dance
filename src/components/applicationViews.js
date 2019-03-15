@@ -64,7 +64,7 @@ export default class ApplicationViews extends Component {
             )
     }
     updateDance = (dance) => {
-        return danceMgr.editDance(dance)
+        return danceMgr.updateDance(dance)
             .then(() => {
                 return danceMgr.getAll()
             })
@@ -72,9 +72,12 @@ export default class ApplicationViews extends Component {
                 dances: dances
             }))
     }
-    updateUser = (updatedUser, id)=> {
-        return userMgr.updateUser(updatedUser, id)
-            .then(users => this.setState({
+    updateUser = (updatedUser)=> {
+        return userMgr.updateUser(updatedUser)
+            .then(() =>{
+                userMgr.getAll()
+            })
+              .then( users => this.setState({
                 users: users
             }))
     }
@@ -209,7 +212,8 @@ export default class ApplicationViews extends Component {
                     return <Register {...props}
                     users={this.state.users}
                     addUser={this.addUser}
-                    clubs={this.state.clubs}/>
+                    clubs={this.state.clubs}
+                    updateUser={this.updateUser}/>
                 }}/>
 
                 <Route exact path="/dance/new" render={props => {
