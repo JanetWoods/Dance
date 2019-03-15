@@ -19,6 +19,9 @@ export default class NavBar extends Component {
                         <Link className="nav-link" to="/DanceList">Dances</Link>
                     </li>
                     <li className="nav-item">
+                        <Link className="nav-link" to="/DanceListGrouped">Dances By Type</Link>
+                    </li>
+                    <li className="nav-item">
                         <Link className="nav-link" to={`/account/user/${this.props.activeUser.id}`}>Your Account</Link>
                     </li>
                 </ul>

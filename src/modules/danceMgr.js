@@ -19,6 +19,12 @@ export default {
     getAll() {
         return fetch(`${settings.remoteURL}/dances`).then(e => e.json())
       },
+    getDanceByType() {
+        return fetch(`${settings.remoteURL}/dances?_expand=typeOfEvent`).then(e => e.json())
+      },
+    getDanceWithClub() {
+        return fetch(`${settings.remoteURL}/dances?_expand=club`).then(e => e.json())
+      },
     addDance(dance) {
         return fetch(`${settings.remoteURL}/dances`,{
             method: "POST",

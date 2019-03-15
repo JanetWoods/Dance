@@ -13,6 +13,7 @@ import typeOfUserMgr from "../modules/typeOfUserMgr"
 import userMgr from "../modules/userMgr"
 import Account from "./auth/account"
 import Register from "./auth/register"
+import ListByType from "./dance/listByType"
 
 export default class ApplicationViews extends Component {
     state = {
@@ -20,7 +21,7 @@ export default class ApplicationViews extends Component {
         users: [],
         clubs: [],
         typeOfUser: [],
-        typesOfEvents: [],
+        typeOfEvents: [],
         locations: [],
         states: []
     }
@@ -162,14 +163,14 @@ export default class ApplicationViews extends Component {
         console.log("component mounted, Application View.")
         //get everything from the managers.
         //then set state
-             danceMgr.getAll()
-            .then(dances => newState.dances = dances)
+            danceMgr.getDanceWithClub()
+             .then(dances => newState.dances = dances)
 
             .then(() => clubMgr.getAll())
             .then(clubs => newState.clubs = clubs)
 
             .then(() => eventTypeMgr.getAll())
-            .then(typesOfEvents => newState.typesOfEvents = typesOfEvents)
+            .then(typeOfEvents => newState.typeOfEvents = typeOfEvents)
 
             .then(() => locationMgr.getAll())
             .then(locations => newState.locations = locations)
@@ -197,7 +198,8 @@ export default class ApplicationViews extends Component {
 
                 <Route exact path="/" render={props => {
                     return <DanceList {...props}
-                        dances={this.state.dances} />
+                        dances={this.state.dances}
+                        clubs={this.state.clubs}/>
                 }} />
                 <Route exact path="/account/user/:id(\d+)" render={props => {
                     return <Account {...props}
@@ -221,8 +223,9 @@ export default class ApplicationViews extends Component {
                         dances={this.state.dances}
                         addDance={this.addDance}
                         locations={this.state.locations}
-                        typesOfEvents={this.state.typesOfEvents}
-                        userPower = {this.props.userPower}/>
+                        typeOfEvents={this.state.typeOfEvents}
+                        userPower = {this.props.userPower}
+                        clubs={this.state.clubs}/>
                 }} />
                 <Route exact path="/dances/edit/:id(\d+)" render={props => {
                     return <EditDanceForm {...props}
@@ -232,7 +235,8 @@ export default class ApplicationViews extends Component {
                         getdance={this.getdance}
                         updateDance={this.updateDance}
                         locations={this.state.locations}
-                        typesOfEvents={this.state.typesOfEvents}/>
+                        typeOfEvents={this.state.typeOfEvents}
+                        clubs={this.state.clubs}/>
                 }} />
                 <Route exact path="/DanceList" render={props => {
                     return <DanceList
@@ -241,6 +245,13 @@ export default class ApplicationViews extends Component {
                         userPower={this.props.userPower}
                         {...props} />
                 }} />
+
+                <Route exact path="/DanceListGrouped" render={props => {
+                    return <ListByType
+                    dances={this.state.dances}
+                    typeOfEvents={this.state.typeOfEvents}
+                    locations={this.state.locations}/>
+                }}/>
 
             </React.Fragment>
         )

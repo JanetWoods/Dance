@@ -30,6 +30,7 @@ export default class DanceEvent extends Component {
 
                         <p className="list-item">
                             {this.props.dance.whenDate}-- {this.props.dance.danceNotes} --
+                            {this.props.dance.clubName}
 
                             Cost: {this.props.dance.cost}
 

@@ -168,20 +168,22 @@
       "endTime": "22:00",
       "cost": "7.00",
       "typeOfEventId": "1",
-      "locationId": "2"
+      "locationId": "1",
+      "clubId": 1
     },
     {
-      "danceNotes": "",
-      "whenDate": "",
-      "danceTime": "19:00",
+      "danceNotes": "Cowboy Boots tonight!",
+      "whenDate": "2019-03-16",
+      "danceTime": "19:30",
       "endTime": "22:00",
-      "cost": "5",
-      "typeOfEventId": 0,
-      "locationId": 0,
-      "id": 2
+      "cost": "7.00",
+      "typeOfEventId": "1",
+      "locationId": "1",
+      "clubId": "1",
+      "id": 4
     }
   ],
-  "typesOfEvents": [
+  "typeOfEvents": [
     {
       "id": 1,
       "nameType": "Club Dance"
