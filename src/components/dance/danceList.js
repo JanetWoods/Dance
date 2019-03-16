@@ -1,10 +1,10 @@
 import React, { Component } from "react"
 import DanceEvent from "./danceEvent"
 import { Link } from 'react-router-dom'
+// import danceMgr from ".../danceMgr"
 
 export default class DanceList extends Component {
-
-   powerUser = sessionStorage.getItem("Type")
+    powerUser = sessionStorage.getItem("Type")
     render() {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?

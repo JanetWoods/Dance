@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
+import ClubCard from "../club/clubCard"
 
 export default class DanceEvent extends Component {
     powerUser = sessionStorage.getItem("Type")
@@ -23,17 +24,15 @@ export default class DanceEvent extends Component {
                         <button className="list-button"
                             type="button"
                             onClick={() => {
-                                this.props.deleteDance(`${this.props.dance.id}`)
+                                this.props.deleteDance(this.props.dance.id)
                             }} >
                             Delete This Event
                             </button>
 
                         <p className="list-item">
                             {this.props.dance.whenDate}-- {this.props.dance.danceNotes} --
-                            {this.props.dance.clubName}
-
                             Cost: {this.props.dance.cost}
-
+                            Where: {this.props.locationid}
                         </p>
                     </React.Fragment>
                 </div>

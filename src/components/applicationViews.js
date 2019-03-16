@@ -163,7 +163,8 @@ export default class ApplicationViews extends Component {
         console.log("component mounted, Application View.")
         //get everything from the managers.
         //then set state
-            danceMgr.getDanceWithClub()
+            // danceMgr.getDanceWithClub()
+            danceMgr.getAll()
              .then(dances => newState.dances = dances)
 
             .then(() => clubMgr.getAll())

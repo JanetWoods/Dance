@@ -20,11 +20,7 @@ export default class ListByType extends Component {
 
                         <div key={dance.typeOfEventId}>
 
-                            {/* <h2>{typeofEvent.nameType}</h2> */}
-                                {/* .map( */}
                                     < DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
-                                {/* ) */}
-
                         </div>
                     </React.Fragment>
 

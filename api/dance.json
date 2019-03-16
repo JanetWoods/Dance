@@ -161,26 +161,15 @@
   ],
   "dances": [
     {
-      "id": 1,
-      "danceNotes": "Wear BLUE",
+      "id": 4,
+      "danceNotes": "Cowboy Boots!",
       "whenDate": "2019-03-16",
-      "danceTime": "19:30",
-      "endTime": "22:00",
+      "danceTime": "20:30",
+      "endTime": "23:00",
       "cost": "7.00",
       "typeOfEventId": "1",
-      "locationId": "1",
-      "clubId": 1
-    },
-    {
-      "danceNotes": "Cowboy Boots tonight!",
-      "whenDate": "2019-03-16",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "7.00",
-      "typeOfEventId": "1",
-      "locationId": "1",
-      "clubId": "1",
-      "id": 4
+      "locationId": "2",
+      "clubId": "1"
     }
   ],
   "typeOfEvents": [
