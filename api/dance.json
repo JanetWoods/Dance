@@ -29,7 +29,7 @@
       "nameFirst": "Rob",
       "nameLast": "Woods",
       "clubId": 1,
-      "phone": "859-227-0982",
+      "phone": "859-227-555555",
       "email": "rcw6236@yahoo.com"
     },
     {
@@ -59,44 +59,22 @@
       "username": "Wanda",
       "password": "123",
       "typeOfUserId": 2,
-      "nameFirst": "Wanda",
+      "nameFirst": "Wana TO YOU",
       "nameLast": "Lemon",
-      "clubId": 1,
+      "clubId": "2",
       "phone": "555-555-1111",
       "email": "Wanda@yahoo.com"
     },
     {
-      "username": "Wanda",
-      "password": "123",
-      "typeOfUserId": 2,
-      "nameFirst": "Wanda",
-      "nameLast": "Lemon",
-      "clubId": 1,
-      "phone": "555-555-1111",
-      "email": "Wanda@yahoo.com",
-      "id": 6
-    },
-    {
-      "username": "Wanda",
-      "password": "123",
-      "typeOfUserId": 2,
-      "nameFirst": "Wanda",
-      "nameLast": "Lemon",
-      "clubId": 1,
-      "phone": "555-555-1111",
-      "email": "Wanda@yahoo.com",
-      "id": 7
-    },
-    {
-      "username": "Justina",
+      "id": 6,
+      "username": "John",
       "password": "123",
       "typeOfUserId": 1,
-      "nameFirst": "",
-      "nameLast": "",
-      "clubId": 0,
-      "phone": "",
-      "email": "",
-      "id": 8
+      "nameFirst": "John",
+      "nameLast": "Mudd",
+      "clubId": "2",
+      "phone": "000-123-1111",
+      "email": "nunya@gmail.com"
     }
   ],
   "clubs": [
@@ -184,34 +162,23 @@
   "dances": [
     {
       "id": 1,
-      "whenDate": "13-Mar-2019",
-      "dinnerTime": "7:00",
-      "danceTime": "7:30",
-      "endTime": "10:00",
-      "cost": "$7.00",
-      "danceNotes": "Plenty of parking in back",
-      "typeofEventId": 2,
-      "locationId": 1
-    },
-    {
-      "danceNotes": "Don't forget your Dancing Boots!",
-      "whenDate": "2019-03-30",
+      "danceNotes": "Wear BLUE",
+      "whenDate": "2019-03-16",
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "7.00",
       "typeOfEventId": "1",
-      "locationId": "1",
-      "id": 3
+      "locationId": "2"
     },
     {
-      "danceNotes": "Cost covers all dances and workshops from Friday at 6 Pm through Sunday 10 pm.",
-      "whenDate": "2019-03-15",
-      "danceTime": "19:30",
+      "danceNotes": "",
+      "whenDate": "",
+      "danceTime": "19:00",
       "endTime": "22:00",
-      "cost": "25.00",
-      "typeOfEventId": "4",
-      "locationId": "4",
-      "id": 4
+      "cost": "5",
+      "typeOfEventId": 0,
+      "locationId": 0,
+      "id": 2
     }
   ],
   "typesOfEvents": [

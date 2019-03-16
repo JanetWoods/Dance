@@ -4,7 +4,7 @@ import danceMgr from "../../modules/danceMgr";
 export default class NewEventForm extends Component {
 
   state = {
-    id:"",
+    id: 0,
     whenDate: "",
     dinnerTime: "19:00",
     danceTime: "19:30",
@@ -20,46 +20,41 @@ export default class NewEventForm extends Component {
     this.setState(stateToChange);
   }
   editThisEvent = evt => {
-
     evt.preventDefault()
 
-    if (this.state.danceTime == null) {
-      alert("When does it start?")
-    }
-    else {
       const updatedEvent = {
-        id:this.state.id,
+        id: this.state.id,
         danceNotes: this.state.danceNotes,
         whenDate: this.state.whenDate,
-        dinnerTime: this.state.dinnerTime.value,
+        dinnerTime: this.state.dinnerTime,
         danceTime: this.state.danceTime,
         endTime: this.state.endTime,
         cost: this.state.cost,
         typeOfEventId: this.state.typeOfEventId,
-        locationId: this.state.typeOfEventId
+        locationId: this.state.locationId
       }
-      this.props.editThisEvent(updatedEvent)
+      this.props.updateDance(updatedEvent)
         .then(() => {
-          this.props.history.push("/DanceList")
+          this.props.history.push("/")
         })
-    }
+
   }
 
-  componentDidMount(dance){
+  componentDidMount(dance) {
     danceMgr.getDance(this.props.match.params.id)
-    .then((dance)=>{
-      this.setState({
-        id:dance.id,
-        danceNotes: dance.danceNotes,
-        whenDate: dance.whenDate,
-        dinnerTime: dance.dinnerTime,
-        danceTime: dance.danceTime,
-        endTime: dance.endTime,
-        cost: dance.cost,
-        typeOfEventId: dance.typeOfEventId,
-        locationId: dance.typeOfEventId
+      .then((dance) => {
+        this.setState({
+          id: dance.id,
+          danceNotes: dance.danceNotes,
+          whenDate: dance.whenDate,
+          dinnerTime: dance.dinnerTime,
+          danceTime: dance.danceTime,
+          endTime: dance.endTime,
+          cost: dance.cost,
+          typeOfEventId: dance.typeOfEventId,
+          locationId: dance.locationId
+        })
       })
-    })
   }
   render() {
     return (
@@ -69,7 +64,8 @@ export default class NewEventForm extends Component {
             <label htmlFor="whenDate">What Day is it?</label>
             <input type="date"
               onChange={this.handleFieldChange}
-              id="whenDate" />
+              id="whenDate"
+              value={this.state.whenDate} />
           </div>
           <div className="form-group">
             <label htmlFor="typeOfEventId">Type of Event</label>
@@ -85,12 +81,13 @@ export default class NewEventForm extends Component {
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="location">Location</label>
+            <label htmlFor="locationId">Location</label>
             <select
-              name="location"
+              name="locationId"
               id="locationId"
               onChange={this.handleFieldChange}
-              value={this.state.locationId}>
+              value={this.state.locationId}
+              defaultValue={this.state.locationId}>
 
               <option value="">Select Location</option>
               {this.props.locations.map(loc => (
@@ -102,6 +99,7 @@ export default class NewEventForm extends Component {
             <label htmlFor="danceNotes">Need to know Notes about this dance:</label>
             <input type="text"
               onChange={this.handleFieldChange}
+              value={this.state.danceNotes}
               id="danceNotes" />
           </div>
           <div className="form-group">
@@ -132,19 +130,19 @@ export default class NewEventForm extends Component {
               defaultValue={this.state.endTime} />
           </div>
           <div className="form-group">
-            <label htmlFor="cost"> Cost </label>
+            <label htmlFor="cost"> Cost $</label>
             <input type="number"
               min="0"
               step="any"
               onChange={this.handleFieldChange}
+              value={this.state.cost}
               id="cost" />
           </div>
 
           <button
             type="submt"
-            onClick={this.makeNewEvent}
-            className="list-button">Add Dance Event
-              </button>
+            onClick={this.editThisEvent}
+            className="list-button">Save</button>
 
         </form>
       </React.Fragment>

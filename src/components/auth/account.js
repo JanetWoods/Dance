@@ -110,10 +110,10 @@ export default class Account extends Component {
 
 
                 <div className="form-group">
-                    <label htmlFor="club"> Select your club </label>
+                    <label htmlFor="clubId"> Select your clubId </label>
                     <select
-                        name="club"
-                        id="club"
+                        name="clubId"
+                        id="clubId"
                         onChange={this.handleFieldChange}
                         defaultValue={this.state.clubId}
                         value={this.state.clubId}>

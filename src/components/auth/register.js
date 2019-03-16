@@ -11,7 +11,8 @@ export default class Register extends Component {
         nameLast:"",
         clubId: 0,
         phone: "",
-        email:""
+        email:"",
+        clubs:[]
     }
     handleFieldChange = evt => {
         const stateToChange = {}
@@ -129,9 +130,27 @@ export default class Register extends Component {
                     id="email"
                     placeholder={`Email Address`}
                     autoFocus=""/>
+
+
+                    {/* <div className="form-group"> */}
+                    {/* <label htmlFor="club"> Select your club </label>
+                    <select
+                        name="clubId"
+                        id="clubId"
+                        onChange={this.handleFieldChange}
+                        value={this.state.clubId}
+                        >
+                        <option value="">Select Your Club </option>
+                        {this.props.clubs.map(club => (
+                            <option key={club.id} id={club.id} value={club.id}>{club.clubName}</option>
+                        ))}
+                    </select>
+                </div> */}
+
                 <button type="submit" onClick={this.handleRegistration}>
                     Register
             </button>
+
             </form>
         )
     }
