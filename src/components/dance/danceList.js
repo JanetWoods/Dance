@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 
 export default class DanceList extends Component {
     powerUser = sessionStorage.getItem("Type")
+
+
     render() {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?

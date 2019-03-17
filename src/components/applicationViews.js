@@ -15,6 +15,7 @@ import Account from "./auth/account"
 import Register from "./auth/register"
 import ListByType from "./dance/listByType"
 import NewClubForm from "./club/newClubForm"
+import NewLocationForm from "./location/newLocationForm"
 
 export default class ApplicationViews extends Component {
     state = {
@@ -95,12 +96,15 @@ export default class ApplicationViews extends Component {
             user:user
         }))
     })
-    addLocation = (location => {
+    addLocation = (location) => {
         return locationMgr.addLocation(location)
-        .then(locations => this.setState({
+            .then (()=> {
+            return locationMgr.getAll()
+           .then(locations => this.setState({
             locations: locations
         }))
     })
+}
     addClub = (club) => {
         return clubMgr.addClub(club)
             .then(() => {
@@ -139,7 +143,7 @@ export default class ApplicationViews extends Component {
                 clubs: clubs
             }))
     }
-    addLocation = (location) => {
+    updateLocation = (location) => {
         return locationMgr.updatelocation(location)
             .then(() => {
                 return locationMgr.getAll()
@@ -288,6 +292,13 @@ export default class ApplicationViews extends Component {
                     return <NewClubForm {...props}
                     clubs={this.state.clubs}
                     addClub={this.addClub}
+                    users={this.state.users}
+                    states={this.state.states}
+                    locations={this.state.locations}/>
+                }}/>
+                <Route exact path="/newLocation" render={props => {
+                    return <NewLocationForm {...props}
+                    addLocation={this.addLocation}
                     users={this.state.users}
                     states={this.state.states}
                     locations={this.state.locations}/>
