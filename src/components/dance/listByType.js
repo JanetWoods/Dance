@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 export default class ListByType extends Component {
 
-    // powerUser = sessionStorage.getItem("Type")
-    render() {
+   render() {
+
         return (
             <React.Fragment>
                 <Link className="nav-link" to="/dance/new">Add Event</Link>
@@ -15,12 +15,13 @@ export default class ListByType extends Component {
                 <p>(Note: Club dances are free for club members dancing at their home club.)</p>
 
 
-                {this.props.dances.map(dance =>
+                {this.props.detailedDances.map(dance =>
                     <React.Fragment>
 
                         <div key={dance.typeOfEventId}>
+                        {this.props.DanceEvent}
 
-                                    < DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
+                            < DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
                         </div>
                     </React.Fragment>
 

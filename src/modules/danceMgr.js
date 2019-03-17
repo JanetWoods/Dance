@@ -22,9 +22,14 @@ export default {
     getDanceByType() {
         return fetch(`${settings.remoteURL}/dances?_expand=typeOfEvent`).then(e => e.json())
       },
-    getDanceWithClub() {
-        return fetch(`${settings.remoteURL}/dances?_expand=club`).then(e => e.json())
+    getDanceDetail() {
+        return fetch(`${settings.remoteURL}/dances?_expand=club&_expand=location&_expand=typeOfEvent`).then(e => e.json())
       },
+      deleteDanceDetail: (id) => {
+        return fetch(`${settings.remoteURL}/dances/${id}`, {
+            method: "DELETE"
+        })
+    },
     addDance(dance) {
         return fetch(`${settings.remoteURL}/dances`,{
             method: "POST",
