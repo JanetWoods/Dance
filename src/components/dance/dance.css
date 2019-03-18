@@ -1,3 +1,8 @@
+#root{
+    display: flex;
+    flex-direction: column;
+}
+
 .form-newEvent{
 flex-basis: 50%;
 flex-direction: column;
@@ -13,17 +18,19 @@ flex-direction: column;
     height: 1.7em;
     width: 6em;
     margin-left: 20px;
+    border-radius: .20em;
 }
 .list-item{
     display: flex;
-    flex-direction: row;
-    justify-content: left;
     flex-wrap: wrap;
-    /* align-content: left; */
+    flex-flow: row wrap;
     margin: 15px 15px 15px 15px;
 }
 .card{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    flex-flow: row wrap;
+    margin: 5px;
+    border-radius: .25em;
 }

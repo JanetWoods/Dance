@@ -81,7 +81,7 @@
     {
       "id": 1,
       "clubName": "Wheeler Dealers",
-      "stateId": 1,
+      "stateId": "KY",
       "presidentId": 3,
       "vicePresidentId": 4,
       "secretaryId": 5,
@@ -92,13 +92,35 @@
     {
       "id": 2,
       "clubName": "Red River Ramblers",
-      "stateId": 2,
+      "stateId": "TN",
       "presidentId": 3,
       "vicePresidentId": 4,
       "secretaryId": 5,
       "otherOfficerId": 6,
       "regionId": 1,
       "usualLocationId": 2
+    },
+    {
+      "clubName": "Do Si Dos",
+      "stateId": "KY",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 3
+    },
+    {
+      "clubName": "Down Unders",
+      "stateId": "KY",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 4
     }
   ],
   "regions": [
@@ -119,7 +141,7 @@
       "street": "xxstreet",
       "city": "Nicholasville",
       "zip": "44440",
-      "stateId": 1,
+      "stateId": "KY",
       "locationNotes": "The large blue building"
     },
     {
@@ -128,60 +150,242 @@
       "street": "Winchester Rd",
       "city": "Lexington",
       "zip": "44440",
-      "stateId": 1,
+      "stateId": "KY",
       "locationNotes": "Upstairs"
+    },
+    {
+      "nameLocation": "Presbyterian Church",
+      "street": "Higbee Mill Rd.",
+      "city": "Lexington",
+      "zip": "",
+      "stateId": "KY",
+      "locationNotes": "Use side parking lot or you won't see the entrance to the hall.",
+      "id": 3
     }
   ],
   "states": [
     {
-      "id": 1,
-      "stateShort": "KY",
-      "stateLong": "Kentucky"
+      "id": "AL",
+      "stateLong": "Alabama"
     },
     {
-      "id": 2,
-      "stateShort": "TN",
-      "stateLong": "Tennesse"
+      "id": "AK",
+      "stateLong": "Alaska"
     },
     {
-      "id": 3,
-      "stateShort": "IN",
+      "id": "AZ",
+      "stateLong": "Arizona"
+    },
+    {
+      "id": "AR",
+      "stateLong": "Arkansas"
+    },
+    {
+      "id": "CA",
+      "stateLong": "California"
+    },
+    {
+      "id": "CO",
+      "stateLong": "Colorado"
+    },
+    {
+      "id": "CT",
+      "stateLong": "CT"
+    },
+    {
+      "id": "DE",
+      "stateLong": "Delaware"
+    },
+    {
+      "id": "GA",
+      "stateLong": "Georgia"
+    },
+    {
+      "id": "HI",
+      "stateLong": "Hawaii"
+    },
+    {
+      "id": "ID",
+      "stateLong": "Idaho"
+    },
+    {
+      "id": "FL",
+      "stateLong": "Florida"
+    },
+    {
+      "id": "IL",
+      "stateLong": "Illinois"
+    },
+    {
+      "id": "IN",
       "stateLong": "Indiana"
     },
     {
-      "id": 4,
-      "stateShort": "OH",
+      "id": "IA",
+      "stateLong": "Iowa"
+    },
+    {
+      "id": "KS",
+      "stateLong": "Kansas"
+    },
+    {
+      "id": "KY",
+      "stateLong": "Kentucky"
+    },
+    {
+      "id": "LA",
+      "stateLong": "Louisiana"
+    },
+    {
+      "id": "ME",
+      "stateLong": "Maine"
+    },
+    {
+      "id": "MD",
+      "stateLong": "Maryland"
+    },
+    {
+      "id": "MA",
+      "stateLong": "Michigan"
+    },
+    {
+      "id": "MN",
+      "stateLong": "Minnesota"
+    },
+    {
+      "id": "MS",
+      "stateLong": "Mississippi"
+    },
+    {
+      "id": "MO",
+      "stateLong": "Missouri"
+    },
+    {
+      "id": "MT",
+      "stateLong": "Montana"
+    },
+    {
+      "id": "NE",
+      "stateLong": "Nebraska"
+    },
+    {
+      "id": "NV",
+      "stateLong": "Nevada"
+    },
+    {
+      "id": "NH",
+      "stateLong": "New Hampshire"
+    },
+    {
+      "id": "NJ",
+      "stateLong": "New Jersey"
+    },
+    {
+      "id": "NM",
+      "stateLong": "New Mexico"
+    },
+    {
+      "id": "NY",
+      "stateLong": "New York"
+    },
+    {
+      "id": "NC",
+      "stateLong": "North Carolina"
+    },
+    {
+      "id": "ND",
+      "stateLong": "North Dakota"
+    },
+    {
+      "id": "OH",
       "stateLong": "Ohio"
     },
     {
-      "id": 5,
-      "stateShort": "FL",
-      "stateLong": "Florida"
+      "id": "OK",
+      "stateLong": "Oklahoma"
+    },
+    {
+      "id": "OR",
+      "stateLong": "Oregon"
+    },
+    {
+      "id": "PA",
+      "stateLong": "Pennsylvania"
+    },
+    {
+      "id": "RI",
+      "stateLong": "Rhode Island"
+    },
+    {
+      "id": "SC",
+      "stateLong": "South Carolina"
+    },
+    {
+      "id": "SD",
+      "stateLong": "South Dakota"
+    },
+    {
+      "id": "TN",
+      "stateLong": "Tennessee"
+    },
+    {
+      "id": "TX",
+      "stateLong": "Texas"
+    },
+    {
+      "id": "UT",
+      "stateLong": "Utah"
+    },
+    {
+      "id": "VT",
+      "stateLong": "Vermont"
+    },
+    {
+      "id": "VA",
+      "stateLong": "Virginia"
+    },
+    {
+      "id": "WA",
+      "stateLong": "Washington"
+    },
+    {
+      "id": "WV",
+      "stateLong": "West Virginia"
+    },
+    {
+      "id": "WI",
+      "stateLong": "Wisconsin"
+    },
+    {
+      "id": "WY",
+      "stateLong": "Wyoming"
     }
   ],
   "dances": [
     {
-      "id": 1,
-      "danceNotes": "Wear BLUE",
-      "whenDate": "2019-03-16",
+      "danceNotes": "50's style",
+      "whenDate": "2019-04-06",
+      "danceTime": "15:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": "3",
+      "locationId": "3",
+      "clubId": "1",
+      "id": 1
+    },
+    {
+      "danceNotes": "costume night",
+      "whenDate": "2019-04-06",
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "7.00",
-      "typeOfEventId": "1",
-      "locationId": "2"
-    },
-    {
-      "danceNotes": "",
-      "whenDate": "",
-      "danceTime": "19:00",
-      "endTime": "22:00",
-      "cost": "5",
-      "typeOfEventId": 0,
-      "locationId": 0,
+      "typeOfEventId": "6",
+      "locationId": "6",
+      "clubId": "4",
       "id": 2
     }
   ],
-  "typesOfEvents": [
+  "typeOfEvents": [
     {
       "id": 1,
       "nameType": "Club Dance"

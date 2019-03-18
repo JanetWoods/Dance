@@ -10,7 +10,8 @@ export default class NewEventForm extends Component {
     cost: "7.00",
     danceNotes: "",
     typeOfEventId: 0,
-    locationId: 0
+    locationId: 0,
+    clubId:0
   }
   handleFieldChange = evt => {
     const stateToChange = {};
@@ -33,7 +34,8 @@ export default class NewEventForm extends Component {
         endTime: this.state.endTime,
         cost: this.state.cost,
         typeOfEventId: this.state.typeOfEventId,
-        locationId: this.state.typeOfEventId
+        locationId: this.state.typeOfEventId,
+        clubId: this.state.clubId
       }
       this.props.addDance(newEvent)
         .then(() => {
@@ -59,11 +61,12 @@ export default class NewEventForm extends Component {
               onChange={this.handleFieldChange}
               value={this.state.typeOfEventId}>
               <option value="">Select Event/Dance Type</option>
-              {this.props.typesOfEvents.map(typeE => (
+              {this.props.typeOfEvents.map(typeE => (
                 <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
               ))}
             </select>
           </div>
+
           <div className="form-group">
             <label htmlFor="location">Location</label>
             <select
@@ -78,6 +81,23 @@ export default class NewEventForm extends Component {
               ))}
             </select>
           </div>
+
+
+          <div className="form-group">
+            <label htmlFor="club">Host Club</label>
+            <select
+              name="club"
+              id="clubId"
+              onChange={this.handleFieldChange}
+              value={this.state.clubId}>
+
+              <option value="">Select club</option>
+              {this.props.clubs.map(club => (
+                <option key={club.id} id={club.id} value={club.id}> {club.clubName} </option>
+              ))}
+            </select>
+          </div>
+
           <div className="form-group">
             <label htmlFor="danceNotes">Need to know Notes about this dance:</label>
             <input type="text"

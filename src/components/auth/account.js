@@ -61,33 +61,19 @@ export default class Account extends Component {
 
         return (
             <form className="form-updateAccount">
-                <h1 className="h3 mb-3 font-weight-normal">Update Your Account</h1>
-                <label htmlFor="UserName"
+                <h1 className="h3 mb-3 font-weight-normal"> {this.state.nameFirst} {this.state.nameLast}</h1>
+                <label htmlFor="username">Username:</label> <span>
+                <input onChange={this.handleFieldChange}
                     type="username"
                     id="username"
-                    placeholder={`username`}
-                    >{this.props.username}</label>
-
-
-                <label htmlFor="inputNameFirst">First Name</label>
-                <input onChange={this.handleFieldChange}
-                    type="nameFirst"
-                    id="nameFirst"
-                    value={this.state.nameFirst}
-                    defaultValue={this.state.nameFirst}
-                    placeholder={this.state.nameFirst}
+                    value={this.state.username}
+                    defaultValue={this.state.username}
+                    placeholder={this.state.username}
                     autoFocus=""
                     required="" />
 
-                <label htmlFor="inputNameLast">Last Name</label>
-                <input onChange={this.handleFieldChange}
-                    type="nameLast"
-                    id="nameLast"
-                    placeholder={this.state.nameLast}
-                    value={this.state.nameLast}
-                    defaultvalue={this.state.nameLast}
-                    autoFocus=""
-                    required="" />
+                </span><br/>
+
 
                 <label htmlFor="inputPhone">Phone Number</label>
                 <input onChange={this.handleFieldChange}
@@ -97,7 +83,7 @@ export default class Account extends Component {
                     defaultValue={this.state.phone}
                     value={this.state.phone}
                     autoFocus="" />
-
+<br/>
                 <label htmlFor="email">email</label>
                 <input onChange={this.handleFieldChange}
                     type="email"
@@ -110,7 +96,7 @@ export default class Account extends Component {
 
 
                 <div className="form-group">
-                    <label htmlFor="clubId"> Select your clubId </label>
+                    <label htmlFor="clubId"> Select your club </label>
                     <select
                         name="clubId"
                         id="clubId"

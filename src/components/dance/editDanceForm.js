@@ -31,7 +31,8 @@ export default class NewEventForm extends Component {
         endTime: this.state.endTime,
         cost: this.state.cost,
         typeOfEventId: this.state.typeOfEventId,
-        locationId: this.state.locationId
+        locationId: this.state.locationId,
+        clubId: this.state.clubId
       }
       this.props.updateDance(updatedEvent)
         .then(() => {
@@ -52,7 +53,8 @@ export default class NewEventForm extends Component {
           endTime: dance.endTime,
           cost: dance.cost,
           typeOfEventId: dance.typeOfEventId,
-          locationId: dance.locationId
+          locationId: dance.locationId,
+          clubId: dance.clubId
         })
       })
   }
@@ -75,8 +77,22 @@ export default class NewEventForm extends Component {
               onChange={this.handleFieldChange}
               value={this.state.typeOfEventId}>
               <option value="">Select Event/Dance Type</option>
-              {this.props.typesOfEvents.map(typeE => (
+              {this.props.typeOfEvents.map(typeE => (
                 <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
+              ))}
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="club">Host Club</label>
+            <select
+              name="club"
+              id="clubId"
+              onChange={this.handleFieldChange}
+              value={this.state.clubId}>
+
+              <option value="">Select club</option>
+              {this.props.clubs.map(club => (
+                <option key={club.id} id={club.id} value={club.id}> {club.clubName} </option>
               ))}
             </select>
           </div>

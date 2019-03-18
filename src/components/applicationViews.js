@@ -13,6 +13,9 @@ import typeOfUserMgr from "../modules/typeOfUserMgr"
 import userMgr from "../modules/userMgr"
 import Account from "./auth/account"
 import Register from "./auth/register"
+import ListByType from "./dance/listByType"
+import NewClubForm from "./club/newClubForm"
+import NewLocationForm from "./location/newLocationForm"
 
 export default class ApplicationViews extends Component {
     state = {
@@ -20,9 +23,10 @@ export default class ApplicationViews extends Component {
         users: [],
         clubs: [],
         typeOfUser: [],
-        typesOfEvents: [],
+        typeOfEvents: [],
         locations: [],
-        states: []
+        states: [],
+        detailedDances:[]
     }
 
     aUserId = this.props.activeUser.id
@@ -33,15 +37,20 @@ export default class ApplicationViews extends Component {
         .then(() => {
             return danceMgr.getAll()
         })
+        .then(()=> danceMgr.getDanceDetail())
+        .then(detailedDances => this.setState({
+            detailedDances: detailedDances
+        }))
         .then(dances => this.setState({
             dances: dances
         }))
     }
     deleteDance = (danceId) => {
         return danceMgr.deleteDance(danceId)
-        .then(() => {
-            return danceMgr.getAll()
-        })
+        .then(()=> danceMgr.getDanceDetail())
+        .then(detailedDances => this.setState({
+            detailedDances: detailedDances
+        }))
         .then(dances => this.setState({
             dances: dances
         }))
@@ -87,8 +96,17 @@ export default class ApplicationViews extends Component {
             user:user
         }))
     })
+    addLocation = (location) => {
+        return locationMgr.addLocation(location)
+            .then (()=> {
+            return locationMgr.getAll()
+           .then(locations => this.setState({
+            locations: locations
+        }))
+    })
+}
     addClub = (club) => {
-        return clubMgr.updateClub(club)
+        return clubMgr.addClub(club)
             .then(() => {
                 return clubMgr.getAll()
                     .then(clubs => this.setState({
@@ -112,7 +130,10 @@ export default class ApplicationViews extends Component {
             .then(clubs => this.setState({
                 clubs: clubs
             }))
-    }
+        }
+
+
+
     deleteClub = (clubId) => {
         return clubMgr.deleteclub(clubId)
             .then(() => {
@@ -122,7 +143,7 @@ export default class ApplicationViews extends Component {
                 clubs: clubs
             }))
     }
-    addLocation = (location) => {
+    updateLocation = (location) => {
         return locationMgr.updatelocation(location)
             .then(() => {
                 return locationMgr.getAll()
@@ -157,19 +178,26 @@ export default class ApplicationViews extends Component {
                 locations: locations
             }))
     }
+    getDancesWithClubs = ()=>{
+        return danceMgr.getDanceWithClub()
+            .then(dances => this.setState({
+                    dances: dances
+                }))
+    }
     componentDidMount() {
         const newState = {}
         console.log("component mounted, Application View.")
+
         //get everything from the managers.
         //then set state
-             danceMgr.getAll()
-            .then(dances => newState.dances = dances)
+              danceMgr.getAll()
+             .then(dances => newState.dances = dances)
 
             .then(() => clubMgr.getAll())
             .then(clubs => newState.clubs = clubs)
 
             .then(() => eventTypeMgr.getAll())
-            .then(typesOfEvents => newState.typesOfEvents = typesOfEvents)
+            .then(typeOfEvents => newState.typeOfEvents = typeOfEvents)
 
             .then(() => locationMgr.getAll())
             .then(locations => newState.locations = locations)
@@ -186,6 +214,9 @@ export default class ApplicationViews extends Component {
             .then(() => userMgr.getAll())
             .then(users => newState.users = users)
 
+                .then(()=> danceMgr.getDanceDetail())
+                .then(detailedDances => newState.detailedDances = detailedDances)
+
             .then(() => this.setState(newState))
     }
 
@@ -197,7 +228,9 @@ export default class ApplicationViews extends Component {
 
                 <Route exact path="/" render={props => {
                     return <DanceList {...props}
-                        dances={this.state.dances} />
+                        dances={this.state.dances}
+                        clubs={this.state.clubs}
+                        detailedDances={this.state.detailedDances}/>
                 }} />
                 <Route exact path="/account/user/:id(\d+)" render={props => {
                     return <Account {...props}
@@ -221,26 +254,55 @@ export default class ApplicationViews extends Component {
                         dances={this.state.dances}
                         addDance={this.addDance}
                         locations={this.state.locations}
-                        typesOfEvents={this.state.typesOfEvents}
-                        userPower = {this.props.userPower}/>
+                        typeOfEvents={this.state.typeOfEvents}
+                        userPower = {this.props.userPower}
+                        clubs={this.state.clubs}/>
                 }} />
                 <Route exact path="/dances/edit/:id(\d+)" render={props => {
-                    return <EditDanceForm {...props}
+                    return <EditDanceForm {...props}njnm
                     userPower = {this.props.userPower}
                         dance={this.state.dance}
                         editDance={this.editDance}
                         getdance={this.getdance}
                         updateDance={this.updateDance}
                         locations={this.state.locations}
-                        typesOfEvents={this.state.typesOfEvents}/>
+                        typeOfEvents={this.state.typeOfEvents}
+                        detailedDances={this.detailedDances}
+                        clubs={this.state.clubs}/>
                 }} />
                 <Route exact path="/DanceList" render={props => {
                     return <DanceList
                         dances={this.state.dances}
                         deleteDance={this.deleteDance}
                         userPower={this.props.userPower}
+                        detailedDances={this.state.detailedDances}
+                        addDance={this.addDance}
                         {...props} />
-                }} />
+                    }} />
+
+                <Route exact path="/DanceListGrouped" render={props => {
+                    return <ListByType {...props}
+                    dances={this.state.dances}
+                    typeOfEvents={this.state.typeOfEvents}
+                    locations={this.state.locations}
+                    detailedDances={this.state.detailedDances}
+                    />
+                }}/>
+                <Route exact path="/newClub" render={props => {
+                    return <NewClubForm {...props}
+                    clubs={this.state.clubs}
+                    addClub={this.addClub}
+                    users={this.state.users}
+                    states={this.state.states}
+                    locations={this.state.locations}/>
+                }}/>
+                <Route exact path="/newLocation" render={props => {
+                    return <NewLocationForm {...props}
+                    addLocation={this.addLocation}
+                    users={this.state.users}
+                    states={this.state.states}
+                    locations={this.state.locations}/>
+                }}/>
 
             </React.Fragment>
         )
