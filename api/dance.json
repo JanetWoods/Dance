@@ -17,7 +17,7 @@
       "typeOfUserId": 2,
       "nameFirst": "Janet",
       "nameLast": "Woods",
-      "clubId": 1,
+      "clubId": "3",
       "phone": "859-360-9552",
       "email": "janetnwoods@gmail.com"
     },
@@ -161,6 +161,24 @@
       "stateId": "KY",
       "locationNotes": "Use side parking lot or you won't see the entrance to the hall.",
       "id": 3
+    },
+    {
+      "nameLocation": "50+ Senior Center",
+      "street": "953 Clark Street",
+      "city": "Clarksville",
+      "zip": "",
+      "stateId": "TN",
+      "locationNotes": "",
+      "id": 4
+    },
+    {
+      "nameLocation": "Downtown Georgetown",
+      "street": "Main Street & Broadway",
+      "city": "Lexington",
+      "zip": "",
+      "stateId": "KY",
+      "locationNotes": "",
+      "id": 5
     }
   ],
   "states": [
@@ -363,6 +381,7 @@
   ],
   "dances": [
     {
+      "id": 1,
       "danceNotes": "50's style",
       "whenDate": "2019-04-06",
       "danceTime": "15:30",
@@ -370,19 +389,29 @@
       "cost": "7.00",
       "typeOfEventId": "3",
       "locationId": "3",
-      "clubId": "1",
-      "id": 1
+      "clubId": "1"
     },
     {
+      "id": 2,
       "danceNotes": "costume night",
-      "whenDate": "2019-04-06",
+      "whenDate": "2019-05-03",
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "7.00",
       "typeOfEventId": "6",
-      "locationId": "6",
-      "clubId": "4",
-      "id": 2
+      "locationId": "2",
+      "clubId": "4"
+    },
+    {
+      "id": 3,
+      "danceNotes": "Wear Pink",
+      "whenDate": "2019-03-27",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": "1",
+      "locationId": "1",
+      "clubId": "1"
     }
   ],
   "typeOfEvents": [

@@ -32,7 +32,7 @@ export default class DanceEvent extends Component {
                         <p className="list-item">
                             {this.props.dance.typeOfEvent.nameType}-- {this.props.dance.club.clubName}<br/>
                             When: {this.props.dance.whenDate}<br/>
-                            {/* Where: {this.props.dance.location.nameLocation}:  {this.props.dance.location.street}  {this.props.dance.location.city}, {this.props.location.stateId}  <br/> */}
+                            Where: {this.props.dance.location.nameLocation}
                             $ {this.props.dance.cost}<br/>
                             -- {this.props.dance.danceNotes} --
                         </p>

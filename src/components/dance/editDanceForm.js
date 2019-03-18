@@ -66,8 +66,9 @@ export default class NewEventForm extends Component {
             <label htmlFor="whenDate">What Day is it?</label>
             <input type="date"
               onChange={this.handleFieldChange}
+              value={this.state.whenDate}
               id="whenDate"
-              value={this.state.whenDate} />
+               />
           </div>
           <div className="form-group">
             <label htmlFor="typeOfEventId">Type of Event</label>

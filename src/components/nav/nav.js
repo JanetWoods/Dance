@@ -26,6 +26,9 @@ render(){
                     <li className="nav-item">
                         <Link className="nav-link" to="/newLocation">Add Location</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/locations"> Locations </Link>
+                    </li>
 
                     <li className="nav-item">
                         <Link className="nav-link" to={`/account/user/${this.props.activeUser.id}`}>Your Account</Link>

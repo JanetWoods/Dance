@@ -34,3 +34,6 @@ flex-direction: column;
     margin: 5px;
     border-radius: .25em;
 }
+.cancelled{
+    color: firebrick;
+}
