@@ -1,4 +1,54 @@
 {
+  "dances": [
+    {
+      "danceNotes": "",
+      "whenDate": "2019-03-23",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "5",
+      "typeOfEventId": "2",
+      "locationId": "2",
+      "clubId": "3",
+      "id": 1
+    },
+    {
+      "danceNotes": "Ross Family Funeral",
+      "whenDate": "2019-04-06",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "10",
+      "typeOfEventId": "3",
+      "locationId": "3",
+      "clubId": "2",
+      "id": 2
+    }
+  ],
+  "typeOfEvents": [
+    {
+      "id": 1,
+      "nameType": "Club Dance"
+    },
+    {
+      "id": 2,
+      "nameType": "Class"
+    },
+    {
+      "id": 3,
+      "nameType": "Benefit"
+    },
+    {
+      "id": 4,
+      "nameType": "Convention"
+    },
+    {
+      "id": 5,
+      "nameType": "Workshop"
+    },
+    {
+      "id": 6,
+      "nameType": "Special"
+    }
+  ],
   "typeOfUser": [
     {
       "id": 1,
@@ -110,17 +160,6 @@
       "regionId": "",
       "usualLocationId": "",
       "id": 3
-    },
-    {
-      "clubName": "Down Unders",
-      "stateId": "KY",
-      "presidentId": "",
-      "vicePresidentId": "",
-      "secretaryId": "",
-      "otherOfficerId": "",
-      "regionId": "",
-      "usualLocationId": "",
-      "id": 4
     }
   ],
   "regions": [
@@ -179,6 +218,15 @@
       "stateId": "KY",
       "locationNotes": "",
       "id": 5
+    },
+    {
+      "nameLocation": "Lexington First Baptist Church",
+      "street": "500 Wickamore Street",
+      "city": "Lexington",
+      "zip": "",
+      "stateId": "KY",
+      "locationNotes": "Use entrance under the green awning.",
+      "id": 6
     }
   ],
   "states": [
@@ -377,67 +425,6 @@
     {
       "id": "WY",
       "stateLong": "Wyoming"
-    }
-  ],
-  "dances": [
-    {
-      "id": 1,
-      "danceNotes": "50's style",
-      "whenDate": "2019-04-06",
-      "danceTime": "15:30",
-      "endTime": "22:00",
-      "cost": "7.00",
-      "typeOfEventId": "3",
-      "locationId": "3",
-      "clubId": "1"
-    },
-    {
-      "id": 2,
-      "danceNotes": "costume night",
-      "whenDate": "2019-05-03",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "7.00",
-      "typeOfEventId": "6",
-      "locationId": "2",
-      "clubId": "4"
-    },
-    {
-      "id": 3,
-      "danceNotes": "Wear Pink",
-      "whenDate": "2019-03-27",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "7.00",
-      "typeOfEventId": "1",
-      "locationId": "1",
-      "clubId": "1"
-    }
-  ],
-  "typeOfEvents": [
-    {
-      "id": 1,
-      "nameType": "Club Dance"
-    },
-    {
-      "id": 2,
-      "nameType": "Class"
-    },
-    {
-      "id": 3,
-      "nameType": "Benefit"
-    },
-    {
-      "id": 4,
-      "nameType": "Convention"
-    },
-    {
-      "id": 5,
-      "nameType": "Workshop"
-    },
-    {
-      "id": 6,
-      "nameType": "Special"
     }
   ]
 }

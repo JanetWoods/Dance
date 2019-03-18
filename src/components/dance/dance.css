@@ -26,14 +26,17 @@ flex-direction: column;
     flex-flow: row wrap;
     margin: 15px 15px 15px 15px;
 }
+
+.cancelled{
+    color: firebrick;
+}
 .card{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    flex-flow: row wrap;
-    margin: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+    justify-content:left;
+    width: 75%;
     border-radius: .25em;
-}
-.cancelled{
-    color: firebrick;
 }

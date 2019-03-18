@@ -18,6 +18,8 @@ import NewClubForm from "./club/newClubForm"
 import NewLocationForm from "./location/newLocationForm"
 import DanceEvent from "./dance/danceEvent"
 import Locations from "./location/locations"
+import LocationDetail from "./location/locationDetail"
+
 export default class ApplicationViews extends Component {
     state = {
         dances: [],
@@ -277,6 +279,13 @@ export default class ApplicationViews extends Component {
                         detailedDances={this.detailedDances}
                         clubs={this.state.clubs} />
                 }} />
+                <Route exact path="/locations/:id(\d+)" render={props => {
+                    return <LocationDetail {...props}
+                        users={this.state.users}
+                        states={this.state.states}
+                        locations={this.state.locations}
+                         />
+                }} />
                 <Route exact path="/DanceList" render={props => {
                     return <DanceList
                         dances={this.state.dances}
@@ -329,6 +338,8 @@ export default class ApplicationViews extends Component {
                         states={this.state.states}
                         locations={this.state.locations} />
                 }} />
+
+
 
             </React.Fragment>
         )

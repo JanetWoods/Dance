@@ -11,7 +11,7 @@ export default class DanceEvent extends Component {
 
                 <div key={`dance-${this.props.dance.id}`} className="card">
 
-                    <React.Fragment>
+                    <React.Fragment className="card">
 
                         <button className="list-button"
                             type="button"
@@ -29,13 +29,16 @@ export default class DanceEvent extends Component {
                             Delete
                             </button>
 
-                        <p className="list-item">
-                            {this.props.dance.typeOfEvent.nameType}-- {this.props.dance.club.clubName}<br/>
-                            When: {this.props.dance.whenDate}<br/>
-                            Where: {this.props.dance.location.nameLocation}
-                            $ {this.props.dance.cost}<br/>
-                            -- {this.props.dance.danceNotes} --
-                        </p>
+                        <p className="list-item"> What: <strong> {this.props.dance.typeOfEvent.nameType}</strong>,
+                         When:  <strong> {this.props.dance.whenDate} </strong>
+                         Host: {this.props.dance.club.clubName}<br/>
+
+                           <Link className="nav-link" to={`/locations/${this.props.dance.location.id}`} {...this.props}>
+                            Where:  {this.props.dance.location.nameLocation}
+                           </Link></p>
+                           <p className="list-item"> ${this.props.dance.cost},
+                            Note:  {this.props.dance.danceNotes}</p>
+
                     </React.Fragment>
                 </div>
                 :
