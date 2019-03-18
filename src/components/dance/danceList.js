@@ -16,7 +16,7 @@ export default class DanceList extends Component {
             <Link className="nav-link" to="/dance/new">Add Event</Link>
 
             <h2>Dances</h2>
-    <p>(Note: Club dances are free for club members dancing at their home club.)</p>
+            <p>(Note: Club dances are free for club members dancing at their home club.)</p>
             {
                 this.props.detailedDances.sort(function compare(a, b) {
                     var dateA = new Date(a.whenDate);
@@ -38,15 +38,20 @@ export default class DanceList extends Component {
 
                 <h2>Dances</h2>
         <p>(Note: Club dances are free for club members dancing at their home club.)</p>
-                {
-                    this.props.dances.map(dance => {
+        {
+                this.props.detailedDances.sort(function compare(a, b) {
+                    var dateA = new Date(a.whenDate);
+                    var dateB = new Date(b.whenDate);
+                    return dateA - dateB;
+                }).map(dance => {
 
-                        return <section className="container">
-                            <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
-                        </section>
+                    return <section className="card">
 
-                    })
-                }
+                        <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser}/>
+                    </section>
+
+                })
+            }
             </React.Fragment>
         )
     }

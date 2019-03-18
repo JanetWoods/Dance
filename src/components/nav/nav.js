@@ -23,9 +23,7 @@ render(){
                     <li className="nav-item">
                         <Link className="nav-link" to="/newClub">Add Club</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/newLocation">Add Location</Link>
-                    </li>
+
                     <li className="nav-item">
                         <Link className="nav-link" to="/locations"> Locations </Link>
                     </li>

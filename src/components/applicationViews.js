@@ -19,7 +19,7 @@ import NewLocationForm from "./location/newLocationForm"
 import DanceEvent from "./dance/danceEvent"
 import Locations from "./location/locations"
 import LocationDetail from "./location/locationDetail"
-
+import EditLocationForm  from "./location/editLocationForm"
 export default class ApplicationViews extends Component {
     state = {
         dances: [],
@@ -177,7 +177,7 @@ export default class ApplicationViews extends Component {
             )
     }
     updateLocation = (location) => {
-        return locationMgr.editlocation(location)
+        return locationMgr.updatelocation(location)
             .then(() => {
                 return locationMgr.getAll()
             })
@@ -334,6 +334,13 @@ export default class ApplicationViews extends Component {
                 <Route exact path="/Locations" render={props => {
                     return <Locations {...props}
                         addLocation={this.addLocation}
+                        users={this.state.users}
+                        states={this.state.states}
+                        locations={this.state.locations} />
+                }} />
+                <Route exact path="/Locations/edit/:id(\d+)" render={props => {
+                    return <EditLocationForm  {...props}
+                    updateLocation={this.updateLocation}
                         users={this.state.users}
                         states={this.state.states}
                         locations={this.state.locations} />

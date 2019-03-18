@@ -2,32 +2,47 @@ import React, { Component } from "react"
 import { Link } from 'react-router-dom'
 import LocationCard from "./location"
 
-
-
 export default class Locations extends Component {
-
-
 
     render() {
         return (
+            (sessionStorage.getItem("Type") === "PowerUser") ?
+                <React.Fragment>
 
-            <React.Fragment>
-            {/* <Link className="nav-link" to="/dance/new">Add Event</Link> */}
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/newLocation">Add Location</Link>
+                    </li>
+                    <h2>Locations</h2>
+                    {
+                        this.props.locations.map(location => {
 
-            <h2>Locations</h2>
-            {
-                this.props.locations.map(location => {
-
-                    return <section className="container">
-
-                        <LocationCard key={`location-${this.props.location.id}`}{...this.props} location={location} powerUser={this.powerUser}/>
+                            return <section className="container">
 
 
-                    </section>
+                                <LocationCard key={`location-${this.props.location.id}`}{...this.props} location={location} powerUser={this.powerUser} />
 
-                })
-            }
-        </React.Fragment>
+
+                            </section>
+
+                        })
+                    }
+                </React.Fragment>
+                :
+                <React.Fragment>
+                    {
+                        this.props.locations.map(location => {
+
+                            return <section className="container">
+
+
+                                <LocationCard key={`location-${this.props.location.id}`}{...this.props} location={location} powerUser={this.powerUser} />
+
+
+                            </section>
+
+                        })
+                    }
+                </React.Fragment>
 
         )
     }

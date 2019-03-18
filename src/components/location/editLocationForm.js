@@ -3,6 +3,7 @@ import locationMgr from "../../modules/locationMgr"
 export default class EditLocationForm extends Component {
 
   state = {
+    id:0,
     nameLocation: "",
     street: "",
     city: "",
@@ -16,11 +17,10 @@ export default class EditLocationForm extends Component {
     this.setState(stateToChange);
   }
   editThisLocation = evt => {
-
     evt.preventDefault()
 
       const updatedLocation = {
-        locationId: this.state.locationId,
+        id: this.state.id,
         nameLocation: this.state.nameLocation,
         street: this.state.street,
         city: this.state.city,
@@ -28,7 +28,7 @@ export default class EditLocationForm extends Component {
         stateId: this.state.stateId,
         locationNotes: this.state.locationNotes
       }
-      this.props.editLocation(updatedLocation)
+      this.props.updateLocation(updatedLocation)
         .then(() => {
           this.props.history.push("/locations")
         })
