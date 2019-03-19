@@ -104,17 +104,6 @@ export default class Login extends Component {
                     Sign in
                 </button>
 
-
-                <p>No account yet? Register</p>
-
-                <button className="list-button"
-                    type="button"
-                    onClick={() => {
-                        this.props.history.push('/register')
-                    }} >
-                    Register
-                </button>
-
             </form>
         )
     }

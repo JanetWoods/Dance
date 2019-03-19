@@ -4,6 +4,7 @@ export default class NewEventForm extends Component {
 
   state = {
     whenDate: "",
+    throughDate: "",
     dinnerTime: "19:00",
     danceTime: "19:30",
     endTime: "22:00",
@@ -11,7 +12,8 @@ export default class NewEventForm extends Component {
     danceNotes: "",
     typeOfEventId: 0,
     locationId: 0,
-    clubId:0
+    clubId: 0,
+    eventSite: ""
   }
   handleFieldChange = evt => {
     const stateToChange = {};
@@ -22,8 +24,17 @@ export default class NewEventForm extends Component {
 
     evt.preventDefault()
 
-    if (this.state.danceTime == null) {
+    if (this.state.danceTime === "") {
       alert("When does it start?")
+    }
+    if(this.state.typeOfEventId === "") {
+      alert("Please select a type of event.  Is it a class? A Workshop? What is it?")
+    }
+    if (this.state.clubId === "") {
+      alert("Please select a host club")
+    }
+    if(this.state.whenDate === ""){
+      alert("What day is it?")
     }
     else {
       const newEvent = {
@@ -35,7 +46,9 @@ export default class NewEventForm extends Component {
         cost: this.state.cost,
         typeOfEventId: this.state.typeOfEventId,
         locationId: this.state.typeOfEventId,
-        clubId: this.state.clubId
+        clubId: this.state.clubId,
+        eventSite: this.state.eventSite,
+        throughDate: this.state.throughDate
       }
       this.props.addDance(newEvent)
         .then(() => {
@@ -51,8 +64,26 @@ export default class NewEventForm extends Component {
             <label htmlFor="whenDate">What Day is it?</label>
             <input type="date"
               onChange={this.handleFieldChange}
-              id="whenDate" />
+              id="whenDate"
+              required />
           </div>
+          <div className="form-group">
+            <label htmlFor="throughDate"> End Date (for multi-day events)</label>
+            <input type="date"
+              onChange={this.handleFieldChange}
+              value={this.state.throughDate}
+              id="throughDate"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="eventURL"> Event URL (if applicable)</label>
+            <input type="url"
+              onChange={this.handleFieldChange}
+              value={this.state.eventSite}
+              id="eventSite" />
+          </div>
+
+
           <div className="form-group">
             <label htmlFor="typeOfEventId">Type of Event</label>
             <select
@@ -60,7 +91,7 @@ export default class NewEventForm extends Component {
               id="typeOfEventId"
               onChange={this.handleFieldChange}
               value={this.state.typeOfEventId}>
-              <option value="">Select Event/Dance Type</option>
+              <option required value="">Select Event/Dance Type</option>
               {this.props.typeOfEvents.map(typeE => (
                 <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
               ))}
@@ -73,8 +104,8 @@ export default class NewEventForm extends Component {
               name="location"
               id="locationId"
               onChange={this.handleFieldChange}
+              required
               value={this.state.locationId}>
-
               <option value="">Select Location</option>
               {this.props.locations.map(loc => (
                 <option key={loc.id} id={loc.id} value={loc.id}> {loc.nameLocation} </option>
@@ -89,7 +120,8 @@ export default class NewEventForm extends Component {
               name="club"
               id="clubId"
               onChange={this.handleFieldChange}
-              value={this.state.clubId}>
+              value={this.state.clubId}
+              required>
 
               <option value="">Select club</option>
               {this.props.clubs.map(club => (

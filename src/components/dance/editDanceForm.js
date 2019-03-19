@@ -6,13 +6,15 @@ export default class NewEventForm extends Component {
   state = {
     id: 0,
     whenDate: "",
+    throughDate:"",
     dinnerTime: "19:00",
     danceTime: "19:30",
     endTime: "22:00",
     cost: "7.00",
     danceNotes: "",
     typeOfEventId: 0,
-    locationId: 0
+    locationId: 0,
+    eventSite:""
   }
   handleFieldChange = evt => {
     const stateToChange = {};
@@ -26,13 +28,15 @@ export default class NewEventForm extends Component {
         id: this.state.id,
         danceNotes: this.state.danceNotes,
         whenDate: this.state.whenDate,
+        throughDate: this.state.throughDate,
         dinnerTime: this.state.dinnerTime,
         danceTime: this.state.danceTime,
         endTime: this.state.endTime,
         cost: this.state.cost,
         typeOfEventId: this.state.typeOfEventId,
         locationId: this.state.locationId,
-        clubId: this.state.clubId
+        clubId: this.state.clubId,
+        eventSite: this.state.eventSite
       }
       this.props.updateDance(updatedEvent)
         .then(() => {
@@ -70,6 +74,23 @@ export default class NewEventForm extends Component {
               id="whenDate"
                />
           </div>
+
+          <div className="form-group">
+            <label htmlFor="throughDate"> End Date (for multi-day events)</label>
+            <input type="date"
+              onChange={this.handleFieldChange}
+              value={this.state.throughDate}
+              id="throughDate"
+               />
+          </div>
+          <div className="form-group">
+            <label htmlFor="eventURL"> Event URL (if applicable)</label>
+            <input type="url"
+              onChange={this.handleFieldChange}
+              value={this.state.eventSite}
+              id="eventSite" />
+          </div>
+
           <div className="form-group">
             <label htmlFor="typeOfEventId">Type of Event</label>
             <select

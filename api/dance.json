@@ -1,26 +1,17 @@
 {
   "dances": [
     {
-      "danceNotes": "",
-      "whenDate": "2019-03-23",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "5",
-      "typeOfEventId": "2",
-      "locationId": "2",
-      "clubId": "3",
-      "id": 1
-    },
-    {
+      "id": 2,
       "danceNotes": "Ross Family Funeral",
       "whenDate": "2019-04-06",
+      "throughDate": "2019-04-06",
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "10",
       "typeOfEventId": "3",
       "locationId": "3",
       "clubId": "2",
-      "id": 2
+      "eventSite": "https://68nsdc.com/index.html"
     }
   ],
   "typeOfEvents": [
@@ -60,17 +51,6 @@
     }
   ],
   "users": [
-    {
-      "id": 1,
-      "username": "Janet",
-      "password": "123",
-      "typeOfUserId": 2,
-      "nameFirst": "Janet",
-      "nameLast": "Woods",
-      "clubId": "3",
-      "phone": "859-360-9552",
-      "email": "janetnwoods@gmail.com"
-    },
     {
       "id": 2,
       "username": "Rob",
@@ -149,17 +129,6 @@
       "otherOfficerId": 6,
       "regionId": 1,
       "usualLocationId": 2
-    },
-    {
-      "clubName": "Do Si Dos",
-      "stateId": "KY",
-      "presidentId": "",
-      "vicePresidentId": "",
-      "secretaryId": "",
-      "otherOfficerId": "",
-      "regionId": "",
-      "usualLocationId": "",
-      "id": 3
     }
   ],
   "regions": [
@@ -227,6 +196,15 @@
       "stateId": "KY",
       "locationNotes": "Use entrance under the green awning.",
       "id": 6
+    },
+    {
+      "nameLocation": "Cobb Galleria Convention Centre",
+      "street": "2 Galleria Pkwy SE",
+      "city": "Atlanta",
+      "zip": "",
+      "stateId": "GA",
+      "locationNotes": "",
+      "id": 7
     }
   ],
   "states": [

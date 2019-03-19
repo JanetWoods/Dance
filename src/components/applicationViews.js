@@ -185,12 +185,6 @@ export default class ApplicationViews extends Component {
                 locations: locations
             }))
     }
-    getDancesWithClubs = () => {
-        return danceMgr.getDanceWithClub()
-            .then(dances => this.setState({
-                dances: dances
-            }))
-    }
     componentDidMount() {
         const newState = {}
         console.log("component mounted, Application View.")
