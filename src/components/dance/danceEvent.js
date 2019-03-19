@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Link } from 'react-router-dom'
 import ClubCard from "../club/clubCard"
 import "./dance.css"
+import Moment from 'react-dom'
 
 export default class DanceEvent extends Component {
     powerUser = sessionStorage.getItem("Type")
@@ -16,7 +17,7 @@ export default class DanceEvent extends Component {
 
                     <p className="list-item"> What: <strong> {this.props.dance.typeOfEvent.nameType}</strong>,
                         When:<strong className="list-item"> {this.props.dance.whenDate} </strong>.....
-                         begin: {this.props.dance.dinnerTime} .....<span>  {this.props.dance.throughDate}  </span>
+                         begin: moment({this.props.dance.dinnerTime}) .....<span>  {this.props.dance.throughDate}  </span>
                          <p>
 
 

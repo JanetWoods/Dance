@@ -27,6 +27,20 @@
       "eventSite": "",
       "throughDate": "2019-04-07",
       "id": 4
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-03-04",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 1,
+      "locationId": 1,
+      "clubId": 1,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 5
     }
   ],
   "typeOfEvents": [
