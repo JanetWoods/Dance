@@ -20,7 +20,9 @@ import DanceEvent from "./dance/danceEvent"
 import Locations from "./location/locations"
 import LocationDetail from "./location/locationDetail"
 import EditLocationForm  from "./location/editLocationForm"
-import isEmpty from "./isEmpty"
+import sortIt from "./compare"
+import EditClubForm from "./club/editClubForm"
+import Clubs from "./club/clubList"
 export default class ApplicationViews extends Component {
     state = {
         dances: [],
@@ -35,6 +37,8 @@ export default class ApplicationViews extends Component {
 
     aUserId = this.props.activeUser.id
     userPower = this.props.userPower
+
+
 
     addDance = (event) => {
         return danceMgr.addDance(event)
@@ -131,7 +135,7 @@ export default class ApplicationViews extends Component {
             )
     }
     updateClub = (club) => {
-        return clubMgr.editclub(club)
+        return clubMgr.editClub(club)
             .then(() => {
                 return clubMgr.getAll()
             })
@@ -199,6 +203,9 @@ export default class ApplicationViews extends Component {
             .then(clubs => newState.clubs = clubs)
 
             .then(() => eventTypeMgr.getAll())
+            // .then((typeOfEvents) => {
+            //     typeOfEvents.sortIt(sortIt(typeOfEvents.nameType))
+            // })
             .then(typeOfEvents => newState.typeOfEvents = typeOfEvents)
 
             .then(() => locationMgr.getAll())
@@ -341,6 +348,22 @@ export default class ApplicationViews extends Component {
                         states={this.state.states}
                         locations={this.state.locations} />
                 }} />
+                <Route exact path="/clubs/edit/:id(\d+)" render={props => {
+                    return <EditClubForm  {...props}
+                        updateClub={this.updateClub}
+                        users={this.state.users}
+                        states={this.state.states}
+                        locations={this.state.locations} />
+                }} />
+                <Route exact path="/clubs" render={props => {
+                    return <Clubs  {...props}
+                        updateClub={this.updateClub}
+                        users={this.state.users}
+                        states={this.state.states}
+                        locations={this.state.locations}
+                        clubs={this.state.clubs} />
+                }} />
+
 
 
 

@@ -159,8 +159,7 @@
       "secretaryId": 5,
       "otherOfficerId": 6,
       "regionId": 1,
-      "usualLocationId": 1,
-      "zip": " "
+      "usualLocationId": 1
     },
     {
       "id": 2,
@@ -185,6 +184,17 @@
       "regionId": 1,
       "usualLocationId": 2,
       "zip": " "
+    },
+    {
+      "id": 4,
+      "clubName": "Barnlofters",
+      "stateId": "TN",
+      "presidentId": null,
+      "vicePresidentId": null,
+      "secretaryId": null,
+      "otherOfficerId": null,
+      "regionId": null,
+      "usualLocationId": null
     }
   ],
   "regions": [
