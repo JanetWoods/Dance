@@ -99,7 +99,7 @@ export default class NewLocationForm extends Component {
           <button
             type="submt"
             onClick={this.makeNewLocation}
-            className="list-button">Add Location
+            className="list-button">Add
               </button>
 
         </form>

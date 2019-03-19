@@ -17,16 +17,15 @@ export default class DanceEvent extends Component {
 
                     <p className="list-item"> What: <strong> {this.props.dance.typeOfEvent.nameType}</strong>,
                         When:<strong className="list-item"> {this.props.dance.whenDate} </strong>.....
-                         begin: moment({this.props.dance.dinnerTime}) .....<span>  {this.props.dance.throughDate}  </span>
+                          ({this.props.dance.dinnerTime}) .....<span>  {this.props.dance.throughDate}  </span>
                          <p>
 
 
-                        {this.props.dance.club.clubName}</p>
+                      {this.props.dance.club.clubName}</p>
                            <br />
 
-                            <Link className="nav-link" to={`/locations/${this.props.dance.location.id}`} {...this.props}>
-                                Where:  {this.props.dance.location.nameLocation}
-                            </Link></p>
+                         <span>Where:<Link className="nav-link" to={`/locations/${this.props.dance.location.id}`} {...this.props}>
+                                  {this.props.dance.location.nameLocation}</Link></span></p>
 
                             <a href={`${this.props.dance.eventSite}`} target="new">{this.props.dance.eventSite}
                             </a>

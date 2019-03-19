@@ -46,43 +46,47 @@
   "typeOfEvents": [
     {
       "id": 1,
-      "nameType": "Square Dance"
-    },
-    {
-      "id": 2,
-      "nameType": "Square Dane Class"
-    },
-    {
-      "id": 3,
       "nameType": "Benefit"
     },
     {
-      "id": 4,
-      "nameType": "Convention"
-    },
-    {
-      "id": 5,
-      "nameType": "Workshop"
-    },
-    {
-      "id": 6,
-      "nameType": "Special"
-    },
-    {
-      "id": 7,
+      "id": 2,
       "nameType": "Contra Dance"
     },
     {
-      "id": 7,
-      "nameType": "Square Dance Student's Halfway Dance "
+      "id": 3,
+      "nameType": "Convention"
+    },
+    {
+      "id": 4,
+      "nameType": "Cruise"
+    },
+    {
+      "id": 5,
+      "nameType": "Special"
+    },
+    {
+      "id": 6,
+      "nameType": "Square Dance"
     },
     {
       "id": 7,
-      "nameType": "Square Dance Class Graduation Dance"
+      "nameType": "Square Dance Class"
     },
     {
-      "id": 7,
+      "id": 8,
+      "nameType": "Square Dance, Student's Halfway Dance "
+    },
+    {
+      "id": 9,
+      "nameType": "Square Dance, Class Graduation Dance"
+    },
+    {
+      "id": 10,
       "nameType": "Square and Rounds"
+    },
+    {
+      "id": 11,
+      "nameType": "Workshop"
     }
   ],
   "typeOfUser": [
@@ -201,7 +205,7 @@
     },
     {
       "id": 4,
-      "clubName": "Barnlofters",
+      "clubName": "Music City Singles",
       "stateId": "TN",
       "presidentId": null,
       "vicePresidentId": null,
@@ -209,6 +213,94 @@
       "otherOfficerId": null,
       "regionId": null,
       "usualLocationId": null
+    },
+    {
+      "clubName": "Barnlofters",
+      "stateId": "TN",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 5
+    },
+    {
+      "clubName": "Flat Rock Squares",
+      "stateId": "TN",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 6
+    },
+    {
+      "clubName": "Nashville A Club",
+      "stateId": "TN",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 7
+    },
+    {
+      "clubName": "Paris Squares",
+      "stateId": "TN",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 8
+    },
+    {
+      "clubName": "Plus Unlimited",
+      "stateId": "TN",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 9
+    },
+    {
+      "clubName": "Rhapsody Rounds",
+      "stateId": "TN",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 10
+    },
+    {
+      "clubName": "Tennessee Walkers",
+      "stateId": "TN",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 11
+    },
+    {
+      "clubName": "Wilson County Grand Squares",
+      "stateId": "TN",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 12
     }
   ],
   "regions": [
@@ -285,6 +377,78 @@
       "zip": "30339",
       "stateId": "GA",
       "locationNotes": ""
+    },
+    {
+      "nameLocation": "Hermitage Presbyterian",
+      "street": "421 Highland View Drive",
+      "city": "Hermitage",
+      "zip": "37076",
+      "stateId": "TN",
+      "locationNotes": "",
+      "id": 8
+    },
+    {
+      "nameLocation": "Carpenters SQ Fellowship Hall",
+      "street": "3016 Nolensville Road",
+      "city": "Nashville",
+      "zip": "37211",
+      "stateId": "TN",
+      "locationNotes": "",
+      "id": 9
+    },
+    {
+      "nameLocation": "Christ Lutheran",
+      "street": "299 Haywood Lane",
+      "city": "Nashville",
+      "zip": "37211",
+      "stateId": "TN",
+      "locationNotes": "",
+      "id": 10
+    },
+    {
+      "nameLocation": "Woodmont Baptist",
+      "street": "2100 Woodmont Blvd",
+      "city": "Nashville",
+      "zip": "",
+      "stateId": "TN",
+      "locationNotes": "North Entrance",
+      "id": 11
+    },
+    {
+      "nameLocation": "Central Community Services Center",
+      "street": "55 Jones Bend Rd. Extended",
+      "city": "Paris",
+      "zip": "38242",
+      "stateId": "TN",
+      "locationNotes": "",
+      "id": 12
+    },
+    {
+      "nameLocation": "Christ Columbia",
+      "street": "707 Lion Street",
+      "city": "Columbia",
+      "zip": "38401",
+      "stateId": "TN",
+      "locationNotes": "",
+      "id": 13
+    },
+    {
+      "nameLocation": "Central Christian ",
+      "street": "404 E. Main Street",
+      "city": "Murfreesboro",
+      "zip": "37130",
+      "stateId": "TN",
+      "locationNotes": "",
+      "id": 14
+    },
+    {
+      "nameLocation": "Gladeville Community Center",
+      "street": "95 McCreary Road",
+      "city": "Lebanon",
+      "zip": "37090",
+      "stateId": "TN",
+      "locationNotes": "",
+      "id": 15
     }
   ],
   "states": [
