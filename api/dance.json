@@ -1,20 +1,6 @@
 {
   "dances": [
     {
-      "id": 2,
-      "danceNotes": "Ross Family Funeral",
-      "whenDate": "2019-04-06",
-      "throughDate": "",
-      "dinnerTime": "19:00",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "10",
-      "typeOfEventId": "3",
-      "locationId": "3",
-      "clubId": "2",
-      "eventSite": ""
-    },
-    {
       "id": 3,
       "danceNotes": "discount if registered before May 1st.",
       "whenDate": "2019-06-26",
@@ -23,20 +9,34 @@
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "75",
-      "typeOfEventId": "4",
-      "locationId": "7",
-      "clubId": "3",
-      "eventSite": ""
+      "typeOfEventId": 4,
+      "locationId": 7,
+      "clubId": 3,
+      "eventSite": "https://68nsdc.com/"
+    },
+    {
+      "danceNotes": "Wear Pink",
+      "whenDate": "2019-04-06",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "10",
+      "typeOfEventId": 6,
+      "locationId": 6,
+      "clubId": 1,
+      "eventSite": "",
+      "throughDate": "2019-04-07",
+      "id": 4
     }
   ],
   "typeOfEvents": [
     {
       "id": 1,
-      "nameType": "Club Dance"
+      "nameType": "Square Dance"
     },
     {
       "id": 2,
-      "nameType": "Class"
+      "nameType": "Square Dane Class"
     },
     {
       "id": 3,
@@ -53,6 +53,22 @@
     {
       "id": 6,
       "nameType": "Special"
+    },
+    {
+      "id": 7,
+      "nameType": "Contra Dance"
+    },
+    {
+      "id": 7,
+      "nameType": "Square Dance Student's Halfway Dance "
+    },
+    {
+      "id": 7,
+      "nameType": "Square Dance Class Graduation Dance"
+    },
+    {
+      "id": 7,
+      "nameType": "Square and Rounds"
     }
   ],
   "typeOfUser": [
@@ -143,7 +159,8 @@
       "secretaryId": 5,
       "otherOfficerId": 6,
       "regionId": 1,
-      "usualLocationId": 1
+      "usualLocationId": 1,
+      "zip": " "
     },
     {
       "id": 2,
@@ -154,18 +171,20 @@
       "secretaryId": 5,
       "otherOfficerId": 6,
       "regionId": 1,
-      "usualLocationId": 2
+      "usualLocationId": 2,
+      "zip": " "
     },
     {
+      "id": 3,
       "clubName": "Atlanta Peaches",
       "stateId": "GA",
-      "presidentId": "",
-      "vicePresidentId": "",
-      "secretaryId": "",
-      "otherOfficerId": "",
-      "regionId": "",
-      "usualLocationId": "",
-      "id": 3
+      "presidentId": 3,
+      "vicePresidentId": 4,
+      "secretaryId": 5,
+      "otherOfficerId": 6,
+      "regionId": 1,
+      "usualLocationId": 2,
+      "zip": " "
     }
   ],
   "regions": [
@@ -235,13 +254,13 @@
       "id": 6
     },
     {
+      "id": 7,
       "nameLocation": "Cobb Galleria Convention Centre",
       "street": "2 Galleria Pkwy SE",
       "city": "Atlanta",
-      "zip": "",
+      "zip": "30339",
       "stateId": "GA",
-      "locationNotes": "",
-      "id": 7
+      "locationNotes": ""
     }
   ],
   "states": [

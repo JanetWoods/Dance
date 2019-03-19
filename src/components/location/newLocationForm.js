@@ -28,6 +28,7 @@ export default class NewLocationForm extends Component {
         city: this.state.city,
         zip: this.state.zip,
         stateId: this.state.stateId,
+        zip: this.state.zip,
         locationNotes: this.state.locationNotes
       }
       this.props.addLocation(newLocation)
@@ -76,6 +77,15 @@ export default class NewLocationForm extends Component {
                 <option key={state.id} id={state.id} value={state.id}>{state.stateLong}</option>
               ))}
             </select>
+          </div>
+
+
+          <div className="form-group">
+            <label htmlFor="zip"> Zip </label>
+            <input type="text"
+              onChange={this.handleFieldChange}
+              id="zip"
+              value={this.state.zip}/>
           </div>
 
           <div className="form-group">

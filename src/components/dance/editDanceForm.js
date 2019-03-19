@@ -25,7 +25,7 @@ export default class NewEventForm extends Component {
     evt.preventDefault()
 
       const updatedEvent = {
-        id: this.state.id,
+        id: parseInt(this.state.id),
         danceNotes: this.state.danceNotes,
         whenDate: this.state.whenDate,
         throughDate: this.state.throughDate,
@@ -33,9 +33,9 @@ export default class NewEventForm extends Component {
         danceTime: this.state.danceTime,
         endTime: this.state.endTime,
         cost: this.state.cost,
-        typeOfEventId: this.state.typeOfEventId,
-        locationId: this.state.locationId,
-        clubId: this.state.clubId,
+        typeOfEventId: parseInt(this.state.typeOfEventId),
+        locationId: parseInt(this.state.locationId),
+        clubId: parseInt(this.state.clubId),
         eventSite: this.state.eventSite
       }
       this.props.updateDance(updatedEvent)
@@ -49,7 +49,7 @@ export default class NewEventForm extends Component {
     danceMgr.getDance(this.props.match.params.id)
       .then((dance) => {
         this.setState({
-          id: dance.id,
+          id: parseInt(dance.id),
           danceNotes: dance.danceNotes,
           whenDate: dance.whenDate,
           dinnerTime: dance.dinnerTime,

@@ -25,10 +25,10 @@ export default class LocationDetail extends Component {
         return (
 
             <div key={`location-${this.state.location.id}`} className="location-card">
-                <strong>{this.state.location.nameLocation}</strong>
-                {this.state.location.street} , ---- {this.state.location.city},  {this.state.location.stateId}<br/>
-
-                 {this.state.location.locationNotes}<br/>
+               <p>   <strong>{this.state.location.nameLocation} </strong>,
+                {this.state.location.street}, {this.state.location.city},  {this.state.location.stateId}, {this.state.location.zip}<br/>
+                </p>
+                <p> {this.state.location.locationNotes}</p>
 
 
             </div>

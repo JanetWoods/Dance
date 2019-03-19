@@ -20,6 +20,7 @@ import DanceEvent from "./dance/danceEvent"
 import Locations from "./location/locations"
 import LocationDetail from "./location/locationDetail"
 import EditLocationForm  from "./location/editLocationForm"
+import isEmpty from "./isEmpty"
 export default class ApplicationViews extends Component {
     state = {
         dances: [],
@@ -259,7 +260,8 @@ export default class ApplicationViews extends Component {
                         locations={this.state.locations}
                         typeOfEvents={this.state.typeOfEvents}
                         userPower={this.props.userPower}
-                        clubs={this.state.clubs} />
+                        clubs={this.state.clubs}
+                        isEmpty={this.isEmpty}/>
                 }} />
                 <Route exact path="/dances/edit/:id(\d+)" render={props => {
                     return <EditDanceForm {...props} njnm
