@@ -18,7 +18,7 @@ export default {
     },
     getAll() {
         return fetch(`${settings.remoteURL}/typeOfEvents`).then(e => e.json())
-      },
+        },
     addType(type) {
         return fetch(`${settings.remoteURL}/typeOfEvents`,{
             method: "POST",

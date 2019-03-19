@@ -57,7 +57,7 @@ export default class Login extends Component {
                         if (!user.length) {
                             alert("Wrong username or password")
                         } else {
-                            let typeOfUser = null
+                            let typeOfUser = ""
                             if (parseInt(user[0].typeOfUserId) === 2) {
                                 typeOfUser = "PowerUser"
                                 sessionStorage.setItem("credentials", parseInt(user[0].id))
@@ -65,7 +65,7 @@ export default class Login extends Component {
                                 sessionStorage.setItem("username", user[0].username)
                             }
                             if (parseInt(user[0].typeOfUserId) === 1) {
-                                typeOfUser = null
+                                typeOfUser = "regular"
                                 sessionStorage.setItem("credentials", parseInt(user[0].id))
                                 sessionStorage.setItem("username", user[0].username)
                                 sessionStorage.setItem("Type", typeOfUser)
@@ -102,17 +102,6 @@ export default class Login extends Component {
 
                 <button type="submit" onClick={this.handleLogin}>
                     Sign in
-                </button>
-
-
-                <p>No account yet? Register</p>
-
-                <button className="list-button"
-                    type="button"
-                    onClick={() => {
-                        this.props.history.push('/register')
-                    }} >
-                    Register
                 </button>
 
             </form>

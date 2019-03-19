@@ -1,4 +1,76 @@
 {
+  "dances": [
+    {
+      "id": 3,
+      "danceNotes": "discount if registered before May 1st.",
+      "whenDate": "2019-06-26",
+      "throughDate": "",
+      "dinnerTime": "18:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "75",
+      "typeOfEventId": 4,
+      "locationId": 7,
+      "clubId": 3,
+      "eventSite": "https://68nsdc.com/"
+    },
+    {
+      "danceNotes": "Wear Pink",
+      "whenDate": "2019-04-06",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "10",
+      "typeOfEventId": 6,
+      "locationId": 6,
+      "clubId": 1,
+      "eventSite": "",
+      "throughDate": "2019-04-07",
+      "id": 4
+    }
+  ],
+  "typeOfEvents": [
+    {
+      "id": 1,
+      "nameType": "Square Dance"
+    },
+    {
+      "id": 2,
+      "nameType": "Square Dane Class"
+    },
+    {
+      "id": 3,
+      "nameType": "Benefit"
+    },
+    {
+      "id": 4,
+      "nameType": "Convention"
+    },
+    {
+      "id": 5,
+      "nameType": "Workshop"
+    },
+    {
+      "id": 6,
+      "nameType": "Special"
+    },
+    {
+      "id": 7,
+      "nameType": "Contra Dance"
+    },
+    {
+      "id": 7,
+      "nameType": "Square Dance Student's Halfway Dance "
+    },
+    {
+      "id": 7,
+      "nameType": "Square Dance Class Graduation Dance"
+    },
+    {
+      "id": 7,
+      "nameType": "Square and Rounds"
+    }
+  ],
   "typeOfUser": [
     {
       "id": 1,
@@ -10,17 +82,6 @@
     }
   ],
   "users": [
-    {
-      "id": 1,
-      "username": "Janet",
-      "password": "123",
-      "typeOfUserId": 2,
-      "nameFirst": "Janet",
-      "nameLast": "Woods",
-      "clubId": 1,
-      "phone": "859-360-9552",
-      "email": "janetnwoods@gmail.com"
-    },
     {
       "id": 2,
       "username": "Rob",
@@ -75,6 +136,17 @@
       "clubId": "2",
       "phone": "000-123-1111",
       "email": "nunya@gmail.com"
+    },
+    {
+      "id": 7,
+      "username": "Janet",
+      "password": "123",
+      "typeOfUserId": 2,
+      "nameFirst": "",
+      "nameLast": "",
+      "clubId": "1",
+      "phone": "8593609552",
+      "email": "janetnwoods@gmail.com"
     }
   ],
   "clubs": [
@@ -98,29 +170,31 @@
       "secretaryId": 5,
       "otherOfficerId": 6,
       "regionId": 1,
-      "usualLocationId": 2
+      "usualLocationId": 2,
+      "zip": " "
     },
     {
-      "clubName": "Do Si Dos",
-      "stateId": "KY",
-      "presidentId": "",
-      "vicePresidentId": "",
-      "secretaryId": "",
-      "otherOfficerId": "",
-      "regionId": "",
-      "usualLocationId": "",
-      "id": 3
+      "id": 3,
+      "clubName": "Atlanta Peaches",
+      "stateId": "GA",
+      "presidentId": 3,
+      "vicePresidentId": 4,
+      "secretaryId": 5,
+      "otherOfficerId": 6,
+      "regionId": 1,
+      "usualLocationId": 2,
+      "zip": " "
     },
     {
-      "clubName": "Down Unders",
-      "stateId": "KY",
-      "presidentId": "",
-      "vicePresidentId": "",
-      "secretaryId": "",
-      "otherOfficerId": "",
-      "regionId": "",
-      "usualLocationId": "",
-      "id": 4
+      "id": 4,
+      "clubName": "Barnlofters",
+      "stateId": "TN",
+      "presidentId": null,
+      "vicePresidentId": null,
+      "secretaryId": null,
+      "otherOfficerId": null,
+      "regionId": null,
+      "usualLocationId": null
     }
   ],
   "regions": [
@@ -138,7 +212,7 @@
     {
       "id": 1,
       "nameLocation": "NicholasVille Rec Center",
-      "street": "xxstreet",
+      "street": "Third Street",
       "city": "Nicholasville",
       "zip": "44440",
       "stateId": "KY",
@@ -161,6 +235,42 @@
       "stateId": "KY",
       "locationNotes": "Use side parking lot or you won't see the entrance to the hall.",
       "id": 3
+    },
+    {
+      "nameLocation": "50+ Senior Center",
+      "street": "953 Clark Street",
+      "city": "Clarksville",
+      "zip": "",
+      "stateId": "TN",
+      "locationNotes": "",
+      "id": 4
+    },
+    {
+      "nameLocation": "Downtown Georgetown",
+      "street": "Main Street & Broadway",
+      "city": "Lexington",
+      "zip": "",
+      "stateId": "KY",
+      "locationNotes": "",
+      "id": 5
+    },
+    {
+      "nameLocation": "Lexington First Baptist Church",
+      "street": "500 Wickamore Street",
+      "city": "Lexington",
+      "zip": "",
+      "stateId": "KY",
+      "locationNotes": "Use entrance under the green awning.",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "nameLocation": "Cobb Galleria Convention Centre",
+      "street": "2 Galleria Pkwy SE",
+      "city": "Atlanta",
+      "zip": "30339",
+      "stateId": "GA",
+      "locationNotes": ""
     }
   ],
   "states": [
@@ -359,56 +469,6 @@
     {
       "id": "WY",
       "stateLong": "Wyoming"
-    }
-  ],
-  "dances": [
-    {
-      "danceNotes": "50's style",
-      "whenDate": "2019-04-06",
-      "danceTime": "15:30",
-      "endTime": "22:00",
-      "cost": "7.00",
-      "typeOfEventId": "3",
-      "locationId": "3",
-      "clubId": "1",
-      "id": 1
-    },
-    {
-      "danceNotes": "costume night",
-      "whenDate": "2019-04-06",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "7.00",
-      "typeOfEventId": "6",
-      "locationId": "6",
-      "clubId": "4",
-      "id": 2
-    }
-  ],
-  "typeOfEvents": [
-    {
-      "id": 1,
-      "nameType": "Club Dance"
-    },
-    {
-      "id": 2,
-      "nameType": "Class"
-    },
-    {
-      "id": 3,
-      "nameType": "Benefit"
-    },
-    {
-      "id": 4,
-      "nameType": "Convention"
-    },
-    {
-      "id": 5,
-      "nameType": "Workshop"
-    },
-    {
-      "id": 6,
-      "nameType": "Special"
     }
   ]
 }

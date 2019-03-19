@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
-import ClubCard from "./clubCard"
+import LocationCard from "./location"
 
-export default class Clubs extends Component {
-    powerUser = sessionStorage.getItem("Type")
+export default class Locations extends Component {
 
     render() {
         return (
@@ -11,16 +10,16 @@ export default class Clubs extends Component {
                 <React.Fragment>
 
                     <li className="nav-item">
-                        <Link className="nav-link" to="/newClub">Add Club</Link>
+                        <Link className="nav-link" to="/newLocation">Add Location</Link>
                     </li>
-                    <h2>Clubs</h2>
+                    <h2>Locations</h2>
                     {
-                        this.props.clubs.map(club => {
+                        this.props.locations.map(location => {
 
                             return <section className="container">
 
 
-                                <ClubCard key={`club-${club.id}`}{...this.props} club={club} powerUser={this.powerUser} />
+                                <LocationCard key={`location-${this.props.location.id}`}{...this.props} location={location} powerUser={this.powerUser} />
 
 
                             </section>
@@ -31,12 +30,12 @@ export default class Clubs extends Component {
                 :
                 <React.Fragment>
                     {
-                        this.props.clubs.map(club => {
+                        this.props.locations.map(location => {
 
                             return <section className="container">
 
 
-                                <clubCard key={`club-${club.id}`}{...this.props} club={club} powerUser={this.powerUser} />
+                                <LocationCard key={`location-${this.props.location.id}`}{...this.props} location={location} powerUser={this.powerUser} />
 
 
                             </section>

@@ -21,10 +21,11 @@ render(){
                         <Link className="nav-link" to="/DanceList">Dances</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/newClub">Add Club</Link>
+                        <Link className="nav-link" to="/locations"> Locations </Link>
                     </li>
+
                     <li className="nav-item">
-                        <Link className="nav-link" to="/newLocation">Add Location</Link>
+                        <Link className="nav-link" to="/clubs"> Clubs </Link>
                     </li>
 
                     <li className="nav-item">

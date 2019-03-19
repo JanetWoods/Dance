@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-
-export default class NewLocationForm extends Component {
+import locationMgr from "../../modules/locationMgr"
+export default class EditLocationForm extends Component {
 
   state = {
+    id: 0,
     nameLocation: "",
     street: "",
     city: "",
@@ -15,27 +16,38 @@ export default class NewLocationForm extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   }
-  makeNewLocation = evt => {
-
+  editThisLocation = evt => {
     evt.preventDefault()
-    if(this.state.nameLocation === " "){
-        alert("What do people call that place?")
+
+    const updatedLocation = {
+      id: this.state.id,
+      nameLocation: this.state.nameLocation,
+      street: this.state.street,
+      city: this.state.city,
+      zip: this.state.zip,
+      stateId: this.state.stateId,
+      locationNotes: this.state.locationNotes
     }
-    else{
-      const newLocation = {
-        nameLocation: this.state.nameLocation,
-        street: this.state.street,
-        city: this.state.city,
-        zip: this.state.zip,
-        stateId: this.state.stateId,
-        zip: this.state.zip,
-        locationNotes: this.state.locationNotes
-      }
-      this.props.addLocation(newLocation)
-        .then(() => {
-          this.props.history.push("/")
+    this.props.updateLocation(updatedLocation)
+      .then(() => {
+        this.props.history.push("/locations")
+      })
+
+  }
+
+  componentDidMount(location) {
+    locationMgr.get(this.props.match.params.id)
+      .then((location) => {
+        this.setState({
+          id: location.id,
+          nameLocation: location.nameLocation,
+          street: location.street,
+          city: location.city,
+          zip: location.zip,
+          stateId: location.stateId,
+          locationNotes: location.locationNotes
         })
-    }
+      })
   }
   render() {
     return (
@@ -46,23 +58,23 @@ export default class NewLocationForm extends Component {
             <input type="text"
               onChange={this.handleFieldChange}
               id="nameLocation"
-              value={this.state.nameLocation}/>
-              </div>
+              value={this.state.nameLocation} />
+          </div>
 
           <div className="form-group">
             <label htmlFor="street">Street Address</label>
             <input type="text"
               onChange={this.handleFieldChange}
               id="street"
-              value={this.state.street}/>
-            </div>
+              value={this.state.street} />
+          </div>
 
           <div className="form-group">
             <label htmlFor="city"> City </label>
             <input type="text"
               onChange={this.handleFieldChange}
               id="city"
-              value={this.state.city}/>
+              value={this.state.city} />
           </div>
 
           <div className="form-group">
@@ -79,13 +91,12 @@ export default class NewLocationForm extends Component {
             </select>
           </div>
 
-
           <div className="form-group">
             <label htmlFor="zip"> Zip </label>
             <input type="text"
               onChange={this.handleFieldChange}
               id="zip"
-              value={this.state.zip}/>
+              value={this.state.zip} />
           </div>
 
           <div className="form-group">
@@ -93,13 +104,13 @@ export default class NewLocationForm extends Component {
             <input type="text"
               onChange={this.handleFieldChange}
               id="locationNotes"
-              value={this.state.locationNotes}/>
-            </div>
+              value={this.state.locationNotes} />
+          </div>
 
           <button
             type="submt"
-            onClick={this.makeNewLocation}
-            className="list-button">Add Location
+            onClick={this.editThisLocation}
+            className="list-button">Save
               </button>
 
         </form>

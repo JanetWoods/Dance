@@ -17,20 +17,45 @@ flex-direction: column;
     padding: 0px 5px 6px 5px;
     height: 1.7em;
     width: 6em;
-    margin-left: 20px;
     border-radius: .20em;
 }
-.list-item{
+.location-link{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: inherit;
     flex-flow: row wrap;
-    margin: 15px 15px 15px 15px;
+    margin-right: 5px;
+    width: 20%;
+}
+
+.cancelled{
+    color: firebrick;
 }
 .card{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    flex-flow: row wrap;
-    margin: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    justify-content:left;
+    width: 95%;
     border-radius: .25em;
+}
+.danceCard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-top: 15px;
+    justify-content:left;
+    width: 90%;
+    border-radius: .25em;
+    border-color: black;
+}
+.list-item{
+display: flex;
+flex-wrap: wrap;
+flex-flow: row wrap;
+margin-left: 15px;
+margin-right: 25px;
+justify-content:left;
 }
