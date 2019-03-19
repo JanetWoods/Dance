@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import DanceEvent from "./danceEvent"
 import { Link } from 'react-router-dom'
-
+import "./dance.css"
 
 
 export default class DanceList extends Component {
@@ -13,7 +13,7 @@ export default class DanceList extends Component {
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
             <React.Fragment>
-            <Link className="nav-link" to="/dance/new">Add Event</Link>
+            <Link className="location-link" to="/dance/new">Add Event</Link>
 
             <h2>Dances</h2>
             <p>(Note: Club dances are free for club members dancing at their home club.)</p>

@@ -12,7 +12,7 @@ export default class NewEventForm extends Component {
     danceNotes: "",
     typeOfEventId: 0,
     locationId: 0,
-    clubId: 0,
+    clubId: 1,
     eventSite: ""
   }
   handleFieldChange = evt => {

@@ -4,14 +4,29 @@
       "id": 2,
       "danceNotes": "Ross Family Funeral",
       "whenDate": "2019-04-06",
-      "throughDate": "2019-04-06",
+      "throughDate": "",
+      "dinnerTime": "19:00",
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "10",
       "typeOfEventId": "3",
       "locationId": "3",
       "clubId": "2",
-      "eventSite": "https://68nsdc.com/index.html"
+      "eventSite": ""
+    },
+    {
+      "id": 3,
+      "danceNotes": "discount if registered before May 1st.",
+      "whenDate": "2019-06-26",
+      "throughDate": "",
+      "dinnerTime": "18:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "75",
+      "typeOfEventId": "4",
+      "locationId": "7",
+      "clubId": "3",
+      "eventSite": ""
     }
   ],
   "typeOfEvents": [
@@ -105,6 +120,17 @@
       "clubId": "2",
       "phone": "000-123-1111",
       "email": "nunya@gmail.com"
+    },
+    {
+      "id": 7,
+      "username": "Janet",
+      "password": "123",
+      "typeOfUserId": 2,
+      "nameFirst": "",
+      "nameLast": "",
+      "clubId": "1",
+      "phone": "8593609552",
+      "email": "janetnwoods@gmail.com"
     }
   ],
   "clubs": [
@@ -129,6 +155,17 @@
       "otherOfficerId": 6,
       "regionId": 1,
       "usualLocationId": 2
+    },
+    {
+      "clubName": "Atlanta Peaches",
+      "stateId": "GA",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 3
     }
   ],
   "regions": [

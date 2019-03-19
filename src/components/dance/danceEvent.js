@@ -15,10 +15,12 @@ export default class DanceEvent extends Component {
                     <React.Fragment className="card">
 
                     <p className="list-item"> What: <strong> {this.props.dance.typeOfEvent.nameType}</strong>,
-                         When:  <strong className="list-item"> {this.props.dance.whenDate}</strong>  <p>Through: {this.props.dance.throughDate}</p> <br/>
+                        When:<strong className="list-item"> {this.props.dance.whenDate} </strong>.....
+                         begin: {this.props.dance.dinnerTime} .....<span>  {this.props.dance.throughDate}  </span>
+                         <p>
 
 
-                         Host:<p className="list-item"> {this.props.dance.club.clubName}</p>
+                        {this.props.dance.club.clubName}</p>
                            <br />
 
                             <Link className="nav-link" to={`/locations/${this.props.dance.location.id}`} {...this.props}>
@@ -50,18 +52,28 @@ export default class DanceEvent extends Component {
                     </React.Fragment>
                 </div>
                 :
-                <div>
+                <div key={`dance-${this.props.dance.id}`} className="card">
 
                     <React.Fragment>
-                        <p className="list-item"> What: <strong> {this.props.dance.typeOfEvent.nameType}</strong>,
-                         When:  <strong className="list-item"> {this.props.dance.whenDate}, </strong>
-                            Host:<strong className="list-item"> {this.props.dance.club.clubName}</strong><br />
+                    <p className="list-item"> What: <strong> {this.props.dance.typeOfEvent.nameType}</strong>,
+                        When:<strong className="list-item"> {this.props.dance.whenDate} </strong>.....
+                         begin: {this.props.dance.dinnerTime} .....<span>  {this.props.dance.throughDate}  </span>
+                         <p>
+
+
+                        {this.props.dance.club.clubName}</p>
+                           <br />
 
                             <Link className="nav-link" to={`/locations/${this.props.dance.location.id}`} {...this.props}>
                                 Where:  {this.props.dance.location.nameLocation}
                             </Link></p>
+
+                            <a href={`${this.props.dance.eventSite}`} target="new">{this.props.dance.eventSite}
+                            </a>
+
                         <p className="list-item"> ${this.props.dance.cost},
                             Note:  {this.props.dance.danceNotes}</p>
+
 
                     </React.Fragment >
                 </div>
