@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
 import ClubCard from "./clubCard"
+import "../club/club.css"
 
 export default class Clubs extends Component {
     powerUser = sessionStorage.getItem("Type")

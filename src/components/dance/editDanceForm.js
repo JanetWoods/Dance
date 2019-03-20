@@ -52,13 +52,15 @@ export default class NewEventForm extends Component {
           id: parseInt(dance.id),
           danceNotes: dance.danceNotes,
           whenDate: dance.whenDate,
+          throughDate: dance.throughDate,
           dinnerTime: dance.dinnerTime,
           danceTime: dance.danceTime,
           endTime: dance.endTime,
           cost: dance.cost,
           typeOfEventId: dance.typeOfEventId,
           locationId: dance.locationId,
-          clubId: dance.clubId
+          clubId: dance.clubId,
+          eventSite: dance.eventSite
         })
       })
   }

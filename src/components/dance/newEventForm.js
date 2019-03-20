@@ -21,26 +21,38 @@ export default class NewEventForm extends Component {
     this.setState(stateToChange);
   }
   makeNewEvent = evt => {
-
     evt.preventDefault()
 
-    const newEvent = {
-      danceNotes: this.state.danceNotes,
-      whenDate: this.state.whenDate,
-      dinnerTime: this.state.dinnerTime,
-      danceTime: this.state.danceTime,
-      endTime: this.state.endTime,
-      cost: this.state.cost,
-      typeOfEventId: parseInt(this.state.typeOfEventId),
-      locationId: parseInt(this.state.typeOfEventId),
-      clubId: parseInt(this.state.clubId),
-      eventSite: this.state.eventSite,
-      throughDate: this.state.throughDate
+    if(this.state.whenDate !== "")
+    {
+      if(this.state.locationId !== ""){
+
+        const newEvent = {
+          danceNotes: this.state.danceNotes,
+          whenDate: this.state.whenDate,
+          dinnerTime: this.state.dinnerTime,
+          danceTime: this.state.danceTime,
+          endTime: this.state.endTime,
+          cost: this.state.cost,
+          typeOfEventId: parseInt(this.state.typeOfEventId),
+          locationId: parseInt(this.state.typeOfEventId),
+          clubId: parseInt(this.state.clubId),
+          eventSite: this.state.eventSite,
+          throughDate: this.state.throughDate
+        }
+        this.props.addDance(newEvent)
+        .then(() => {
+          this.props.history.push("/DanceList")
+        })
+      }
+      else{
+        alert("You forgot to enter the location. Where is it?")
+      }
     }
-    this.props.addDance(newEvent)
-      .then(() => {
-        this.props.history.push("/DanceList")
-      })
+    else{
+      alert("You forgot to enter the date. When is it?")
+    }
+
   }
 render() {
   return (

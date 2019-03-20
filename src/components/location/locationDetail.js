@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { Link } from 'react-router-dom'
 import locationMgr from "../../modules/locationMgr"
 import "./location.css"
 
@@ -23,13 +22,15 @@ export default class LocationDetail extends Component {
     render() {
 
         return (
-
             <div key={`location-${this.state.location.id}`} className="location-card">
-               <p>   <strong>{this.state.location.nameLocation} </strong>,
-                {this.state.location.street}, {this.state.location.city},  {this.state.location.stateId}, {this.state.location.zip}<br/>
-                </p>
-                <p> {this.state.location.locationNotes}</p>
+             <h3>  {this.state.location.nameLocation}   </h3>
+             <br/>
+               <p className="list-item"> {this.state.location.street}</p>
+              <br/>
 
+            <p className="list-item">   {this.state.location.city},  {this.state.location.stateId}, {this.state.location.zip}</p>
+               <br/>
+                <p className="list-item">Note:  {this.state.location.locationNotes}</p>
 
             </div>
 

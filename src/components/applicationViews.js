@@ -20,9 +20,11 @@ import DanceEvent from "./dance/danceEvent"
 import Locations from "./location/locations"
 import LocationDetail from "./location/locationDetail"
 import EditLocationForm  from "./location/editLocationForm"
-import sortIt from "./compare"
 import EditClubForm from "./club/editClubForm"
 import Clubs from "./club/clubList"
+import FilteredDances from "./dance/filter"
+import DanceDetail from "./dance/detailedDance"
+
 export default class ApplicationViews extends Component {
     state = {
         dances: [],
@@ -181,6 +183,14 @@ export default class ApplicationViews extends Component {
                 })
             )
     }
+    getTHISDanceDetail=(id)=> {
+        return danceMgr.getTHISDanceDetail(id)
+        .then((dance) =>
+         this.setState({
+            dance: dance
+        })
+        )
+    }
     updateLocation = (location) => {
         return locationMgr.updatelocation(location)
             .then(() => {
@@ -190,6 +200,7 @@ export default class ApplicationViews extends Component {
                 locations: locations
             }))
     }
+
     componentDidMount() {
         const newState = {}
         console.log("component mounted, Application View.")
@@ -203,9 +214,6 @@ export default class ApplicationViews extends Component {
             .then(clubs => newState.clubs = clubs)
 
             .then(() => eventTypeMgr.getAll())
-            // .then((typeOfEvents) => {
-            //     typeOfEvents.sortIt(sortIt(typeOfEvents.nameType))
-            // })
             .then(typeOfEvents => newState.typeOfEvents = typeOfEvents)
 
             .then(() => locationMgr.getAll())
@@ -271,7 +279,7 @@ export default class ApplicationViews extends Component {
                         isEmpty={this.isEmpty}/>
                 }} />
                 <Route exact path="/dances/edit/:id(\d+)" render={props => {
-                    return <EditDanceForm {...props} njnm
+                    return <EditDanceForm {...props}
                         userPower={this.props.userPower}
                         dance={this.state.dance}
                         editDance={this.editDance}
@@ -281,6 +289,18 @@ export default class ApplicationViews extends Component {
                         typeOfEvents={this.state.typeOfEvents}
                         detailedDances={this.detailedDances}
                         clubs={this.state.clubs} />
+                }} />
+                <Route exact path="/dances/detail/:id(\d+)" render={props => {
+                    return <DanceDetail {...props}
+                        userPower={this.props.userPower}
+                        dance={this.state.dance}
+                        getdance={this.getdance}
+                        locations={this.state.locations}
+                        typeOfEvents={this.state.typeOfEvents}
+                        detailedDances={this.detailedDances}
+                        clubs={this.state.clubs}
+                        getTHISDanceDetail={this.getTHISDanceDetail}
+                         />
                 }} />
                 <Route exact path="/locations/:id(\d+)" render={props => {
                     return <LocationDetail {...props}
@@ -299,6 +319,17 @@ export default class ApplicationViews extends Component {
                         editDance={this.editDance}
                         {...props} />
                 }} />
+                <Route exact path="/filteredList" render={props => {
+                    return <FilteredDances
+                        dances={this.state.dances}
+                        deleteDance={this.deleteDance}
+                        userPower={this.props.userPower}
+                        detailedDances={this.state.detailedDances}
+                        addDance={this.addDance}
+                        editDance={this.editDance}
+                        states={this.props.states}
+                        {...props} />
+                }} />
                 <Route exact path="/DanceEvent" render={props => {
                     return <DanceEvent
                         dances={this.state.dances}
@@ -311,14 +342,8 @@ export default class ApplicationViews extends Component {
                         {...props} />
                 }} />
 
-                <Route exact path="/DanceListGrouped" render={props => {
-                    return <ListByType {...props}
-                        dances={this.state.dances}
-                        typeOfEvents={this.state.typeOfEvents}
-                        locations={this.state.locations}
-                        detailedDances={this.state.detailedDances}
-                    />
-                }} />
+
+
                 <Route exact path="/newClub" render={props => {
                     return <NewClubForm {...props}
                         clubs={this.state.clubs}

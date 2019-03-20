@@ -2,8 +2,6 @@ import React, { Component } from "react"
 import DanceEvent from "./danceEvent"
 import { Link } from 'react-router-dom'
 import "./dance.css"
-import moment from 'react-moment'
-import diff from "../dance/diff"
 
 export default class DanceList extends Component {
     powerUser = sessionStorage.getItem("Type")
@@ -14,10 +12,11 @@ export default class DanceList extends Component {
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
                 <React.Fragment>
-                    <Link className="location-link" to="/dance/new">Add Event</Link>
+                    <p className="location-link"><Link  to="/dance/new">Add Event</Link></p>
 
-                    <h2>Dances</h2>
-                    <p>(Note: Club dances are free for club members dancing at their home club.)</p>
+                    <h2 className="list-title">Dances</h2>
+                    <div className="danceCard">
+
                     {
                         this.props.detailedDances.sort(function compare(a, b) {
                             var dateA = new Date(a.whenDate);
@@ -32,6 +31,7 @@ export default class DanceList extends Component {
 
                         })
                     }
+                     </div>
                 </React.Fragment>
 
                 :

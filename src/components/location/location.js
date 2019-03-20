@@ -8,12 +8,13 @@ export default class LocationCard extends Component {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
-                <div key={`location-${this.props.location.id}`} className="card">
+                <div key={`location-${this.props.location.id}`} className="location-card">
                     <strong>{this.props.location.nameLocation}</strong>
                     {this.props.location.street} ,  {this.props.location.city},  {this.props.location.stateId}<br />
                     {this.props.location.locationNotes}<br />
 
-                    <button className="list-button"
+                  <p>
+                        <button className="list-button"
                         type="button"
                         onClick={() => {
                             this.props.history.push(`/locations/edit/${this.props.location.id}`)
@@ -28,10 +29,11 @@ export default class LocationCard extends Component {
                         }} >
                         Delete
                             </button>
+                            </p>
                 </div>
                 :
 
-                <div key={`location-${this.props.location.id}`} className="card">
+                <div key={`location-${this.props.location.id}`} className="location-card">
                     <strong>{this.props.location.nameLocation}</strong>
                     {this.props.location.street} ,  {this.props.location.city},  {this.props.location.stateId}<br />
                     {this.props.location.locationNotes}<br />

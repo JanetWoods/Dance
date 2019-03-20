@@ -12,7 +12,7 @@ export default class Locations extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/newLocation">Add Location</Link>
                     </li>
-                    <h2>Locations</h2>
+                    <h2 className="list-title">Locations</h2>
                     {
                         this.props.locations.map(location => {
 

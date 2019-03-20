@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import clubMgr from "../../modules/clubMgr";
-
+import "../club/club.css"
 export default class ClubCard extends Component {
 
     club = this.props.clubs.find(club =>
