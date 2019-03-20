@@ -3,7 +3,6 @@ import DanceEvent from "./danceEvent"
 import { Link } from 'react-router-dom'
 import "./dance.css"
 
-
 export default class DanceList extends Component {
     powerUser = sessionStorage.getItem("Type")
 
@@ -12,47 +11,49 @@ export default class DanceList extends Component {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
-            <React.Fragment>
-            <Link className="location-link" to="/dance/new">Add Event</Link>
+                <React.Fragment>
+                    <p className="location-link"><Link  to="/dance/new">Add Event</Link></p>
 
-            <h2>Dances</h2>
-            <p>(Note: Club dances are free for club members dancing at their home club.)</p>
-            {
-                this.props.detailedDances.sort(function compare(a, b) {
-                    var dateA = new Date(a.whenDate);
-                    var dateB = new Date(b.whenDate);
-                    return dateA - dateB;
-                }).map(dance => {
+                    <h2 className="list-title">Dances</h2>
+                    <div className="danceCard">
 
-                    return <section className="container">
+                    {
+                        this.props.detailedDances.sort(function compare(a, b) {
+                            var dateA = new Date(a.whenDate);
+                            var dateB = new Date(b.whenDate);
+                            return dateB - dateA;
+                        }).map(dance => {
 
-                        <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser}/>
-                    </section>
+                            return <section className="container">
 
-                })
-            }
-        </React.Fragment>
+                                <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
+                            </section>
 
-            :
-            <React.Fragment>
+                        })
+                    }
+                     </div>
+                </React.Fragment>
 
-                <h2>Dances</h2>
-        <p>(Note: Club dances are free for club members dancing at their home club.)</p>
-        {
-                this.props.detailedDances.sort(function compare(a, b) {
-                    var dateA = new Date(a.whenDate);
-                    var dateB = new Date(b.whenDate);
-                    return dateA - dateB;
-                }).map(dance => {
+                :
+                <React.Fragment>
 
-                    return <section className="card">
+                    <h2>Dances</h2>
+                    <p>(Note: Club dances are free for club members dancing at their home club.)</p>
+                    {
+                        this.props.detailedDances.sort(function compare(a, b) {
+                            var dateA = new Date(a.whenDate);
+                            var dateB = new Date(b.whenDate);
+                            return dateB - dateA;
+                        }).map(dance => {
 
-                        <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser}/>
-                    </section>
+                            return <section className="card">
 
-                })
-            }
-            </React.Fragment>
+                                <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
+                            </section>
+
+                        })
+                    }
+                </React.Fragment>
         )
     }
 

@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
-import ClubCard from "../club/clubCard"
-import "./dance.css"
-import Moment from 'react-dom'
+import "../dance/dance.css"
 
 export default class DanceEvent extends Component {
     powerUser = sessionStorage.getItem("Type")
@@ -13,26 +11,28 @@ export default class DanceEvent extends Component {
 
                 <div key={`dance-${this.props.dance.id}`} className="card">
 
-                    <React.Fragment className="card">
+                    <React.Fragment >
 
-                    <p className="list-item"> What: <strong> {this.props.dance.typeOfEvent.nameType}</strong>,
-                        When:<strong className="list-item"> {this.props.dance.whenDate} </strong>.....
-                         begin: moment({this.props.dance.dinnerTime}) .....<span>  {this.props.dance.throughDate}  </span>
-                         <p>
+                        <p className="list-item"> <strong>{this.props.dance.typeOfEvent.nameType}</strong>,
+                        <strong className="list-item"> {this.props.dance.whenDate} </strong>
 
+                            <br />
 
-                        {this.props.dance.club.clubName}</p>
-                           <br />
-
-                            <Link className="nav-link" to={`/locations/${this.props.dance.location.id}`} {...this.props}>
-                                Where:  {this.props.dance.location.nameLocation}
-                            </Link></p>
+                            <span><Link to={`/locations/${this.props.dance.location.id}`} {...this.props}>
+                                {this.props.dance.location.city},{this.props.dance.location.stateId} </Link></span>
 
                             <a href={`${this.props.dance.eventSite}`} target="new">{this.props.dance.eventSite}
-                            </a>
+                             </a>
+                        </p>
+                        <p>
 
-                        <p className="list-item"> ${this.props.dance.cost},
-                            Note:  {this.props.dance.danceNotes}
+                        <button className="list-button"
+                                type="button"
+                                onClick={() => {
+                                    this.props.history.push(`/dances/detail/${this.props.dance.id}`)
+                                }} >
+                                More
+                            </button>
 
                             <button className="list-button"
                                 type="button"
@@ -48,34 +48,32 @@ export default class DanceEvent extends Component {
                                     this.props.deleteDance(this.props.dance.id)
                                 }} >
                                 Delete
-                            </button>  </p>
-
+                            </button>
+                        </p>
                     </React.Fragment>
                 </div>
                 :
                 <div key={`dance-${this.props.dance.id}`} className="card">
 
                     <React.Fragment>
-                    <p className="list-item"> What: <strong> {this.props.dance.typeOfEvent.nameType}</strong>,
-                        When:<strong className="list-item"> {this.props.dance.whenDate} </strong>.....
-                         begin: {this.props.dance.dinnerTime} .....<span>  {this.props.dance.throughDate}  </span>
-                         <p>
+                        <p className="list-item"> <strong>{this.props.dance.typeOfEvent.nameType}</strong>,
+                        <strong className="list-item"> {this.props.dance.whenDate} </strong>
 
+                            <br />
 
-                        {this.props.dance.club.clubName}</p>
-                           <br />
-
-                            <Link className="nav-link" to={`/locations/${this.props.dance.location.id}`} {...this.props}>
-                                Where:  {this.props.dance.location.nameLocation}
-                            </Link></p>
+                            <span><Link to={`/locations/${this.props.dance.location.id}`} {...this.props}>
+                                {this.props.dance.location.city},{this.props.dance.location.stateId} </Link></span>
 
                             <a href={`${this.props.dance.eventSite}`} target="new">{this.props.dance.eventSite}
                             </a>
-
-                        <p className="list-item"> ${this.props.dance.cost},
-                            Note:  {this.props.dance.danceNotes}</p>
-
-
+                            <button className="list-button"
+                                type="button"
+                                onClick={() => {
+                                    this.props.history.push(`/dances/detail/${this.props.dance.id}`)
+                                }} >
+                                More
+                            </button>
+                        </p>
                     </React.Fragment >
                 </div>
         )

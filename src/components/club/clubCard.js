@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import clubMgr from "../../modules/clubMgr";
-
+import "../club/club.css"
 export default class ClubCard extends Component {
 
     club = this.props.clubs.find(club =>
@@ -19,28 +19,35 @@ export default class ClubCard extends Component {
     render() {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
-                <div key={`club-${this.props.club.id}`}>
+            <section className="card">
+            {this.props.club.stateId} <br/>
+                    <div key={`club-${this.props.club.id}`}>
 
-                    <React.Fragment>
-                        {this.props.club.clubName}
+                        <React.Fragment>
 
-                        <button className="list-button"
-                            type="button"
-                            onClick={() => {
-                                this.props.history.push(`/clubs/edit/${this.props.club.id}`)
-                            }} >
-                            Edit
+                            {this.props.club.clubName}
+
+                            <button className="list-button"
+                                type="button"
+                                onClick={() => {
+                                    this.props.history.push(`/clubs/edit/${this.props.club.id}`)
+                                }} >
+                                Edit
                             </button>
-                    </React.Fragment>
-                </div>
+                        </React.Fragment>
+                    </div>
+                </section>
                 :
-                <div key={`club-${this.props.club.id}`}>
-                    <React.Fragment>
-                        {this.props.club.clubName}
+                <section className="card">
+                 {this.props.club.stateId} <br/>
+                    <div key={`club-${this.props.club.id}`}>
+                        <React.Fragment>
+                            {this.props.club.clubName}
 
 
-                    </React.Fragment>
-                </div>
+                        </React.Fragment>
+                    </div>
+                </section>
         )
     }
 

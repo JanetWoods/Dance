@@ -29,6 +29,9 @@ export default {
     getDanceDetail() {
         return fetch(`${settings.remoteURL}/dances?_expand=club&_expand=location&_expand=typeOfEvent`).then(e => e.json())
       },
+    getTHISDanceDetail(id) {
+        return fetch(`${settings.remoteURL}/dances/${id}?_expand=club&_expand=location&_expand=typeOfEvent`).then(e => e.json())
+      },
       deleteDanceDetail: (id) => {
         return fetch(`${settings.remoteURL}/dances/${id}`, {
             method: "DELETE"

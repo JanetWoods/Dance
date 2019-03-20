@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
 import ClubCard from "./clubCard"
+import "../club/club.css"
 
 export default class Clubs extends Component {
     powerUser = sessionStorage.getItem("Type")
@@ -17,43 +18,45 @@ export default class Clubs extends Component {
                     <h2>Clubs</h2>
                     {
                         this.props.states.map(state =>
-                            <section className="card">
+                            <section>
                                 <div key={state.id}>
-                                    {state.stateLong}
+
                                     {
                                         this.props.clubs.filter(
                                             club => club.stateId === state.id
                                         )
                                             .map(
                                                 club =>
-                                                    <ClubCard key={`club-${club.id}`}{...this.props} club={club} powerUser={this.powerUser} />
-
+                                                    club.stateId !== null ?
+                                                        <ClubCard key={`club-${club.id}`}{...this.props} club={club} powerUser={this.powerUser} />
+                                                        : {}
                                             )
                                     }
 
                                 </div>
                             </section>
                         )
-                    }
 
+                    }
                 </React.Fragment>)
 
                 :
                 (<React.Fragment>
-                     <h2>Clubs</h2>
+                    <h2>Clubs</h2>
                     {
                         this.props.states.map(state =>
-                            <section className="card">
+                            <section>
                                 <div key={state.id}>
-                                    {state.stateLong}
+
                                     {
                                         this.props.clubs.filter(
                                             club => club.stateId === state.id
                                         )
                                             .map(
                                                 club =>
-                                                    <ClubCard key={`club-${club.id}`}{...this.props} club={club} powerUser={this.powerUser} />
-
+                                                    club.stateId !== null ?
+                                                        <ClubCard key={`club-${club.id}`}{...this.props} club={club} powerUser={this.powerUser} />
+                                                        : {}
                                             )
                                     }
 

@@ -15,11 +15,12 @@ export default class NavBar extends Component {
 render(){
     return(
         (sessionStorage.getItem("Type") === "PowerUser") ?
-            <nav className="navBar">
-                <ul>
+            <nav className="navBar navbar-light light-blue p-0 shadow">
+                <ul className="nav nav-pills">
                     <li className="nav-item">
                         <Link className="nav-link" to="/DanceList">Dances</Link>
                     </li>
+
                     <li className="nav-item">
                         <Link className="nav-link" to="/locations"> Locations </Link>
                     </li>
@@ -41,8 +42,8 @@ render(){
                 </button>
             </nav>
         :
-        <nav className="navBar">
-        <ul>
+        <nav className="navBar navbar-light light-blue p-0 shadow">
+        <ul className="nav nav-pills">
             <li className="nav-item">
                 <Link className="nav-link" to="/DanceList">Dances</Link>
             </li>
