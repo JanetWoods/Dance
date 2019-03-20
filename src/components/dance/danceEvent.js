@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
-import "./dance.css"
+import "../dance/dance.css"
 
 export default class DanceEvent extends Component {
     powerUser = sessionStorage.getItem("Type")

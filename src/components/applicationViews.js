@@ -13,7 +13,6 @@ import typeOfUserMgr from "../modules/typeOfUserMgr"
 import userMgr from "../modules/userMgr"
 import Account from "./auth/account"
 import Register from "./auth/register"
-import ListByType from "./dance/listByType"
 import NewClubForm from "./club/newClubForm"
 import NewLocationForm from "./location/newLocationForm"
 import DanceEvent from "./dance/danceEvent"
@@ -65,6 +64,17 @@ export default class ApplicationViews extends Component {
                 dances: dances
             }))
     }
+
+    deleteLocation = (locationId) => {
+        return locationMgr.deleteLocation(locationId)
+            .then(() => {
+                return locationMgr.getAll()
+            })
+            .then(locations => this.setState({
+                locations: locations
+            }))
+    }
+
     updateDance = (dance) => {
         return danceMgr.updateDance(dance)
             .then(() => danceMgr.getDanceDetail())
@@ -110,6 +120,7 @@ export default class ApplicationViews extends Component {
                 user: user
             }))
     })
+
     addLocation = (location) => {
         return locationMgr.addLocation(location)
             .then(() => {
@@ -166,15 +177,7 @@ export default class ApplicationViews extends Component {
                     }))
             })
     }
-    deleteLocation = (locationId) => {
-        return locationMgr.deletelocation(locationId)
-            .then(() => {
-                return locationMgr.getAll()
-            })
-            .then(locations => this.setState({
-                locations: locations
-            }))
-    }
+
     retrieveLocation = (locationId) => {
         return locationMgr.getlocation(locationId)
             .then((location) =>
@@ -307,6 +310,7 @@ export default class ApplicationViews extends Component {
                         users={this.state.users}
                         states={this.state.states}
                         locations={this.state.locations}
+                        deleteLocation={this.deleteLocation}
                          />
                 }} />
                 <Route exact path="/DanceList" render={props => {
@@ -364,7 +368,8 @@ export default class ApplicationViews extends Component {
                         addLocation={this.addLocation}
                         users={this.state.users}
                         states={this.state.states}
-                        locations={this.state.locations} />
+                        locations={this.state.locations}
+                        deleteLocation={this.deleteLocation}/>
                 }} />
                 <Route exact path="/Locations/edit/:id(\d+)" render={props => {
                     return <EditLocationForm  {...props}

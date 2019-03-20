@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import locationMgr from "../../modules/locationMgr"
+import "./location.css"
 export default class EditLocationForm extends Component {
 
   state = {
@@ -32,7 +33,6 @@ export default class EditLocationForm extends Component {
       .then(() => {
         this.props.history.push("/locations")
       })
-
   }
 
   componentDidMount(location) {

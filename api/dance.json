@@ -23,14 +23,16 @@
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "10",
-      "typeOfEventId": 6,
+      "typeOfEventId": 7,
       "locationId": 6,
       "clubId": 1,
       "eventSite": ""
     },
     {
+      "id": 5,
       "danceNotes": "",
       "whenDate": "2019-03-04",
+      "throughDate": "",
       "dinnerTime": "19:00",
       "danceTime": "19:30",
       "endTime": "22:00",
@@ -38,9 +40,21 @@
       "typeOfEventId": 1,
       "locationId": 1,
       "clubId": 1,
-      "eventSite": "",
+      "eventSite": ""
+    },
+    {
+      "id": 6,
+      "danceNotes": "",
+      "whenDate": "2019-03-19",
       "throughDate": "",
-      "id": 5
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 7,
+      "locationId": 4,
+      "clubId": 2,
+      "eventSite": ""
     }
   ],
   "typeOfEvents": [
