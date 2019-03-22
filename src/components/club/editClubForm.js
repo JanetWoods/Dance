@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import clubMgr from "../../modules/clubMgr"
-
+import "./club.css"
 export default class EditClubForm extends Component {
 
   state = {
@@ -39,7 +39,7 @@ export default class EditClubForm extends Component {
       }
       this.props.updateClub(updatedClub)
         .then(() => {
-          this.props.history.push("/")
+          this.props.history.push("/clubs")
         })
     }
   }
@@ -62,16 +62,15 @@ export default class EditClubForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <form className="form-newEvent">
+        <form className="form-container">
           <div className="form-group">
             <label htmlFor="clubName">Name of Club</label>
             <input type="text"
               onChange={this.handleFieldChange}
               id="clubName"
               value={this.state.clubName}/>
-
-
           </div>
+
           <div className="form-group">
             <label htmlFor="stateId">State</label>
             <select

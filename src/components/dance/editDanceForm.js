@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import danceMgr from "../../modules/danceMgr";
+import "../dance/dance.css"
 
 export default class NewEventForm extends Component {
 
@@ -67,14 +68,16 @@ export default class NewEventForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <form className="form-newEvent">
+        <div className="form-container-large">
+
+        <form>
           <div className="form-group">
             <label htmlFor="whenDate">What Day is it?</label>
             <input type="date"
               onChange={this.handleFieldChange}
               value={this.state.whenDate}
               id="whenDate"
-               />
+              />
           </div>
 
           <div className="form-group">
@@ -83,7 +86,7 @@ export default class NewEventForm extends Component {
               onChange={this.handleFieldChange}
               value={this.state.throughDate}
               id="throughDate"
-               />
+              />
           </div>
           <div className="form-group">
             <label htmlFor="eventURL"> Event URL (if applicable)</label>
@@ -103,7 +106,7 @@ export default class NewEventForm extends Component {
               <option value="">Select Event/Dance Type</option>
               {this.props.typeOfEvents.map(typeE => (
                 <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
-              ))}
+                ))}
             </select>
           </div>
           <div className="form-group">
@@ -117,7 +120,7 @@ export default class NewEventForm extends Component {
               <option value="">Select club</option>
               {this.props.clubs.map(club => (
                 <option key={club.id} id={club.id} value={club.id}> {club.clubName} </option>
-              ))}
+                ))}
             </select>
           </div>
           <div className="form-group">
@@ -132,7 +135,7 @@ export default class NewEventForm extends Component {
               <option value="">Select Location</option>
               {this.props.locations.map(loc => (
                 <option key={loc.id} id={loc.id} value={loc.id}> {loc.nameLocation} </option>
-              ))}
+                ))}
             </select>
           </div>
           <div className="form-group">
@@ -185,6 +188,7 @@ export default class NewEventForm extends Component {
             className="list-button">Save</button>
 
         </form>
+            </div>
       </React.Fragment>
     )
   }

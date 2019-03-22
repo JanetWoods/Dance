@@ -12,10 +12,12 @@ export default class DanceList extends Component {
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
                 <React.Fragment>
-                    <p className="location-link"><Link  to="/dance/new">Add Event</Link></p>
+                    <div className="top-container">
+                    <p><Link className="dance-link"  to="/dance/new">Add Event</Link></p>
+                    </div>
 
                     <h2 className="list-title">Dances</h2>
-                    <div className="danceCard">
+                    <div className="container">
 
                     {
                         this.props.detailedDances.sort(function compare(a, b) {
@@ -24,7 +26,7 @@ export default class DanceList extends Component {
                             return dateB - dateA;
                         }).map(dance => {
 
-                            return <section className="container">
+                            return <section>
 
                                 <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
                             </section>

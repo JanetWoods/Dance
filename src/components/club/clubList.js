@@ -11,11 +11,13 @@ export default class Clubs extends Component {
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
                 (<React.Fragment>
-
+                <div className="top-container">
                     <li className="nav-item">
                         <Link className="nav-link" to="/newClub">Add Club</Link>
                     </li>
-                    <h2>Clubs</h2>
+                    </div>
+                    <h2 className="list-title">Clubs</h2>
+                      <div className="container">
                     {
                         this.props.states.map(state =>
                             <section>
@@ -38,6 +40,7 @@ export default class Clubs extends Component {
                         )
 
                     }
+                    </div>
                 </React.Fragment>)
 
                 :

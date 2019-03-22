@@ -21,11 +21,19 @@ flex-direction: column;
 }
 .location-link{
     display: flex;
-    flex-wrap: inherit;
     flex-flow: row wrap;
     margin-right: 5px;
     width: 20%;
 }
+.dance-link{
+    display: inline;
+    justify-content: center;
+}
+.top-container{
+    display: flex;
+    justify-content: center;
+}
+
 
 .cancelled{
     color: firebrick;
@@ -55,28 +63,90 @@ flex-direction: column;
     border-color: blue;
     border-radius: 5%;
 }
-.danceCard{
+.card-dance{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 30px;
-    margin-top: 15px;
+    flex-wrap: wrap;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 5px 5px 5px 5px;
     justify-content:left;
     width: 50%;
-    border-radius: 5%;
+    border-style: solid;
     border-color: blue;
+    border-radius: 5%;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+.card-detailed{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5px;
+    margin-bottom: 5%;
+    padding: 5px 5px 5px 5px;
+    justify-content:left;
+    width: 60%;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 5%;
 }
 .list-item{
 display: flex;
 flex-wrap: wrap;
 flex-flow: row wrap;
-margin-left: 15px;
-margin-right: 25px;
+margin-left: 25%;
+margin-right: 25%;
 justify-content:left;
 padding-left: 5px;
 justify-content: flex-start;
 }
 .list-title{
-    justify-content: space-around;
     display: flex;
+    align-content: center;
+    width: 100%;
+}
+.nav-link{
+    flex-direction: column;
+    align-content: space-between;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.form-container{
+display: flex;
+flex-direction: column;
+align-content: left;
+width:50%;
+border-color: blue;
+margin-left: 25%;
+margin-right: 25%;
+margin-bottom: 10%;
+box-sizing: content-box;
+}
+.form-group{
+align-content: left;
+width: 100%;
+margin-top: 1%;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+flex-grow: 2;
+}
+.form-container-large{
+display: flex;
+flex-direction: column;
+align-content: left;
+width:90%;
+border-color: blue;
+margin-left: 10%;
+margin-right: 10%;
+margin-bottom: 10%;
+box-sizing: content-box;
 }

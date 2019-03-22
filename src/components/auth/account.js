@@ -58,11 +58,13 @@ export default class Account extends Component {
 
     render() {
 
-
         return (
-            <form className="form-updateAccount">
-                <h1 className="h3 mb-3 font-weight-normal"> {this.state.nameFirst} {this.state.nameLast}</h1>
-                <label htmlFor="username">Username:</label> <span>
+            <form className="form-container">
+
+                <h2> {this.state.nameFirst} {this.state.nameLast}</h2>
+
+                <div className="form-group">
+                <label htmlFor="username">Username:</label>
                 <input onChange={this.handleFieldChange}
                     type="username"
                     id="username"
@@ -71,10 +73,9 @@ export default class Account extends Component {
                     placeholder={this.state.username}
                     autoFocus=""
                     required="" />
+                </div>
 
-                </span><br/>
-
-
+                <div className="form-group">
                 <label htmlFor="inputPhone">Phone Number</label>
                 <input onChange={this.handleFieldChange}
                     type="phone"
@@ -83,7 +84,9 @@ export default class Account extends Component {
                     defaultValue={this.state.phone}
                     value={this.state.phone}
                     autoFocus="" />
-<br/>
+                    </div>
+
+                <div className="form-group">
                 <label htmlFor="email">email</label>
                 <input onChange={this.handleFieldChange}
                     type="email"
@@ -92,8 +95,7 @@ export default class Account extends Component {
                     defaultValue={this.state.email}
                     value={this.state.email}
                     autoFocus="" />
-
-
+                    </div>
 
                 <div className="form-group">
                     <label htmlFor="clubId"> Select your club </label>
@@ -103,17 +105,19 @@ export default class Account extends Component {
                         onChange={this.handleFieldChange}
                         defaultValue={this.state.clubId}
                         value={this.state.clubId}>
-
                         <option value="">Select Your Club </option>
                         {this.props.clubs.map(club => (
                             <option key={club.id} id={club.id} value={club.id}>{club.clubName}</option>
                         ))}
                     </select>
+
                 </div>
 
+                <div className="form-group">
                 <button type="submit" onClick={this.EditUser}>
                     Save Changes
             </button>
+                </div>
             </form>
         )
     }

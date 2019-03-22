@@ -20,6 +20,9 @@ render(){
                     <li className="nav-item">
                         <Link className="nav-link" to="/DanceList">Dances</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/filteredList">Filtered Dances</Link>
+                    </li>
 
                     <li className="nav-item">
                         <Link className="nav-link" to="/locations"> Locations </Link>

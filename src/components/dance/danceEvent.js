@@ -9,7 +9,7 @@ export default class DanceEvent extends Component {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
-                <div key={`dance-${this.props.dance.id}`} className="card">
+                <div key={`dance-${this.props.dance.id}`} className="card-dance">
 
                     <React.Fragment >
 
@@ -53,7 +53,7 @@ export default class DanceEvent extends Component {
                     </React.Fragment>
                 </div>
                 :
-                <div key={`dance-${this.props.dance.id}`} className="card">
+                <div key={`dance-${this.props.dance.id}`} className="card-detailed">
 
                     <React.Fragment>
                         <p className="list-item"> <strong>{this.props.dance.typeOfEvent.nameType}</strong>,

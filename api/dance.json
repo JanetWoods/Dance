@@ -69,6 +69,20 @@
       "locationId": 7,
       "clubId": 1,
       "eventSite": "https://68nsdc.com/"
+    },
+    {
+      "danceNotes": "testing date filter",
+      "whenDate": "2019-03-20",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 11,
+      "locationId": 11,
+      "clubId": 1,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 8
     }
   ],
   "typeOfEvents": [
@@ -192,8 +206,8 @@
       "username": "Janet",
       "password": "123",
       "typeOfUserId": 2,
-      "nameFirst": "",
-      "nameLast": "",
+      "nameFirst": "Janet",
+      "nameLast": "Woods",
       "clubId": "1",
       "phone": "8593609552",
       "email": "janetnwoods@gmail.com"
@@ -231,8 +245,7 @@
       "secretaryId": 5,
       "otherOfficerId": 6,
       "regionId": 1,
-      "usualLocationId": 2,
-      "zip": " "
+      "usualLocationId": 2
     },
     {
       "id": 4,
