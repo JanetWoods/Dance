@@ -13,12 +13,33 @@ export default class DanceList extends Component {
 
                 <React.Fragment>
                     <div className="top-container">
-                    <p><Link className="dance-link"  to="/dance/new">Add Event</Link></p>
+                        <p><Link className="dance-link" to="/dance/new">Add Event</Link></p>
                     </div>
 
                     <h2 className="list-title">Dances</h2>
-                    <div className="container">
+                    <div >
 
+                        {
+                            this.props.detailedDances.sort(function compare(a, b) {
+                                var dateA = new Date(a.whenDate);
+                                var dateB = new Date(b.whenDate);
+                                return dateB - dateA;
+                            }).map(dance => {
+
+                                return <section>
+
+                                    <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
+                                </section>
+
+                            })
+                        }
+                    </div>
+                </React.Fragment>
+
+                :
+                <React.Fragment>
+
+                    <h2>Dances</h2>
                     {
                         this.props.detailedDances.sort(function compare(a, b) {
                             var dateA = new Date(a.whenDate);
@@ -27,28 +48,6 @@ export default class DanceList extends Component {
                         }).map(dance => {
 
                             return <section>
-
-                                <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
-                            </section>
-
-                        })
-                    }
-                     </div>
-                </React.Fragment>
-
-                :
-                <React.Fragment>
-
-                    <h2>Dances</h2>
-                    <p>(Note: Club dances are free for club members dancing at their home club.)</p>
-                    {
-                        this.props.detailedDances.sort(function compare(a, b) {
-                            var dateA = new Date(a.whenDate);
-                            var dateB = new Date(b.whenDate);
-                            return dateB - dateA;
-                        }).map(dance => {
-
-                            return <section className="card">
 
                                 <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
                             </section>

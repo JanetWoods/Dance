@@ -513,6 +513,15 @@
       "stateId": "",
       "locationNotes": "",
       "id": 16
+    },
+    {
+      "nameLocation": "Janet N Woods",
+      "street": "6236 CINCINNATI RD",
+      "city": "Sadieville",
+      "zip": "40370",
+      "stateId": "AL",
+      "locationNotes": "",
+      "id": 17
     }
   ],
   "states": [
@@ -542,7 +551,7 @@
     },
     {
       "id": "CT",
-      "stateLong": "CT"
+      "stateLong": "Connecticut"
     },
     {
       "id": "DE",

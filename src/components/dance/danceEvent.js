@@ -53,19 +53,24 @@ export default class DanceEvent extends Component {
                     </React.Fragment>
                 </div>
                 :
-                <div key={`dance-${this.props.dance.id}`} className="card-detailed">
+                <div key={`dance-${this.props.dance.id}`} className="card-dance">
 
                     <React.Fragment>
                         <p className="list-item"> <strong>{this.props.dance.typeOfEvent.nameType}</strong>,
                         <strong className="list-item"> {this.props.dance.whenDate} </strong>
 
                             <br />
+                            </p>
+
+                        <p className="list-item">,
 
                             <span><Link to={`/locations/${this.props.dance.location.id}`} {...this.props}>
                                 {this.props.dance.location.city},{this.props.dance.location.stateId} </Link></span>
 
                             <a href={`${this.props.dance.eventSite}`} target="new">{this.props.dance.eventSite}
                             </a>
+                            </p>
+                            <p className="list-button-row">
                             <button className="list-button"
                                 type="button"
                                 onClick={() => {
@@ -73,7 +78,7 @@ export default class DanceEvent extends Component {
                                 }} >
                                 More
                             </button>
-                        </p>
+                                </p>
                     </React.Fragment >
                 </div>
         )

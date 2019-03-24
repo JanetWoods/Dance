@@ -17,7 +17,7 @@ export default class Clubs extends Component {
                     </li>
                     </div>
                     <h2 className="list-title">Clubs</h2>
-                      <div className="container">
+                      <div>
                     {
                         this.props.states.map(state =>
                             <section>

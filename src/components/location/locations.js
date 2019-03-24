@@ -30,11 +30,11 @@ export default class Locations extends Component {
                 </React.Fragment>
                 :
                 <React.Fragment>
+                    <h2 className="list-title">Locations</h2>
                     {
                         this.props.locations.map(location => {
 
-                            return <section className="container">
-
+                            return <section>
 
                                 <LocationCard key={`location-${this.props.location.id}`}{...this.props} location={location} powerUser={this.powerUser} />
 
