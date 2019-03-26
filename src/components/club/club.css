@@ -34,11 +34,11 @@ flex-direction: column;
 .club-card{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: 20px;
-    margin-right: 20%;
+    flex-direction: column;
+    margin-left: 45px;
+    margin-right: 25%;
     margin-top: 1%;
-    justify-content:left;
+    justify-content:space-around;
     width: 50%;
     margin-bottom: 1%;
     border-style: solid;
@@ -60,6 +60,11 @@ justify-content: flex-start;
     justify-content: space-around;
     display: flex;
 }
+.list-title-left{
+    justify-content: space-around;
+    display: flex;
+    align-content: left;
+}
 
 .form-container{
     display: flex;
@@ -72,15 +77,28 @@ justify-content: flex-start;
     margin-bottom: 1%;
     box-sizing: content-box;
     }
-    .container{
+.container{
     display: flex;
     flex-direction: column;
     align-content: center;
-    width:30%;
-    border-color: blue;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-bottom: 10%;
-    justify-content: center;
+    width:100%;
+    /* border-color: blue; */
+    margin-bottom: 5%;
+    justify-content: right;
     flex-wrap: wrap;
+}
+.list-button-row{
+    justify-content: space-evenly;
+    width: 100%;
+}
+button{
+    margin-left: 10px;
+    margin-right: 25px;
+}
+.list-button{
+    margin: 5px 0px 0px 5px;
+    padding: 0px 5px 6px 5px;
+    height: 1.7em;
+    width: 6em;
+    border-radius: .20em;
 }

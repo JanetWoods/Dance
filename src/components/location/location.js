@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
+import "./location.css"
 
 
 export default class LocationCard extends Component {
@@ -17,10 +18,9 @@ export default class LocationCard extends Component {
 
                     <br />
 
-                    <p className="list-button-row">
+                    <p>
 
                         <button className="list-button"
-                            type="button"
                             onClick={() => {
                                 this.props.history.push(`/locations/edit/${this.props.location.id}`)
                             }} >
@@ -28,7 +28,6 @@ export default class LocationCard extends Component {
                             </button>
 
                         <button className="list-button"
-                            type="button"
                             onClick={() => {
                                 this.props.deleteLocation(this.props.location.id)
                             }} >

@@ -389,6 +389,17 @@
       "regionId": "",
       "usualLocationId": "",
       "id": 16
+    },
+    {
+      "clubName": "Do Si Dos",
+      "stateId": "KY",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 17
     }
   ],
   "regions": [

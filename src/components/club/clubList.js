@@ -22,7 +22,7 @@ export default class Clubs extends Component {
                         this.props.states.map(state =>
 
                             <section key={state.stateId} >
-                                {state.stateLong}
+                               <h4 className="list-title-left"> {state.stateLong}</h4>
                                     {
                                         this.props.clubs.filter(
                                             club => club.stateId === state.id

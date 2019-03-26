@@ -42,3 +42,16 @@
     justify-content: space-around;
     width: 100%;
 }
+
+button{
+    margin-left: 10px;
+    margin-right: 25px;
+}
+
+.list-button{
+    margin: 5px 0px 0px 5px;
+    padding: 0px 5px 6px 5px;
+    height: 1.7em;
+    width: 6em;
+    border-radius: .20em;
+}
