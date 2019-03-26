@@ -31,32 +31,20 @@ flex-direction: column;
     color: firebrick;
 }
 
-.card{
+.club-card{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 30px;
-    margin-right: 30%;
-    margin-top: 2%;
+    margin-left: 20px;
+    margin-right: 20%;
+    margin-top: 1%;
     justify-content:left;
-    width: 40%;
-    margin-bottom: 2%;
+    width: 50%;
+    margin-bottom: 1%;
     border-style: solid;
     border-color: blue;
     border-radius: 5%;
     align-content: left;
-}
-
-.danceCard{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: 10px;
-    margin-top: 15px;
-    justify-content:left;
-    width: 90%;
-    border-radius: .25em;
-    border-color: black;
 }
 .list-item{
 display: flex;
@@ -79,19 +67,20 @@ justify-content: flex-start;
     align-content: left;
     width:50%;
     border-color: blue;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-bottom: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 1%;
     box-sizing: content-box;
     }
     .container{
-        display: flex;
-        flex-direction: column;
-        align-content: left;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     width:30%;
     border-color: blue;
     margin-left: 25%;
     margin-right: 25%;
     margin-bottom: 10%;
-    box-sizing: content-box;
-    }
+    justify-content: center;
+    flex-wrap: wrap;
+}

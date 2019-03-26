@@ -3,6 +3,7 @@
     color: blueviolet;
     align-content: space-around;
     flex-basis: row;
+    width: 100%;
 }
 .nav-item{
 display: flex;

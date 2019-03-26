@@ -17,17 +17,17 @@ export default class Clubs extends Component {
                     </li>
                     </div>
                     <h2 className="list-title">Clubs</h2>
-                      <div>
+                      <div className="container">
                     {
                         this.props.states.map(state =>
-                            <section>
-                                <div key={state.id}>
 
+                            <section key={state.stateId} >
+                                {state.stateLong}
                                     {
                                         this.props.clubs.filter(
                                             club => club.stateId === state.id
                                         )
-                                            .map(
+                                        .map(
                                                 club =>
                                                     club.stateId !== null ?
                                                         <ClubCard key={`club-${club.id}`}{...this.props} club={club} powerUser={this.powerUser} />
@@ -35,7 +35,6 @@ export default class Clubs extends Component {
                                             )
                                     }
 
-                                </div>
                             </section>
                         )
 

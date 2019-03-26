@@ -356,6 +356,39 @@
       "regionId": "",
       "usualLocationId": "",
       "id": 13
+    },
+    {
+      "clubName": "Singles And Doubles",
+      "stateId": "AL",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 14
+    },
+    {
+      "clubName": "Swingin' Squares",
+      "stateId": "AL",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 15
+    },
+    {
+      "clubName": "Alaska-Yukon Square and Round Dancing",
+      "stateId": "AK",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 16
     }
   ],
   "regions": [

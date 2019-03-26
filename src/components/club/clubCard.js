@@ -19,8 +19,9 @@ export default class ClubCard extends Component {
     render() {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
-            <section className="card">
-            {this.props.club.stateId} <br/>
+
+            <section className="club-card">
+            {/* {this.props.club.stateId} */}
                         <React.Fragment>
                     <div key={`club-${this.props.club.id}`}>
 
@@ -38,7 +39,7 @@ export default class ClubCard extends Component {
                         </React.Fragment>
                 </section>
                 :
-                <section className="card">
+                <section className="club-card">
                  {this.props.club.stateId} <br/>
                     <div key={`club-${this.props.club.id}`}>
                         <React.Fragment>

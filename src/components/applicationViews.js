@@ -252,7 +252,8 @@ export default class ApplicationViews extends Component {
                         clubs={this.state.clubs}
                         deleteDance={this.deleteDance}
                         editDance={this.editDance}
-                        detailedDances={this.state.detailedDances} />
+                        detailedDances={this.state.detailedDances}
+                         />
                 }} />
                 <Route exact path="/account/user/:id(\d+)" render={props => {
                     return <Account {...props}

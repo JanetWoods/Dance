@@ -36,7 +36,7 @@ export default class NewClubForm extends Component {
       }
       this.props.addClub(newClub)
         .then(() => {
-          this.props.history.push("/")
+          this.props.history.push("/clubs")
         })
     }
   }

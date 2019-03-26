@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import DanceEvent from "./danceEvent"
 import { Link } from 'react-router-dom'
 import "./dance.css"
-
+import moment from 'moment'
 export default class DanceList extends Component {
     powerUser = sessionStorage.getItem("Type")
 
@@ -18,17 +18,21 @@ export default class DanceList extends Component {
 
                     <h2 className="list-title">Dances</h2>
                     <div >
+                        {}
 
                         {
-                            this.props.detailedDances.sort(function compare(a, b) {
+                            this.props.detailedDances
+                            .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
+                            .sort(function compare(a, b) {
                                 var dateA = new Date(a.whenDate);
                                 var dateB = new Date(b.whenDate);
                                 return dateB - dateA;
-                            }).map(dance => {
+                            })
+                            .map(dance => {
 
-                                return <section>
+                                return <section key={`dance-${dance.id}`}>
 
-                                    <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
+                                    <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} />
                                 </section>
 
                             })
