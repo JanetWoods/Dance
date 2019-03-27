@@ -3,10 +3,16 @@ import DanceEvent from "./danceEvent"
 import { Link } from 'react-router-dom'
 import "./dance.css"
 import moment from 'moment'
+import Filter from "./filter"
+
 export default class DanceList extends Component {
+
+
     powerUser = sessionStorage.getItem("Type")
 
     render() {
+        let type= this.props.filter.type;
+
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
@@ -17,7 +23,6 @@ export default class DanceList extends Component {
 
                     <h2 className="list-title">Dances</h2>
                     <div >
-                        {}
 
                         {
                             this.props.detailedDances

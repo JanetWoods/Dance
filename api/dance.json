@@ -3,8 +3,8 @@
     {
       "id": 3,
       "danceNotes": "You missed this boat already, sorry.",
-      "whenDate": "2019-03-24",
-      "throughDate": "2019-03-31",
+      "whenDate": "2019-04-24",
+      "throughDate": "2019-04-31",
       "dinnerTime": "18:00",
       "danceTime": "19:30",
       "endTime": "22:00",
@@ -22,7 +22,7 @@
       "dinnerTime": "19:00",
       "danceTime": "19:30",
       "endTime": "22:00",
-      "cost": "10",
+      "cost": "11",
       "typeOfEventId": 7,
       "locationId": 6,
       "clubId": 1,
@@ -40,20 +40,6 @@
       "typeOfEventId": 1,
       "locationId": 3,
       "clubId": 1,
-      "eventSite": ""
-    },
-    {
-      "id": 6,
-      "danceNotes": "",
-      "whenDate": "2019-04-06",
-      "throughDate": "",
-      "dinnerTime": "19:00",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "7.00",
-      "typeOfEventId": 7,
-      "locationId": 4,
-      "clubId": 2,
       "eventSite": ""
     },
     {
@@ -83,6 +69,20 @@
       "eventSite": "",
       "throughDate": "",
       "id": 8
+    },
+    {
+      "id": 9,
+      "danceNotes": "The real cruise left already",
+      "whenDate": "2019-04-05",
+      "throughDate": "2019-04-12",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "1799",
+      "typeOfEventId": 4,
+      "locationId": 16,
+      "clubId": 1,
+      "eventSite": ""
     }
   ],
   "typeOfEvents": [
@@ -112,7 +112,7 @@
     },
     {
       "id": 7,
-      "nameType": "Square Dance, Club Dance"
+      "nameType": "Square Dance, (Club Dance)"
     },
     {
       "id": 8,
@@ -128,11 +128,11 @@
     },
     {
       "id": 11,
-      "nameType": "Square and Rounds"
+      "nameType": "Squares and Rounds"
     },
     {
       "id": 12,
-      "nameType": "Workshop"
+      "nameType": "Square Dance, Workshop"
     }
   ],
   "typeOfUser": [
@@ -400,6 +400,61 @@
       "regionId": "",
       "usualLocationId": "",
       "id": 17
+    },
+    {
+      "clubName": "Pueblo Promenaders",
+      "stateId": "AZ",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 18
+    },
+    {
+      "clubName": "Voyager",
+      "stateId": "AZ",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 19
+    },
+    {
+      "clubName": "Down Unders",
+      "stateId": "KY",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 20
+    },
+    {
+      "clubName": "My Club",
+      "stateId": "TN",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 21
+    },
+    {
+      "id": 22,
+      "clubName": "testing squares",
+      "stateId": "AR",
+      "presidentId": null,
+      "vicePresidentId": null,
+      "secretaryId": null,
+      "otherOfficerId": null,
+      "regionId": null,
+      "usualLocationId": null
     }
   ],
   "regions": [

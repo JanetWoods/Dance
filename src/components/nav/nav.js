@@ -12,56 +12,60 @@ export default class NavBar extends Component {
     }
     powerUser = sessionStorage.getItem("Type")
 
-render(){
-    return(
-        (sessionStorage.getItem("Type") === "PowerUser") ?
-            <nav className="navBar navbar-light light-blue p-0 shadow">
-                <ul className="nav nav-pills">
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/DanceList">Dances</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/filteredList">Filtered Dances</Link>
-                    </li>
+    render() {
+        return (
+            (sessionStorage.getItem("Type") === "PowerUser") ?
+                <nav className="navBar navbar-light light-blue p-0 shadow">
+                    <ul className="nav nav-pills">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/DanceList">Dances</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/filteredList">Filtered Dances</Link>
+                        </li>
 
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/locations"> Locations </Link>
-                    </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/locations"> Locations </Link>
+                        </li>
 
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/clubs"> Clubs </Link>
-                    </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/clubs"> Clubs </Link>
+                        </li>
 
-                    <li className="nav-item">
-                        <Link className="nav-link" to={`/account/user/${this.props.activeUser.id}`}>Your Account</Link>
-                    </li>
-                </ul>
-                <p className="nav-link"> Hi {this.props.activeUser.username}</p>
-                <button
-                type="button"
-                className="btn btn-outline-info"
-                onClick={this.logOut}>
-                    Logout
+                        <li className="nav-item">
+                            <Link className="nav-link" to={`/account/user/${this.props.activeUser.id}`}>Your Account</Link>
+                        </li>
+                    </ul>
+                    <p className="nav-link"> Hi {this.props.activeUser.username}</p>
+                    <button
+                        type="button"
+                        className="btn btn-outline-info"
+                        onClick={this.logOut}>
+                        Logout
                 </button>
-            </nav>
-        :
-        <nav className="navBar navbar-light light-blue p-0 shadow">
-        <ul className="nav nav-pills">
-            <li className="nav-item">
-                <Link className="nav-link" to="/DanceList">Dances</Link>
-            </li>
-            <li className="nav-item">
-                <Link className="nav-link" to={`/account/user/${this.props.activeUser.id}`}>Your Account</Link>
-            </li>
-        </ul>
-        <p className="nav-link"> Hi {this.props.activeUser.username}</p>
-        <button
-        type="button"
-        className="btn btn-outline-info"
-        onClick={this.logOut}>
-            Logout
+                </nav>
+                :
+                <nav className="navBar navbar-light light-blue p-0 shadow">
+                    <ul className="nav nav-pills">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/DanceList">Dances</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/filteredList">Filtered Dances</Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link className="nav-link" to={`/account/user/${this.props.activeUser.id}`}>Your Account</Link>
+                        </li>
+                    </ul>
+                    <p className="nav-link"> Hi {this.props.activeUser.username}</p>
+                    <button
+                        type="button"
+                        className="btn btn-outline-info"
+                        onClick={this.logOut}>
+                        Logout
         </button>
-    </nav>
+                </nav>
 
         )
     }

@@ -138,7 +138,7 @@ export default class NewEventForm extends Component {
                 ))}
             </select>
           </div>
-          <div className="form-group">
+          <div className="form-group-long">
             <label htmlFor="danceNotes">Need to know Notes about this dance:</label>
             <input type="text"
               onChange={this.handleFieldChange}
@@ -166,11 +166,11 @@ export default class NewEventForm extends Component {
           <div className="form-group">
             <label htmlFor="endTime">Dance Until: </label>
             <input type="time"
-              id="endTime"
               placeholder="22:00"
               onChange={this.handleFieldChange}
               value={this.state.endTime}
-              defaultValue={this.state.endTime} />
+              defaultValue={this.state.endTime}
+              id="endTime"/>
           </div>
           <div className="form-group">
             <label htmlFor="cost"> Cost $</label>
@@ -181,12 +181,10 @@ export default class NewEventForm extends Component {
               value={this.state.cost}
               id="cost" />
           </div>
-
           <button
             type="submt"
             onClick={this.editThisEvent}
             className="list-button">Save</button>
-
         </form>
             </div>
       </React.Fragment>

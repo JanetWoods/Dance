@@ -19,8 +19,8 @@ export default class Clubs extends Component {
                     <h2 className="list-title">Clubs</h2>
                       <div className="container">
                     {
-                        this.props.states.map(state =>
-
+                        this.props.states
+                        .map(state =>
                             <section key={state.stateId} >
                                <h4 className="list-title-left"> {state.stateLong}</h4>
                                     {
@@ -34,39 +34,35 @@ export default class Clubs extends Component {
                                                         : {}
                                             )
                                     }
-
                             </section>
                         )
-
                     }
                     </div>
                 </React.Fragment>)
 
                 :
                 (<React.Fragment>
-                    <h2>Clubs</h2>
+                     <h2 className="list-title">Clubs</h2>
+                      <div className="container">
                     {
-                        this.props.states.map(state =>
-                            <section>
-                                <div key={state.id}>
-
+                        this.props.states
+                        .map(state =>
+                            <section key={state.stateId} >
                                     {
                                         this.props.clubs.filter(
                                             club => club.stateId === state.id
                                         )
-                                            .map(
+                                        .map(
                                                 club =>
                                                     club.stateId !== null ?
                                                         <ClubCard key={`club-${club.id}`}{...this.props} club={club} powerUser={this.powerUser} />
                                                         : {}
                                             )
                                     }
-
-                                </div>
                             </section>
                         )
-
                     }
+                    </div>
                 </React.Fragment>)
         )
     }

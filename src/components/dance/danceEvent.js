@@ -15,9 +15,7 @@ export default class DanceEvent extends Component {
 
                         <p className="list-item"> <strong>{this.props.dance.typeOfEvent.nameType}</strong>,
                         <strong className="list-item"> {this.props.dance.whenDate} </strong>
-
                             <br />
-
                             <span><Link to={`/locations/${this.props.dance.location.id}`} {...this.props}>
                                 {this.props.dance.location.city},{this.props.dance.location.stateId} </Link></span>
 
@@ -25,7 +23,6 @@ export default class DanceEvent extends Component {
                              </a>
                         </p>
                         <p>
-
                         <button className="list-button"
                                 type="button"
                                 onClick={() => {

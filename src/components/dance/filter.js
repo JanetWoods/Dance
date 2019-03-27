@@ -1,82 +1,99 @@
 import React, { Component } from "react"
-import DanceEvent from "./danceEvent"
+import moment from 'moment'
 import { Link } from 'react-router-dom'
-import DanceList from '../dance/danceList'
+import DanceEvent from "./danceEvent"
+import "../dance/dance.css"
 
-export default class FilteredDances extends Component {
+export default class Filter extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            states:this.props.states,
-            filtered: [],
-            dances:this.props.dances,
-            stateId: "KY"
-        }
-    }
-    componentDidMount() {
-        this.setState({
-            filtered: this.props.states,
-            states: this.props.states
-        })
-    }
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            filtered: nextProps.states
-        })
+    state = {
+        typeOfEventId: 0,
+        stateId: "",
+        typeOfEvents: [],
+        states: []
     }
     handleFieldChange = evt => {
-        //    let currentList=[];
-        //    let newList=[];
-        //     if(evt.target.value !== ""){
-        //         currentList = this.props.states
-        //     }else{
-        //         return stateId === filter
-        //         newList = currentList.filter(stateId =>
-        //             filter=stateId)
-        //             filtered: newList;
-        //         }}
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value;
         this.setState(stateToChange);
     }
+
+    powerUser = sessionStorage.getItem("Type")
+
     render() {
         return (
-            <section>
-
-                <div className="form-group">
-                    <label htmlFor="stateId">State</label>
-                    <select
-                        name="stateId"
-                        id="stateId"
-                        onChange={this.handleFieldChange}
-                        value={this.state.stateId}>
-                        <option value="stateId">Select state</option>
-                        {this.props.states.map(state => (
-                            <option key={state.id} id={state.id} value={state.id}>{state.stateLong}</option>
-                        ))}
-                    </select>
-                </div>
-
-
-                <button
-                    type="submt"
-                    onClick={this.SearchThis}
-                    className="list-button">Save
-        </button>
-
-{/*
+            (sessionStorage.getItem("Type") === "PowerUser") ?
                 <React.Fragment>
-                    <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
-                </React.Fragment> */}
-            </section>
-
+                    <div className="top-container">
+                        <p><Link className="dance-link" to="/dance/new">Add Event</Link></p>
+                    </div>
+                    <form className="form-filter">
+                        <div>
+                            <select
+                                name="typeOfEvent"
+                                id="typeOfEvent"
+                                onChange={this.handleFieldChange}
+                                value={this.state.typeOfEvent}>
+                                <option required value="">Select Event/Dance Type</option>
+                                {this.props.typeOfEvents.map(typeE => (
+                                    <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
+                                ))}
+                            </select>
+                        </div>
+                    </form>
+                    <h4 className="list-title">Dances</h4>
+                    <div >
+                        {
+                            this.props.detailedDances
+                                .filter(dance => dance.typeOfEventId === parseInt(this.state.typeOfEvent))
+                                .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
+                                .sort(function compare(a, b) {
+                                    var dateA = new Date(a.whenDate);
+                                    var dateB = new Date(b.whenDate);
+                                    return dateB - dateA;
+                                })
+                                .map(dance => {
+                                    return <section key={`dance-${dance.id}`}>
+                                        <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} />
+                                    </section>
+                                })
+                        }
+                    </div>
+                </React.Fragment>
+                :
+                <React.Fragment>
+                    <form className="form-filter">
+                        <div>
+                            <select
+                                name="typeOfEvent"
+                                id="typeOfEvent"
+                                onChange={this.handleFieldChange}
+                                value={this.state.typeOfEvent}>
+                                <option required value="">Select Event/Dance Type</option>
+                                {this.props.typeOfEvents.map(typeE => (
+                                    <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
+                                ))}
+                            </select>
+                        </div>
+                    </form>
+                    <div >
+                        {
+                            this.props.detailedDances
+                                .filter(dance => dance.typeOfEventId === parseInt(this.state.typeOfEvent))
+                                .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
+                                .sort(function compare(a, b) {
+                                    var dateA = new Date(a.whenDate);
+                                    var dateB = new Date(b.whenDate);
+                                    return dateB - dateA;
+                                })
+                                .map(dance => {
+                                    return <section key={`dance-${dance.id}`}>
+                                        <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} />
+                                    </section>
+                                })
+                        }
+                    </div>
+                </React.Fragment>
         )
     }
 }
-
-
-
-
-
-
