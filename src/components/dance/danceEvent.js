@@ -11,6 +11,7 @@ export default class DanceEvent extends Component {
 
                 <div key={`dance-${this.props.dance.id}`} className="card-dance">
 
+            <div className="gradient-border">
                     <React.Fragment >
 
                         <p className="list-item"> <strong>{this.props.dance.typeOfEvent.nameType}</strong>,
@@ -48,6 +49,7 @@ export default class DanceEvent extends Component {
                             </button>
                         </p>
                     </React.Fragment>
+                                </div>
                 </div>
                 :
                 <div key={`dance-${this.props.dance.id}`} className="card-dance">

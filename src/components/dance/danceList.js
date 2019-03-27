@@ -16,7 +16,7 @@ export default class FilterDances extends Component {
                     </div>
 
                     <h2 className="list-title">Dances</h2>
-                    <div >
+                    <div>
 
                         {
                             this.props.detailedDances
@@ -28,7 +28,7 @@ export default class FilterDances extends Component {
                                 })
                                 .map(dance => {
 
-                                    return <section key={`dance-${dance.id}`}>
+                                    return <section key={`dance-${dance.id}`} >
                                         <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} />
                                     </section>
 

@@ -59,8 +59,8 @@ export default class Account extends Component {
     render() {
 
         return (
-            <div className="form-container">
-                <form>
+            <div className="gradient-border" >
+                <form className="form-container">
                     <h2> {this.state.nameFirst} {this.state.nameLast}</h2>
 
                     <div className="form-group">
@@ -98,7 +98,7 @@ export default class Account extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="clubId"> Select your club </label>
+                        <label width="auto" htmlFor="clubId"> Select your club </label>
                         <select
                             name="clubId"
                             id="clubId"
