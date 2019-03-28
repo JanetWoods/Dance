@@ -32,11 +32,6 @@ flex-direction: column;
     display: flex;
     justify-content: center;
 }
-
-
-.cancelled{
-    color: firebrick;
-}
 .card{
     display: flex;
     flex-wrap: wrap;
@@ -174,11 +169,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-      background: linear-gradient(to right,  #b09cb3, rgb(147, 125, 153)) ;
+      background: linear-gradient(to right, rgb(232, 226, 235), #d5c1da) ;
   }
   .gradient-border {
     --borderWidth: 3px;
-    background: linear-gradient(to right, rgb(147, 125, 153), #98859b);
     position: relative;
     border-radius: var(--borderWidth);
   }
@@ -189,7 +183,7 @@ body {
     left: calc(-1 * var(--borderWidth));
     height: calc(90% + var(--borderWidth) * 2);
     width: calc(100% + var(--borderWidth) * 2);
-    background: linear-gradient(60deg, #98859b, #65466b, #6e6370, #446377, #98859b, #b250c5, #8c6fba, #a166ab);
+    background: linear-gradient(60deg, #9c8c9e, #8f7c92, #a181a7, #845a8b, #734e7a);
     border-radius: calc(2 * var(--borderWidth));
     z-index: -1;
     animation: animatedgradient 3s ease alternate infinite;
