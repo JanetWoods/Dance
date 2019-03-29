@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { Link } from 'react-router-dom'
 import "./location.css"
 
 
@@ -8,8 +7,8 @@ export default class LocationCard extends Component {
     render() {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
-
                 <div key={`location-${this.props.location.id}`} className="location-card">
+                <div className="gradient-border">
                     <p className="list-button-row">
                         <strong>{this.props.location.nameLocation}</strong>
                     </p>
@@ -34,6 +33,7 @@ export default class LocationCard extends Component {
                             Delete
                             </button>
                     </p>
+                </div>
                 </div>
                 :
                 <div key={`location-${this.props.location.id}`} className="location-card">

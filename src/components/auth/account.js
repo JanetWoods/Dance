@@ -59,7 +59,7 @@ export default class Account extends Component {
     render() {
 
         return (
-            <div className="gradient-border" >
+            <div className="gradient-border">
                 <form className="form-container">
                     <h2> {this.state.nameFirst} {this.state.nameLast}</h2>
 

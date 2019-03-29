@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import userMgr from "../../modules/userMgr"
-import "../dance/dance.css"
-import { Link } from 'react-router-dom'
+import "../auth/account.css"
 
 export default class Login extends Component {
     state = {
@@ -81,30 +80,34 @@ export default class Login extends Component {
     }
     render() {
         return (
-            <form className="form-login">
-                <h1 className="h3 mb-3 font-weight-normal">Sign in</h1>
-                <label htmlFor="inputUserName">Username</label>
-                <input onChange={this.handleFieldChange}
-                    type="username"
-                    id="username"
-                    placeholder={`username`}
-                    autoFocus=""
-                    required=""
-                />
+            <div className="gradient-border">
+            <h1 className="h3 mb-3 font-weight-normal">Sign in</h1>
+                    <form className="form-login">
+                        <div className="form-group">
+                        <label htmlFor="inputUserName">Username</label>
+                        <input onChange={this.handleFieldChange}
+                            type="username"
+                            id="username"
+                            placeholder={`username`}
+                            autoFocus=""
+                            required=""
+                            />
+                        </div>
+                        <div className="form-group">
+                        <label htmlFor="inputPassword">Password</label>
+                        <input onChange={this.handleFieldChange}
+                            type="password"
+                            id="password"
+                            placeholder={`password`}
+                            autoFocus=""
+                            required="" />
+                            </div>
 
-                <label htmlFor="inputPassword">Password</label>
-                <input onChange={this.handleFieldChange}
-                    type="password"
-                    id="password"
-                    placeholder={`password`}
-                    autoFocus=""
-                    required="" />
-
-                <button type="submit" onClick={this.handleLogin}>
-                    Sign in
-                </button>
-
-            </form>
+                        <button type="submit" onClick={this.handleLogin}>
+                            Sign in
+                        </button>
+                    </form>
+                </div>
         )
     }
 }

@@ -11,12 +11,12 @@ export default class DanceEvent extends Component {
 
                 <div key={`dance-${this.props.dance.id}`} className="card-dance">
 
-            <div className="gradient-border">
                     <React.Fragment >
+            <div className="gradient-border" >
 
                         <p className="list-item"> <strong>{this.props.dance.typeOfEvent.nameType}</strong>,
                         <strong className="list-item"> {this.props.dance.whenDate} </strong>
-                            <br />
+                            {/* <br /> */}
                             <span><Link to={`/locations/${this.props.dance.location.id}`} {...this.props}>
                                 {this.props.dance.location.city},{this.props.dance.location.stateId} </Link></span>
 
@@ -48,8 +48,8 @@ export default class DanceEvent extends Component {
                                 Delete
                             </button>
                         </p>
-                    </React.Fragment>
                                 </div>
+                    </React.Fragment>
                 </div>
                 :
                 <div key={`dance-${this.props.dance.id}`} className="card-dance">

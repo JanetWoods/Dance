@@ -52,68 +52,69 @@ export default class EditLocationForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <form className="form-newEvent">
-          <div className="form-group">
-            <label htmlFor="nameLocation">Name of Location</label>
-            <input type="text"
-              onChange={this.handleFieldChange}
-              id="nameLocation"
-              value={this.state.nameLocation} />
-          </div>
+          <form className="form-editLocation">
+        <div className="gradient-border">
+            <div className="form-group">
+              <label htmlFor="nameLocation">Name of Location</label>
+              <input type="text"
+                onChange={this.handleFieldChange}
+                id="nameLocation"
+                value={this.state.nameLocation} />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="street">Street Address</label>
-            <input type="text"
-              onChange={this.handleFieldChange}
-              id="street"
-              value={this.state.street} />
-          </div>
+            <div className="form-group">
+              <label htmlFor="street">Street Address</label>
+              <input type="text"
+                onChange={this.handleFieldChange}
+                id="street"
+                value={this.state.street} />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="city"> City </label>
-            <input type="text"
-              onChange={this.handleFieldChange}
-              id="city"
-              value={this.state.city} />
-          </div>
+            <div className="form-group">
+              <label htmlFor="city"> City </label>
+              <input type="text"
+                onChange={this.handleFieldChange}
+                id="city"
+                value={this.state.city} />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="stateId">State</label>
-            <select
-              name="stateId"
-              id="stateId"
-              onChange={this.handleFieldChange}
-              value={this.state.stateId}>
-              <option value="stateId">Select state</option>
-              {this.props.states.map(state => (
-                <option key={state.id} id={state.id} value={state.id}>{state.stateLong}</option>
-              ))}
-            </select>
-          </div>
+            <div className="form-group">
+              <label htmlFor="stateId">State</label>
+              <select
+                name="stateId"
+                id="stateId"
+                onChange={this.handleFieldChange}
+                value={this.state.stateId}>
+                <option value="stateId">Select state</option>
+                {this.props.states.map(state => (
+                  <option key={state.id} id={state.id} value={state.id}>{state.stateLong}</option>
+                ))}
+              </select>
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="zip"> Zip </label>
-            <input type="text"
-              onChange={this.handleFieldChange}
-              id="zip"
-              value={this.state.zip} />
-          </div>
+            <div className="form-group-short">
+              <label htmlFor="zip"> Zip </label>
+              <input type="text"
+                onChange={this.handleFieldChange}
+                id="zip"
+                value={this.state.zip} />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="locationNotes"> Notes About This Location </label>
-            <input type="text"
-              onChange={this.handleFieldChange}
-              id="locationNotes"
-              value={this.state.locationNotes} />
-          </div>
+            <div className="form-group-long">
+              <label htmlFor="locationNotes"> Notes About This Location </label>
+              <input type="text"
+                onChange={this.handleFieldChange}
+                id="locationNotes"
+                value={this.state.locationNotes} />
+            </div>
 
-          <button
-            type="submt"
-            onClick={this.editThisLocation}
-            className="list-button">Save
+            <button
+              type="submt"
+              onClick={this.editThisLocation}
+              className="list-button">Save
               </button>
-
-        </form>
+        </div>
+          </form>
       </React.Fragment>
     )
   }

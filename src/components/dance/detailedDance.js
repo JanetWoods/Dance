@@ -35,8 +35,8 @@ export default class DanceDetail extends Component {
                 <div className="card-detailed">
 
                     <p className="list-title"> <strong>{this.state.typeOfEvent.nameType}</strong></p>
-                    <p className="list-item">  When:{"  "} <strong> {"  "} {`${this.state.whenDate}`}</strong> </p>
-                    <p className="list-item">Through:{" "} {this.state.throughDate}  (if a multi-day event)</p>
+                    <p className="list-item">  When: <strong> {"  "} {`${this.state.whenDate}`}</strong> </p>
+                    <p className="list-item">Through:{this.state.throughDate}  (if a multi-day event)</p>
                     <p className="list-item">Dinner:{" "}  {this.state.dinnerTime}</p>
                     <p className="list-item">Dance:{" "}  {this.state.danceTime}</p>
 

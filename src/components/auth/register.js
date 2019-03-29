@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import userMgr from "../../modules/userMgr"
-import "../dance/dance.css"
+import "../auth/account.css"
 
 export default class Register extends Component {
     state = {
@@ -81,17 +81,18 @@ export default class Register extends Component {
     }
     render() {
         return (
-            <form className="form-register">
-            <h1> </h1>
+
+               <div className="gradient-border">
                 <h1 className="h3 mb-3 font-weight-normal">Register: </h1>
+
+                    <form className="form-register">
                 <label htmlFor="inputUserName">Username</label>
                 <input onChange={this.handleFieldChange}
                     type="username"
                     id="username"
                     placeholder={`username`}
                     autoFocus=""
-                    required=""
-                />
+                    required=""/>
 
                 <label htmlFor="inputPassword">Password</label>
                 <input onChange={this.handleFieldChange}
@@ -152,6 +153,7 @@ export default class Register extends Component {
             </button>
 
             </form>
+            </div>
         )
     }
 }

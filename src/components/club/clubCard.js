@@ -20,36 +20,40 @@ export default class ClubCard extends Component {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
-            <section >
-                        <React.Fragment>
-                    <div key={`club-${this.props.club.id}`} className="club-card">
+                <section >
+                    <React.Fragment>
+                        <div key={`club-${this.props.club.id}`} className="club-card">
+                            <div className="gradient-border">
 
+                                <p className="list-item">
+                                    {this.props.club.clubName}
+                                </p>
+                                <br />
+                                <p>
 
-                            {this.props.club.clubName}
-                        <p>
-
-                            <button className="list-button"
-                                type="button"
-                                onClick={() => {
-                                    this.props.history.push(`/clubs/edit/${this.props.club.id}`)
-                                }} >
-                                Edit
+                                    <button className="list-button"
+                                        type="button"
+                                        onClick={() => {
+                                            this.props.history.push(`/clubs/edit/${this.props.club.id}`)
+                                        }} >
+                                        Edit
                             </button>
                                 </p>
-                    </div>
-                        </React.Fragment>
+                            </div>
+                        </div>
+                    </React.Fragment>
                 </section>
                 :
-                <section className="club-card">
-                 {this.props.club.stateId} <br/>
-                    <div key={`club-${this.props.club.id}`}>
-                        <React.Fragment>
-                            {this.props.club.clubName}
-
-
-                        </React.Fragment>
-                    </div>
-                </section>
+                <div className="gradient-border">
+                    <section className="club-card">
+                        {this.props.club.stateId}
+                        <div key={`club-${this.props.club.id}`}>
+                            <p>
+                                {this.props.club.clubName}
+                            </p>
+                        </div>
+                    </section>
+                </div>
         )
     }
 

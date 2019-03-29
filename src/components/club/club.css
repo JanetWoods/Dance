@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
 #root{
     display: flex;
     flex-direction: column;
@@ -26,23 +27,27 @@ flex-direction: column;
     margin-right: 5px;
     width: 20%;
 }
-
-.cancelled{
-    color: firebrick;
+.top-container{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+p{
+    text-indent: 2em;
 }
 
 .club-card{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    margin-left: 45px;
-    margin-right: 25%;
+    flex-direction: row;
+    margin-left: 10%;
+    /* margin-right: 25%; */
     margin-top: 1%;
-    justify-content:space-around;
-    width: 50%;
+    width: 80%;
     margin-bottom: 1%;
-    border-style: solid;
-    border-color: blue;
     border-radius: 5%;
     align-content: left;
 }
@@ -51,7 +56,7 @@ display: flex;
 flex-wrap: wrap;
 flex-flow: row wrap;
 margin-left: 15px;
-margin-right: 25px;
+margin-right: 15px;
 justify-content:left;
 padding-left: 5px;
 justify-content: flex-start;
@@ -80,11 +85,11 @@ justify-content: flex-start;
 .container{
     display: flex;
     flex-direction: column;
+    width:50%;
     align-content: center;
-    width:100%;
-    /* border-color: blue; */
-    margin-bottom: 5%;
-    justify-content: right;
+    margin-bottom: 1%;
+    /* margin-left: 25%; */
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 .list-button-row{
@@ -102,3 +107,43 @@ button{
     width: 6em;
     border-radius: .20em;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+      background: linear-gradient(to right, rgb(247, 245, 248), #f1eaf3) ;
+  }
+  .gradient-border {
+    --borderWidth: 3px;
+    position: relative;
+    border-radius: var(--borderWidth);
+    background: linear-gradient(60deg, #9c8c9e, #9e88a1, #a181a7, #906697);
+  }
+  .gradient-border:after {
+    content: '';
+    position: relative;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(90% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #b3a7b4, #9e88a1, #a181a7, #906697);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+
+
+  @keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
