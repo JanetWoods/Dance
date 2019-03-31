@@ -23,6 +23,7 @@ export default class LocationDetail extends Component {
 
         return (
             <div key={`location-${this.state.location.id}`} className="location-card">
+            <div className="gradient-border">
              <h3>  {this.state.location.nameLocation}   </h3>
              <br/>
                <p className="list-item"> {this.state.location.street}</p>
@@ -32,6 +33,7 @@ export default class LocationDetail extends Component {
                <br/>
                 <p className="list-item">Note:  {this.state.location.locationNotes}</p>
 
+            </div>
             </div>
 
 

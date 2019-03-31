@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import "./dance.css"
 export default class NewEventForm extends Component {
 
   state = {
@@ -23,9 +24,7 @@ export default class NewEventForm extends Component {
   makeNewEvent = evt => {
     evt.preventDefault()
 
-    if(this.state.whenDate !== "")
-    {
-      if(this.state.locationId !== ""){
+    if((this.state.whenDate !== " ") && (this.state.locationId !== " ")){
 
         const newEvent = {
           danceNotes: this.state.danceNotes,
@@ -45,19 +44,19 @@ export default class NewEventForm extends Component {
           this.props.history.push("/DanceList")
         })
       }
-      else{
+      else if (this.state.locationId === "0" || this.state.locationId === "") {
         alert("You forgot to enter the location. Where is it?")
       }
-    }
-    else{
+      else if (this.state.whenDate === "" || this.state.whenDate === null){
       alert("You forgot to enter the date. When is it?")
     }
-
   }
 render() {
   return (
     <React.Fragment>
+        <h2 className="list-title">Enter New Event</h2>
       <form className="form-newEvent">
+        <div className="gradient-border">
         <div className="form-group">
           <label htmlFor="whenDate">What Day is it?</label>
           <input type="date"
@@ -70,8 +69,7 @@ render() {
           <input type="date"
             onChange={this.handleFieldChange}
             value={this.state.throughDate}
-            id="throughDate"
-          />
+            id="throughDate"/>
         </div>
         <div className="form-group">
           <label htmlFor="eventURL"> Event URL (if applicable)</label>
@@ -92,7 +90,7 @@ render() {
             <option required value="">Select Event/Dance Type</option>
             {this.props.typeOfEvents.map(typeE => (
               <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
-            ))}
+              ))}
           </select>
         </div>
 
@@ -107,7 +105,7 @@ render() {
             <option value="">Select Location</option>
             {this.props.locations.map(loc => (
               <option key={loc.id} id={loc.id} value={loc.id}> {loc.nameLocation} </option>
-            ))}
+              ))}
           </select>
         </div>
 
@@ -124,7 +122,7 @@ render() {
             <option value="">Select club</option>
             {this.props.clubs.map(club => (
               <option key={club.id} id={club.id} value={club.id}> {club.clubName} </option>
-            ))}
+              ))}
           </select>
         </div>
 
@@ -175,7 +173,7 @@ render() {
           onClick={this.makeNewEvent}
           className="list-button">Add Event
               </button>
-
+          </div>
       </form>
     </React.Fragment>
   )

@@ -1,20 +1,6 @@
 {
   "dances": [
     {
-      "id": 3,
-      "danceNotes": "You missed this boat already, sorry.",
-      "whenDate": "2019-03-24",
-      "throughDate": "2019-03-31",
-      "dinnerTime": "18:00",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "1499.00",
-      "typeOfEventId": 4,
-      "locationId": 16,
-      "clubId": 12,
-      "eventSite": "https://squaredancecaribbean2019.blogspot.com/"
-    },
-    {
       "id": 4,
       "danceNotes": "Wear Pink",
       "whenDate": "2019-04-06",
@@ -22,17 +8,155 @@
       "dinnerTime": "19:00",
       "danceTime": "19:30",
       "endTime": "22:00",
-      "cost": "10",
+      "cost": "11",
       "typeOfEventId": 7,
-      "locationId": 6,
+      "locationId": 9,
       "clubId": 1,
       "eventSite": ""
     },
     {
-      "id": 5,
-      "danceNotes": "",
-      "whenDate": "2019-03-04",
+      "id": 7,
+      "danceNotes": "Bring your boots",
+      "whenDate": "2019-06-26",
+      "throughDate": "2019-06-29",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "80",
+      "typeOfEventId": 3,
+      "locationId": 7,
+      "clubId": 1,
+      "eventSite": "https://68nsdc.com/"
+    },
+    {
+      "danceNotes": "testing date filter",
+      "whenDate": "2019-03-20",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 11,
+      "locationId": 11,
+      "clubId": 1,
+      "eventSite": "",
       "throughDate": "",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "danceNotes": "The real cruise left already",
+      "whenDate": "2019-04-05",
+      "throughDate": "2019-04-12",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "1799",
+      "typeOfEventId": 4,
+      "locationId": 16,
+      "clubId": 1,
+      "eventSite": "https://squaredancecaribbean2019.blogspot.com/"
+    },
+    {
+      "id": 10,
+      "danceNotes": "All ages welcome!",
+      "whenDate": "2019-04-11",
+      "throughDate": "",
+      "dinnerTime": "",
+      "danceTime": "19:00",
+      "endTime": "21:00",
+      "cost": "5.0",
+      "typeOfEventId": 8,
+      "locationId": 8,
+      "clubId": 2,
+      "eventSite": ""
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-04-05",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 7,
+      "locationId": 7,
+      "clubId": 2,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 11
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-04-04",
+      "dinnerTime": "",
+      "danceTime": "19:00",
+      "endTime": "21:00",
+      "cost": "5",
+      "typeOfEventId": 8,
+      "locationId": 8,
+      "clubId": 2,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 12
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-04-18",
+      "dinnerTime": "",
+      "danceTime": "19:00",
+      "endTime": "21:00",
+      "cost": "5",
+      "typeOfEventId": 8,
+      "locationId": 8,
+      "clubId": 2,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 13
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-04-06",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7",
+      "typeOfEventId": 9,
+      "locationId": 9,
+      "clubId": 1,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 14
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-03-08",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "55",
+      "typeOfEventId": 1,
+      "locationId": 1,
+      "clubId": 1,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 15
+    },
+    {
+      "danceNotes": "aaaaaaaaaaaaaaaaa",
+      "whenDate": "2019-04-04",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 5,
+      "locationId": 5,
+      "clubId": 1,
+      "eventSite": "https://squaredancecaribbean2019.blogspot.com/",
+      "throughDate": "",
+      "id": 16
+    },
+    {
+      "danceNotes": "xxxxxxxxxx",
+      "whenDate": "",
       "dinnerTime": "19:00",
       "danceTime": "19:30",
       "endTime": "22:00",
@@ -40,21 +164,9 @@
       "typeOfEventId": 1,
       "locationId": 1,
       "clubId": 1,
-      "eventSite": ""
-    },
-    {
-      "id": 6,
-      "danceNotes": "",
-      "whenDate": "2019-03-19",
+      "eventSite": "https://squaredancecaribbean2019.blogspot.com/",
       "throughDate": "",
-      "dinnerTime": "19:00",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "7.00",
-      "typeOfEventId": 7,
-      "locationId": 4,
-      "clubId": 2,
-      "eventSite": ""
+      "id": 17
     }
   ],
   "typeOfEvents": [
@@ -84,7 +196,7 @@
     },
     {
       "id": 7,
-      "nameType": "Square Dance, Club Dance"
+      "nameType": "Square Dance, (Club Dance)"
     },
     {
       "id": 8,
@@ -100,11 +212,11 @@
     },
     {
       "id": 11,
-      "nameType": "Square and Rounds"
+      "nameType": "Squares and Rounds"
     },
     {
       "id": 12,
-      "nameType": "Workshop"
+      "nameType": "Square Dance, Workshop"
     }
   ],
   "typeOfUser": [
@@ -126,7 +238,7 @@
       "nameFirst": "Rob",
       "nameLast": "Woods",
       "clubId": 1,
-      "phone": "859-227-555555",
+      "phone": "859-227-5511",
       "email": "rcw6236@yahoo.com"
     },
     {
@@ -178,9 +290,9 @@
       "username": "Janet",
       "password": "123",
       "typeOfUserId": 2,
-      "nameFirst": "",
-      "nameLast": "",
-      "clubId": "1",
+      "nameFirst": "Janet",
+      "nameLast": "Woods",
+      "clubId": "2",
       "phone": "8593609552",
       "email": "janetnwoods@gmail.com"
     }
@@ -217,8 +329,7 @@
       "secretaryId": 5,
       "otherOfficerId": 6,
       "regionId": 1,
-      "usualLocationId": 2,
-      "zip": " "
+      "usualLocationId": 2
     },
     {
       "id": 4,
@@ -329,6 +440,105 @@
       "regionId": "",
       "usualLocationId": "",
       "id": 13
+    },
+    {
+      "clubName": "Singles And Doubles",
+      "stateId": "AL",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 14
+    },
+    {
+      "clubName": "Swingin' Squares",
+      "stateId": "AL",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 15
+    },
+    {
+      "clubName": "Alaska-Yukon Square and Round Dancing",
+      "stateId": "AK",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 16
+    },
+    {
+      "clubName": "Do Si Dos",
+      "stateId": "KY",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 17
+    },
+    {
+      "clubName": "Pueblo Promenaders",
+      "stateId": "AZ",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 18
+    },
+    {
+      "clubName": "Voyager",
+      "stateId": "AZ",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 19
+    },
+    {
+      "clubName": "Down Unders",
+      "stateId": "KY",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 20
+    },
+    {
+      "clubName": "My Club",
+      "stateId": "TN",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 21
+    },
+    {
+      "id": 22,
+      "clubName": "Testing squares",
+      "stateId": "AR",
+      "presidentId": null,
+      "vicePresidentId": null,
+      "secretaryId": null,
+      "otherOfficerId": null,
+      "regionId": null,
+      "usualLocationId": null
     }
   ],
   "regions": [
@@ -486,6 +696,15 @@
       "stateId": "",
       "locationNotes": "",
       "id": 16
+    },
+    {
+      "nameLocation": "Bashville Rec Center ",
+      "street": "100 Main Street",
+      "city": "Bashville",
+      "zip": "30411",
+      "stateId": "TN",
+      "locationNotes": "Note a real location",
+      "id": 17
     }
   ],
   "states": [
@@ -515,7 +734,7 @@
     },
     {
       "id": "CT",
-      "stateLong": "CT"
+      "stateLong": "Connecticut"
     },
     {
       "id": "DE",

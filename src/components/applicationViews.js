@@ -21,7 +21,7 @@ import LocationDetail from "./location/locationDetail"
 import EditLocationForm  from "./location/editLocationForm"
 import EditClubForm from "./club/editClubForm"
 import Clubs from "./club/clubList"
-import FilteredDances from "./dance/filter"
+import Filter from "./dance/filter"
 import DanceDetail from "./dance/detailedDance"
 
 export default class ApplicationViews extends Component {
@@ -252,7 +252,8 @@ export default class ApplicationViews extends Component {
                         clubs={this.state.clubs}
                         deleteDance={this.deleteDance}
                         editDance={this.editDance}
-                        detailedDances={this.state.detailedDances} />
+                        detailedDances={this.state.detailedDances}
+                         />
                 }} />
                 <Route exact path="/account/user/:id(\d+)" render={props => {
                     return <Account {...props}
@@ -324,14 +325,16 @@ export default class ApplicationViews extends Component {
                         {...props} />
                 }} />
                 <Route exact path="/filteredList" render={props => {
-                    return <FilteredDances
+                    return <Filter
                         dances={this.state.dances}
                         deleteDance={this.deleteDance}
                         userPower={this.props.userPower}
                         detailedDances={this.state.detailedDances}
+                        typeOfEvents={this.state.typeOfEvents}
                         addDance={this.addDance}
                         editDance={this.editDance}
                         states={this.props.states}
+                        Filter={this.props.filter}
                         {...props} />
                 }} />
                 <Route exact path="/DanceEvent" render={props => {

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
 #root{
     display: flex;
     flex-direction: column;
@@ -26,38 +27,52 @@ flex-direction: column;
     margin-right: 5px;
     width: 20%;
 }
+.top-container{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+p{
+    text-indent: 2em;
+}
+.card-dance{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 5px 5px 5px 5px;
+    justify-content:left;
+    width: auto;
+    overflow: hidden;
+    border-width: 5px;
+    border-style: ridge;
+    border-color: #815988;
+}
+.club-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 5px 5px 5px 5px;
+    justify-content:left;
+    width: 100%;
+    overflow: hidden;
+    border-width: 5px;
+    border-style: ridge;
+    border-color: #815988;
+}
 
-.cancelled{
-    color: firebrick;
-}
-.card{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: 30px;
-    margin-top: 10px;
-    justify-content:left;
-    width: 50%;
-    border-radius: .25em;
-    margin-bottom: 5px;
-}
-.danceCard{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: 10px;
-    margin-top: 15px;
-    justify-content:left;
-    width: 90%;
-    border-radius: .25em;
-    border-color: black;
-}
 .list-item{
 display: flex;
 flex-wrap: wrap;
 flex-flow: row wrap;
 margin-left: 15px;
-margin-right: 25px;
+margin-right: 15px;
 justify-content:left;
 padding-left: 5px;
 justify-content: flex-start;
@@ -65,4 +80,98 @@ justify-content: flex-start;
 .list-title{
     justify-content: space-around;
     display: flex;
+}
+.list-title-left{
+    justify-content: space-around;
+    display: flex;
+    align-content: left;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    width:50%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-width: 5px;
+    border-style: ridge;
+    border-color: #815988;
+    box-sizing: content-box;
+    }
+.container{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    align-content: center;
+    margin-bottom: 1%;
+    /* margin-left: 25%; */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.list-button-row{
+    justify-content: space-evenly;
+    width: 100%;
+}
+button{
+    margin-left: 10px;
+    margin-right: 25px;
+}
+.list-button{
+    margin: 5px 0px 0px 5px;
+    padding: 0px 5px 6px 5px;
+    height: 1.7em;
+    width: 6em;
+    border-radius: .20em;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: rgb(247, 245, 248);
+  }
+  .gradient-border {
+    --borderWidth: 3px;
+    position: relative;
+    width: 100%;
+    border-radius: var(--borderWidth);
+    border-image:   linear-gradient(60deg, #9c8c9e, #9e88a1, #a181a7, #906697);
+  }
+  .gradient-border:after {
+    content: '';
+    position: relative;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(90% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #b3a7b4, #9e88a1, #a181a7, #906697);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+
+
+  @keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: left;
+    margin-left: 25%;
+    margin-right: 25%;
+    width:auto;
 }

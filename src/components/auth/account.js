@@ -1,11 +1,11 @@
 import React, { Component } from "react"
 import userMgr from "../../modules/userMgr"
-import "../dance/dance.css"
+import "./account.css"
 import clubMgr from "../../modules/clubMgr";
 
 export default class Account extends Component {
     state = {
-        id:parseInt(sessionStorage.getItem("credentials")),
+        id: parseInt(sessionStorage.getItem("credentials")),
         password: "",
         username: "",
         typeOfUserId: 1,
@@ -25,7 +25,7 @@ export default class Account extends Component {
     EditUser = e => {
         e.preventDefault()
         const updatedUser = {
-            id:this.props.match.params.id,
+            id: this.props.match.params.id,
             username: this.state.username,
             password: this.state.password,
             typeOfUserId: this.state.typeOfUserId,
@@ -37,84 +37,89 @@ export default class Account extends Component {
         }
         console.log("updated User: ", updatedUser)
         this.props.updateUser(updatedUser)
-        .then(()=>this.props.history.push("/"))
+            .then(() => this.props.history.push("/"))
     }
     componentDidMount(user) {
         userMgr.get(this.props.match.params.id)
-        .then((user) => {
-            this.setState({
-                id: user.id,
-                username: user.username,
-                password: user.password,
-                typeOfUserId: user.typeOfUserId,
-                nameFirst: user.nameFirst,
-                nameLast: user.nameLast,
-                clubId: user.clubId,
-                phone: user.phone,
-                email: user.email
+            .then((user) => {
+                this.setState({
+                    id: user.id,
+                    username: user.username,
+                    password: user.password,
+                    typeOfUserId: user.typeOfUserId,
+                    nameFirst: user.nameFirst,
+                    nameLast: user.nameLast,
+                    clubId: user.clubId,
+                    phone: user.phone,
+                    email: user.email
+                })
             })
-        })
     }
 
     render() {
 
-
         return (
-            <form className="form-updateAccount">
-                <h1 className="h3 mb-3 font-weight-normal"> {this.state.nameFirst} {this.state.nameLast}</h1>
-                <label htmlFor="username">Username:</label> <span>
-                <input onChange={this.handleFieldChange}
-                    type="username"
-                    id="username"
-                    value={this.state.username}
-                    defaultValue={this.state.username}
-                    placeholder={this.state.username}
-                    autoFocus=""
-                    required="" />
+                <form className="form-container">
+            <div className="gradient-border">
+                    <h2> {this.state.nameFirst} {this.state.nameLast}</h2>
 
-                </span><br/>
+                    <div className="form-group">
+                        <label htmlFor="username">Username:</label>
+                        <input onChange={this.handleFieldChange}
+                            type="username"
+                            id="username"
+                            value={this.state.username}
+                            defaultValue={this.state.username}
+                            placeholder={this.state.username}
+                            autoFocus=""
+                            required="" />
+                    </div>
 
+                    <div className="form-group">
+                        <label htmlFor="inputPhone">Phone Number</label>
+                        <input onChange={this.handleFieldChange}
+                            type="phone"
+                            id="phone"
+                            placeholder={this.state.phone}
+                            defaultValue={this.state.phone}
+                            value={this.state.phone}
+                            autoFocus="" />
+                    </div>
 
-                <label htmlFor="inputPhone">Phone Number</label>
-                <input onChange={this.handleFieldChange}
-                    type="phone"
-                    id="phone"
-                    placeholder={this.state.phone}
-                    defaultValue={this.state.phone}
-                    value={this.state.phone}
-                    autoFocus="" />
-<br/>
-                <label htmlFor="email">email</label>
-                <input onChange={this.handleFieldChange}
-                    type="email"
-                    id="email"
-                    placeholder={this.state.email}
-                    defaultValue={this.state.email}
-                    value={this.state.email}
-                    autoFocus="" />
+                    <div className="form-group">
+                        <label htmlFor="email">email</label>
+                        <input onChange={this.handleFieldChange}
+                            type="email"
+                            id="email"
+                            placeholder={this.state.email}
+                            defaultValue={this.state.email}
+                            value={this.state.email}
+                            autoFocus="" />
+                    </div>
 
+                    <div className="form-group">
+                        <label width="auto" htmlFor="clubId"> Select your club </label>
+                        <select
+                            name="clubId"
+                            id="clubId"
+                            onChange={this.handleFieldChange}
+                            defaultValue={this.state.clubId}
+                            value={this.state.clubId}>
+                            <option value="">Select Your Club </option>
+                            {this.props.clubs.map(club => (
+                                <option key={club.id} id={club.id} value={club.id}>{club.clubName}</option>
+                            ))}
+                        </select>
 
+                    </div>
 
-                <div className="form-group">
-                    <label htmlFor="clubId"> Select your club </label>
-                    <select
-                        name="clubId"
-                        id="clubId"
-                        onChange={this.handleFieldChange}
-                        defaultValue={this.state.clubId}
-                        value={this.state.clubId}>
-
-                        <option value="">Select Your Club </option>
-                        {this.props.clubs.map(club => (
-                            <option key={club.id} id={club.id} value={club.id}>{club.clubName}</option>
-                        ))}
-                    </select>
-                </div>
-
-                <button type="submit" onClick={this.EditUser}>
-                    Save Changes
+                    <div className="list-button-row">
+                        <button type="submit" onClick={this.EditUser}>
+                            Save Changes
             </button>
-            </form>
+                    </div>
+            </div>
+                </form>
         )
     }
 }

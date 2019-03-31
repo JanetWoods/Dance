@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import clubMgr from "../../modules/clubMgr"
-
+import "./club.css"
 export default class EditClubForm extends Component {
 
   state = {
@@ -39,7 +39,7 @@ export default class EditClubForm extends Component {
       }
       this.props.updateClub(updatedClub)
         .then(() => {
-          this.props.history.push("/")
+          this.props.history.push("/clubs")
         })
     }
   }
@@ -62,16 +62,16 @@ export default class EditClubForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <form className="form-newEvent">
+        <form className="form-container">
+        <div className="gradient-border">
           <div className="form-group">
             <label htmlFor="clubName">Name of Club</label>
             <input type="text"
               onChange={this.handleFieldChange}
               id="clubName"
               value={this.state.clubName}/>
-
-
           </div>
+
           <div className="form-group">
             <label htmlFor="stateId">State</label>
             <select
@@ -82,7 +82,7 @@ export default class EditClubForm extends Component {
               <option value="stateId">Select state</option>
               {this.props.states.map(state => (
                 <option key={state.id} id={state.id} value={state.id}>{state.stateLong}</option>
-              ))}
+                ))}
             </select>
           </div>
 
@@ -97,7 +97,7 @@ export default class EditClubForm extends Component {
               <option value="locationId"> Preferred dance location</option>
               {this.props.locations.map(location => (
                 <option key={location.id} id={location.id} value={location.id}> {location.nameLocation} </option>
-              ))}
+                ))}
             </select>
           </div>
 
@@ -106,7 +106,7 @@ export default class EditClubForm extends Component {
             onClick={this.makeUpdatedClub}
             className="list-button">Save
               </button>
-
+            </div>
         </form>
       </React.Fragment>
     )

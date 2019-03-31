@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+form{
+display: flex;
+flex-direction: column;
+align-content: left;
+/* width: 100%; */
+margin-top: 1%;
+margin-left: 5%;
+margin-right: 5%;
+margin-bottom: 10%;
+padding: 2%;
+overflow: hidden;
+}
+.form-group{
+  align-content: left;
+  width: auto;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 2;
+  }
+
+.form-container{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+align-content: left;
+width:90%;
+margin-left: 25%;
+margin-right: 25%;
+margin-bottom: 10%;
+box-sizing: content-box;
+border-width: 5px;
+}
+.form-login
+.form-register{
+  display: flex;
+flex-wrap: wrap;
+align-content: left;
+width:100%;
+margin-left: 25%;
+margin-right: 25%;
+margin-bottom: 10%;
+box-sizing: content-box;
+border-width: 5px;
+flex-direction: column;
+padding: 5px 5px 5px 5px;
+justify-content:left;
+overflow: hidden;
+border-width: 5px;
+}
+.list-button-row{
+    justify-content: space-around;
+    width: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(to right,  #b09cb3, rgb(147, 125, 153)) ;
+}
+.gradient-border {
+  --borderWidth: 3px;
+  position: relative;
+  border-radius: var(--borderWidth);
+  background: linear-gradient(60deg, #eceaec, #edd6f0, #e2b9e9, #dba1e6);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #716e72, #7b6f7c, #a78cac, #b183b9);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 10s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+} */

@@ -9,23 +9,19 @@ export default class DanceEvent extends Component {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
-                <div key={`dance-${this.props.dance.id}`} className="card">
-
                     <React.Fragment >
-
-                        <p className="list-item"> <strong>{this.props.dance.typeOfEvent.nameType}</strong>,
-                        <strong className="list-item"> {this.props.dance.whenDate} </strong>
-
-                            <br />
-
-                            <span><Link to={`/locations/${this.props.dance.location.id}`} {...this.props}>
-                                {this.props.dance.location.city},{this.props.dance.location.stateId} </Link></span>
+                <div key={`dance-${this.props.dance.id}`} className="card-dance">
+                <div className="gradient-border" >
+                        <p > <strong>{this.props.dance.typeOfEvent.nameType}</strong>
+                     <strong className="list-item"> {this.props.dance.whenDate} </strong> </p>
+                            {/* <br /> */}
+                           <p> <span><Link to={`/locations/${this.props.dance.location.id}`} {...this.props}>
+                                {this.props.dance.location.city}{",   "}     {this.props.dance.location.stateId} </Link></span>
 
                             <a href={`${this.props.dance.eventSite}`} target="new">{this.props.dance.eventSite}
-                             </a>
+                            </a>
                         </p>
-                        <p>
-
+                        <p className="list-button-row">
                         <button className="list-button"
                                 type="button"
                                 onClick={() => {
@@ -50,22 +46,28 @@ export default class DanceEvent extends Component {
                                 Delete
                             </button>
                         </p>
+                    </div>
+                    </div>
                     </React.Fragment>
-                </div>
                 :
-                <div key={`dance-${this.props.dance.id}`} className="card">
-
+                <div key={`dance-${this.props.dance.id}`} className="card-dance">
+                <div className="gradient-border" >
                     <React.Fragment>
                         <p className="list-item"> <strong>{this.props.dance.typeOfEvent.nameType}</strong>,
                         <strong className="list-item"> {this.props.dance.whenDate} </strong>
 
                             <br />
+                            </p>
+
+                        <p className="list-item">
 
                             <span><Link to={`/locations/${this.props.dance.location.id}`} {...this.props}>
-                                {this.props.dance.location.city},{this.props.dance.location.stateId} </Link></span>
+                                {this.props.dance.location.city}{",  "} {this.props.dance.location.stateId} </Link></span>
 
                             <a href={`${this.props.dance.eventSite}`} target="new">{this.props.dance.eventSite}
                             </a>
+                            </p>
+                            <p className="list-button-row">
                             <button className="list-button"
                                 type="button"
                                 onClick={() => {
@@ -73,9 +75,10 @@ export default class DanceEvent extends Component {
                                 }} >
                                 More
                             </button>
-                        </p>
+                                </p>
                     </React.Fragment >
                 </div>
+                 </div>
         )
     }
 }

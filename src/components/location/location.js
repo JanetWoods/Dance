@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Link } from 'react-router-dom'
+import "./location.css"
 
 
 export default class LocationCard extends Component {
@@ -7,37 +7,56 @@ export default class LocationCard extends Component {
     render() {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
-
                 <div key={`location-${this.props.location.id}`} className="location-card">
-                    <strong>{this.props.location.nameLocation}</strong>
-                    {this.props.location.street} ,  {this.props.location.city},  {this.props.location.stateId}<br />
+                <div className="gradient-border">
+                    <p className="list-button-row">
+                        <strong>{this.props.location.nameLocation}</strong>
+                    </p>
+                    <p className="list-button-row">
+                    {this.props.location.street}
+                    </p>
+                    <p className="list-button-row">
+                    {this.props.location.city},  {this.props.location.stateId}
+                    </p>
+                    <p className="list-button-row">
                     {this.props.location.locationNotes}<br />
-
-                  <p>
+                    </p>
+                    <p className="list-button-row">
                         <button className="list-button"
-                        type="button"
-                        onClick={() => {
-                            this.props.history.push(`/locations/edit/${this.props.location.id}`)
-                        }} >
-                        Edit
+                            onClick={() => {
+                                this.props.history.push(`/locations/edit/${this.props.location.id}`)
+                            }} >
+                            Edit
                             </button>
 
-                    <button className="list-button"
-                        type="button"
-                        onClick={() => {
-                            this.props.deleteLocation(this.props.location.id)
-                        }} >
-                        Delete
+                        <button className="list-button"
+                            onClick={() => {
+                                this.props.deleteLocation(this.props.location.id)
+                            }} >
+                            Delete
                             </button>
-                            </p>
+                    </p>
+                </div>
                 </div>
                 :
-
                 <div key={`location-${this.props.location.id}`} className="location-card">
-                    <strong>{this.props.location.nameLocation}</strong>
-                    {this.props.location.street} ,  {this.props.location.city},  {this.props.location.stateId}<br />
-                    {this.props.location.locationNotes}<br />
+                   <div className="gradient-border">
+                    <p className="list-button-row">
+                        <strong>{this.props.location.nameLocation}</strong>
+                    </p>
+                    <p className="list-button-row">
+                    {this.props.location.street}
+                    </p>
+                    <p className="list-button-row">
+                      {this.props.location.city},  {this.props.location.stateId}<br />
+                   </p>
+                    <p className="list-button-row">
+                    Note: {this.props.location.locationNotes}<br />
+                   </p>
                 </div>
+                </div>
+
+
         )
     }
 }

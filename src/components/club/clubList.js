@@ -11,60 +11,57 @@ export default class Clubs extends Component {
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
                 (<React.Fragment>
-
+                <div className="top-container">
                     <li className="nav-item">
                         <Link className="nav-link" to="/newClub">Add Club</Link>
                     </li>
-                    <h2>Clubs</h2>
+                    </div>
+                    <h2 className="list-title">Clubs</h2>
+                      <div>
                     {
-                        this.props.states.map(state =>
-                            <section>
-                                <div key={state.id}>
-
+                        this.props.states
+                        .map(state =>
+                            <section key={state.stateId}>
+                               <h4 className="list-title-left"> {state.stateLong}</h4>
                                     {
                                         this.props.clubs.filter(
                                             club => club.stateId === state.id
                                         )
-                                            .map(
+                                        .map(
                                                 club =>
                                                     club.stateId !== null ?
                                                         <ClubCard key={`club-${club.id}`}{...this.props} club={club} powerUser={this.powerUser} />
                                                         : {}
                                             )
                                     }
-
-                                </div>
                             </section>
                         )
-
                     }
+                    </div>
                 </React.Fragment>)
 
                 :
                 (<React.Fragment>
-                    <h2>Clubs</h2>
+                     <h2 className="list-title">Clubs</h2>
+                      <div className="container">
                     {
-                        this.props.states.map(state =>
-                            <section>
-                                <div key={state.id}>
-
+                        this.props.states
+                        .map(state =>
+                            <section key={state.stateId} >
                                     {
                                         this.props.clubs.filter(
                                             club => club.stateId === state.id
-                                        )
-                                            .map(
-                                                club =>
-                                                    club.stateId !== null ?
-                                                        <ClubCard key={`club-${club.id}`}{...this.props} club={club} powerUser={this.powerUser} />
-                                                        : {}
+                                        ).map(
+                                         club =>
+                                         club.stateId !== null ?
+                                         <ClubCard key={`club-${club.id}`}{...this.props} club={club} powerUser={this.powerUser} />
+                                         : {}
                                             )
                                     }
-
-                                </div>
-                            </section>
+                             </section>
                         )
-
                     }
+                    </div>
                 </React.Fragment>)
         )
     }
