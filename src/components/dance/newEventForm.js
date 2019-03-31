@@ -24,9 +24,7 @@ export default class NewEventForm extends Component {
   makeNewEvent = evt => {
     evt.preventDefault()
 
-    if(this.state.whenDate !== "")
-    {
-      if(this.state.locationId !== ""){
+    if((this.state.whenDate !== " ") && (this.state.locationId !== " ")){
 
         const newEvent = {
           danceNotes: this.state.danceNotes,
@@ -46,21 +44,19 @@ export default class NewEventForm extends Component {
           this.props.history.push("/DanceList")
         })
       }
-      else{
+      else if (this.state.locationId === "0" || this.state.locationId === "") {
         alert("You forgot to enter the location. Where is it?")
       }
-    }
-    else{
+      else if (this.state.whenDate === "" || this.state.whenDate === null){
       alert("You forgot to enter the date. When is it?")
     }
-
   }
 render() {
   return (
     <React.Fragment>
         <h2 className="list-title">Enter New Event</h2>
-        <div className="gradient-border">
       <form className="form-newEvent">
+        <div className="gradient-border">
         <div className="form-group">
           <label htmlFor="whenDate">What Day is it?</label>
           <input type="date"
@@ -177,9 +173,8 @@ render() {
           onClick={this.makeNewEvent}
           className="list-button">Add Event
               </button>
-
-      </form>
           </div>
+      </form>
     </React.Fragment>
   )
 }

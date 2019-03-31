@@ -9,8 +9,9 @@ export default class Filter extends Component {
     state = {
         typeOfEventId: 0,
         stateId: "",
+        locationId:0,
         typeOfEvents: [],
-        states: []
+        states: [],
     }
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -40,6 +41,7 @@ export default class Filter extends Component {
                                 ))}
                             </select>
                         </div>
+
                     </form>
                     <h4 className="list-title">Dances</h4>
                     <div className="container">
@@ -50,7 +52,7 @@ export default class Filter extends Component {
                                 .sort(function compare(a, b) {
                                     var dateA = new Date(a.whenDate);
                                     var dateB = new Date(b.whenDate);
-                                    return dateB - dateA;
+                                    return dateA - dateB;
                                 })
                                 .map(dance => {
                                     return <section key={`dance-${dance.id}`}>

@@ -1,20 +1,6 @@
 {
   "dances": [
     {
-      "id": 3,
-      "danceNotes": "You missed this boat already, sorry.",
-      "whenDate": "2019-04-24",
-      "throughDate": "2019-04-31",
-      "dinnerTime": "18:00",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "1499.00",
-      "typeOfEventId": 4,
-      "locationId": 16,
-      "clubId": 12,
-      "eventSite": "https://squaredancecaribbean2019.blogspot.com/"
-    },
-    {
       "id": 4,
       "danceNotes": "Wear Pink",
       "whenDate": "2019-04-06",
@@ -37,7 +23,7 @@
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "80",
-      "typeOfEventId": 7,
+      "typeOfEventId": 3,
       "locationId": 7,
       "clubId": 1,
       "eventSite": "https://68nsdc.com/"
@@ -139,6 +125,48 @@
       "eventSite": "",
       "throughDate": "",
       "id": 14
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-03-08",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "55",
+      "typeOfEventId": 1,
+      "locationId": 1,
+      "clubId": 1,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 15
+    },
+    {
+      "danceNotes": "aaaaaaaaaaaaaaaaa",
+      "whenDate": "2019-04-04",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 5,
+      "locationId": 5,
+      "clubId": 1,
+      "eventSite": "https://squaredancecaribbean2019.blogspot.com/",
+      "throughDate": "",
+      "id": 16
+    },
+    {
+      "danceNotes": "xxxxxxxxxx",
+      "whenDate": "",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 1,
+      "locationId": 1,
+      "clubId": 1,
+      "eventSite": "https://squaredancecaribbean2019.blogspot.com/",
+      "throughDate": "",
+      "id": 17
     }
   ],
   "typeOfEvents": [
@@ -210,7 +238,7 @@
       "nameFirst": "Rob",
       "nameLast": "Woods",
       "clubId": 1,
-      "phone": "859-227-555555",
+      "phone": "859-227-5511",
       "email": "rcw6236@yahoo.com"
     },
     {
@@ -264,7 +292,7 @@
       "typeOfUserId": 2,
       "nameFirst": "Janet",
       "nameLast": "Woods",
-      "clubId": "1",
+      "clubId": "2",
       "phone": "8593609552",
       "email": "janetnwoods@gmail.com"
     }
@@ -668,6 +696,15 @@
       "stateId": "",
       "locationNotes": "",
       "id": 16
+    },
+    {
+      "nameLocation": "Bashville Rec Center ",
+      "street": "100 Main Street",
+      "city": "Bashville",
+      "zip": "30411",
+      "stateId": "TN",
+      "locationNotes": "Note a real location",
+      "id": 17
     }
   ],
   "states": [

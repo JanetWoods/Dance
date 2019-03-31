@@ -12,38 +12,40 @@ export default class FilterDances extends Component {
 
                 <React.Fragment>
                     <div className="top-container">
-                        <p><Link className="dance-link" to="/dance/new">Add Event</Link></p>
+                        <h4><Link className="dance-link" to="/dance/new">Add Event</Link></h4>
                     </div>
+
                     <h2 className="list-title">Dances</h2>
-                    <div className="container">
+                    {/* <div className="container"> */}
                         {
                             this.props.detailedDances
                                 .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
                                 .sort(function compare(a, b) {
                                     var dateA = new Date(a.whenDate);
                                     var dateB = new Date(b.whenDate);
-                                    return dateB - dateA;
+                                    return dateA - dateB;
                                 })
                                 .map(dance => {
-
-                                    return <section key={`dance-${dance.id}`} >
+                                    return <section>
                                         <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} />
                                     </section>
                                 })
                         }
-                    </div>
+                    {/* </div> */}
                 </React.Fragment>
                 :
                 <React.Fragment>
                     <h2 className="list-title">Dances</h2>
                     {
-                        this.props.detailedDances.sort(function compare(a, b) {
+                        this.props.detailedDances
+                        .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
+                        .sort(function compare(a, b) {
                             var dateA = new Date(a.whenDate);
                             var dateB = new Date(b.whenDate);
                             return dateB - dateA;
                         }).map(dance => {
                             return <section>
-                                <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
+                                <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance}/>
                             </section>
                         })
                     }

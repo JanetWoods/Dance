@@ -5,8 +5,8 @@ section{
     flex-wrap: wrap;
     flex-direction: column;
     align-content: left;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 .location-card{
     display: flex;
@@ -20,7 +20,7 @@ section{
     width: 100;
     border-width: 5px;
     border-style: ridge;
-    border-block-start-color: #815988;
+    border-color: #815988;;
 }
 .form-editLocation{
     display: flex;

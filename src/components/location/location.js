@@ -12,11 +12,16 @@ export default class LocationCard extends Component {
                     <p className="list-button-row">
                         <strong>{this.props.location.nameLocation}</strong>
                     </p>
-                    {this.props.location.street} ,  {this.props.location.city},  {this.props.location.stateId}<br />
+                    <p className="list-button-row">
+                    {this.props.location.street}
+                    </p>
+                    <p className="list-button-row">
+                    {this.props.location.city},  {this.props.location.stateId}
+                    </p>
+                    <p className="list-button-row">
                     {this.props.location.locationNotes}<br />
-                    <br />
-
-                    <p>
+                    </p>
+                    <p className="list-button-row">
                         <button className="list-button"
                             onClick={() => {
                                 this.props.history.push(`/locations/edit/${this.props.location.id}`)
@@ -35,12 +40,22 @@ export default class LocationCard extends Component {
                 </div>
                 :
                 <div key={`location-${this.props.location.id}`} className="location-card">
+                   <div className="gradient-border">
                     <p className="list-button-row">
                         <strong>{this.props.location.nameLocation}</strong>
                     </p>
-                    {this.props.location.street} ,  {this.props.location.city},  {this.props.location.stateId}<br />
-                    {this.props.location.locationNotes}<br />
+                    <p className="list-button-row">
+                    {this.props.location.street}
+                    </p>
+                    <p className="list-button-row">
+                      {this.props.location.city},  {this.props.location.stateId}<br />
+                   </p>
+                    <p className="list-button-row">
+                    Note: {this.props.location.locationNotes}<br />
+                   </p>
                 </div>
+                </div>
+
 
         )
     }

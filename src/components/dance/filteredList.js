@@ -35,12 +35,10 @@ export default class DanceList extends Component {
                                 return <section key={`dance-${dance.id}`}>
                                     <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} />
                                 </section>
-
                             })
                         }
                     </div>
                 </React.Fragment>
-
                 :
                 <React.Fragment>
 
