@@ -3,13 +3,13 @@ form{
 display: flex;
 flex-direction: column;
 align-content: left;
-width: auto;
+/* width: 100%; */
 margin-top: 1%;
 margin-left: 5%;
 margin-right: 5%;
 margin-bottom: 10%;
 padding: 2%;
-/* overflow: hidden; */
+overflow: hidden;
 }
 .form-group{
   align-content: left;
@@ -47,7 +47,6 @@ border-width: 5px;
 flex-direction: column;
 padding: 5px 5px 5px 5px;
 justify-content:left;
-width: auto;
 overflow: hidden;
 border-width: 5px;
 }
@@ -94,10 +93,10 @@ body {
 	}
 }
 
-
+/*
 .container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 80%;
-}
+} */

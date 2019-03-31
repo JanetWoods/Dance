@@ -68,8 +68,8 @@ export default class NewEventForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="gradient-border">
           <div className="form-container-large">
+        <div className="gradient-border">
             <form>
               <div className="form-group">
                 <label htmlFor="whenDate">What Day is it?</label>

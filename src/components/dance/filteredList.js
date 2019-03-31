@@ -3,7 +3,6 @@ import DanceEvent from "./danceEvent"
 import { Link } from 'react-router-dom'
 import "./dance.css"
 import moment from 'moment'
-import Filter from "./filter"
 
 export default class DanceList extends Component {
 
@@ -22,7 +21,7 @@ export default class DanceList extends Component {
                     </div>
 
                     <h2 className="list-title">Dances</h2>
-                    <div >
+                    <div className="container">
 
                         {
                             this.props.detailedDances
@@ -33,9 +32,7 @@ export default class DanceList extends Component {
                                 return dateB - dateA;
                             })
                             .map(dance => {
-
                                 return <section key={`dance-${dance.id}`}>
-
                                     <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} />
                                 </section>
 

@@ -9,11 +9,10 @@ export default class DanceEvent extends Component {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
+            <section>
                 <div key={`dance-${this.props.dance.id}`} className="card-dance">
-
-                    <React.Fragment >
             <div className="gradient-border" >
-
+                    <React.Fragment >
                         <p className="list-item"> <strong>{this.props.dance.typeOfEvent.nameType}</strong>,
                         <strong className="list-item"> {this.props.dance.whenDate} </strong>
                             {/* <br /> */}
@@ -23,7 +22,7 @@ export default class DanceEvent extends Component {
                             <a href={`${this.props.dance.eventSite}`} target="new">{this.props.dance.eventSite}
                              </a>
                         </p>
-                        <p>
+                        <p className="list-button-row">
                         <button className="list-button"
                                 type="button"
                                 onClick={() => {
@@ -48,9 +47,10 @@ export default class DanceEvent extends Component {
                                 Delete
                             </button>
                         </p>
-                                </div>
                     </React.Fragment>
+                                </div>
                 </div>
+                </section>
                 :
                 <div key={`dance-${this.props.dance.id}`} className="card-dance">
 

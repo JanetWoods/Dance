@@ -24,21 +24,7 @@
       "endTime": "22:00",
       "cost": "11",
       "typeOfEventId": 7,
-      "locationId": 6,
-      "clubId": 1,
-      "eventSite": ""
-    },
-    {
-      "id": 5,
-      "danceNotes": "",
-      "whenDate": "2019-04-12",
-      "throughDate": "",
-      "dinnerTime": "19:00",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "7.00",
-      "typeOfEventId": 1,
-      "locationId": 3,
+      "locationId": 9,
       "clubId": 1,
       "eventSite": ""
     },
@@ -82,7 +68,77 @@
       "typeOfEventId": 4,
       "locationId": 16,
       "clubId": 1,
+      "eventSite": "https://squaredancecaribbean2019.blogspot.com/"
+    },
+    {
+      "id": 10,
+      "danceNotes": "All ages welcome!",
+      "whenDate": "2019-04-11",
+      "throughDate": "",
+      "dinnerTime": "",
+      "danceTime": "19:00",
+      "endTime": "21:00",
+      "cost": "5.0",
+      "typeOfEventId": 8,
+      "locationId": 8,
+      "clubId": 2,
       "eventSite": ""
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-04-05",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 7,
+      "locationId": 7,
+      "clubId": 2,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 11
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-04-04",
+      "dinnerTime": "",
+      "danceTime": "19:00",
+      "endTime": "21:00",
+      "cost": "5",
+      "typeOfEventId": 8,
+      "locationId": 8,
+      "clubId": 2,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 12
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-04-18",
+      "dinnerTime": "",
+      "danceTime": "19:00",
+      "endTime": "21:00",
+      "cost": "5",
+      "typeOfEventId": 8,
+      "locationId": 8,
+      "clubId": 2,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 13
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-04-06",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7",
+      "typeOfEventId": 9,
+      "locationId": 9,
+      "clubId": 1,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 14
     }
   ],
   "typeOfEvents": [
@@ -612,15 +668,6 @@
       "stateId": "",
       "locationNotes": "",
       "id": 16
-    },
-    {
-      "nameLocation": "Janet N Woods",
-      "street": "6236 CINCINNATI RD",
-      "city": "Sadieville",
-      "zip": "40370",
-      "stateId": "AL",
-      "locationNotes": "",
-      "id": 17
     }
   ],
   "states": [

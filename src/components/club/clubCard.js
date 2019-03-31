@@ -21,14 +21,13 @@ export default class ClubCard extends Component {
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
                 <section >
-                    <React.Fragment>
                         <div key={`club-${this.props.club.id}`} className="club-card">
+                            <React.Fragment>
                             <div className="gradient-border">
 
                                 <p className="list-item">
                                     {this.props.club.clubName}
                                 </p>
-                                <br />
                                 <p>
 
                                     <button className="list-button"
@@ -40,8 +39,8 @@ export default class ClubCard extends Component {
                             </button>
                                 </p>
                             </div>
-                        </div>
                     </React.Fragment>
+                        </div>
                 </section>
                 :
                 <div className="gradient-border">

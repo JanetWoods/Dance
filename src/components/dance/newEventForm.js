@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import "./dance.css"
 export default class NewEventForm extends Component {
 
   state = {
@@ -57,6 +58,8 @@ export default class NewEventForm extends Component {
 render() {
   return (
     <React.Fragment>
+        <h2 className="list-title">Enter New Event</h2>
+        <div className="gradient-border">
       <form className="form-newEvent">
         <div className="form-group">
           <label htmlFor="whenDate">What Day is it?</label>
@@ -70,8 +73,7 @@ render() {
           <input type="date"
             onChange={this.handleFieldChange}
             value={this.state.throughDate}
-            id="throughDate"
-          />
+            id="throughDate"/>
         </div>
         <div className="form-group">
           <label htmlFor="eventURL"> Event URL (if applicable)</label>
@@ -92,7 +94,7 @@ render() {
             <option required value="">Select Event/Dance Type</option>
             {this.props.typeOfEvents.map(typeE => (
               <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
-            ))}
+              ))}
           </select>
         </div>
 
@@ -107,7 +109,7 @@ render() {
             <option value="">Select Location</option>
             {this.props.locations.map(loc => (
               <option key={loc.id} id={loc.id} value={loc.id}> {loc.nameLocation} </option>
-            ))}
+              ))}
           </select>
         </div>
 
@@ -124,7 +126,7 @@ render() {
             <option value="">Select club</option>
             {this.props.clubs.map(club => (
               <option key={club.id} id={club.id} value={club.id}> {club.clubName} </option>
-            ))}
+              ))}
           </select>
         </div>
 
@@ -177,6 +179,7 @@ render() {
               </button>
 
       </form>
+          </div>
     </React.Fragment>
   )
 }

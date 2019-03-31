@@ -15,6 +15,7 @@ export default class Locations extends Component {
                     </div>
                     <h2 className="list-title">Locations</h2>
                     {
+
                         this.props.locations.map(location => {
 
                             return <section>
@@ -25,7 +26,7 @@ export default class Locations extends Component {
 
                             </section>
 
-                        })
+})
                     }
                 </React.Fragment>
                 :

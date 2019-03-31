@@ -38,19 +38,35 @@ flex-direction: column;
 p{
     text-indent: 2em;
 }
-
+.card-dance{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 5px 5px 5px 5px;
+    justify-content:left;
+    width: auto;
+    overflow: hidden;
+    border-width: 5px;
+    border-style: ridge;
+    border-color: #815988;
+}
 .club-card{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 10%;
-    /* margin-right: 25%; */
-    margin-top: 1%;
-    width: 80%;
-    margin-bottom: 1%;
-    border-radius: 5%;
-    align-content: left;
+    flex-wrap: wrap;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 5px 5px 5px 5px;
+    justify-content:left;
+    width: 100%;
+    overflow: hidden;
+    border-width: 5px;
+    border-style: ridge;
+    border-color: #815988;
 }
+
 .list-item{
 display: flex;
 flex-wrap: wrap;
@@ -76,10 +92,11 @@ justify-content: flex-start;
     flex-direction: column;
     align-content: left;
     width:50%;
-    border-color: blue;
     margin-left: 30%;
     margin-right: 30%;
-    margin-bottom: 1%;
+    border-width: 5px;
+    border-style: ridge;
+    border-color: #815988;
     box-sizing: content-box;
     }
 .container{
@@ -113,11 +130,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-      background: linear-gradient(to right, rgb(247, 245, 248), #f1eaf3) ;
+    background: rgb(247, 245, 248);
   }
   .gradient-border {
     --borderWidth: 3px;
     position: relative;
+    width: 100%;
     border-radius: var(--borderWidth);
     background: linear-gradient(60deg, #9c8c9e, #9e88a1, #a181a7, #906697);
   }
@@ -147,3 +165,13 @@ body {
           background-position: 0% 50%;
       }
   }
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: left;
+    margin-left: 25%;
+    margin-right: 25%;
+    width:auto;
+}

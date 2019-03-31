@@ -1,16 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
+section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: left;
+    margin-left: 25%;
+    margin-right: 25%;
+}
 .location-card{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 25%;
-    margin-right: 25%;
+    /* margin-left: 25%; */
+    /* margin-right: 25%; */
     margin-top: 5px;
     padding: 5px 5px 5px 5px;
     justify-content:left;
-    width: 50%;
-    border-radius: 5%;
+    width: 100;
+    border-width: 5px;
+    border-style: ridge;
+    border-block-start-color: #815988;
 }
 .form-editLocation{
     display: flex;
@@ -20,8 +30,9 @@
     margin-left: 25%;
     margin-right: 25%;
     border-style: ridge;
+    border-width: 5px;
+    border-color: #815988;
 }
-
 .list-item{
     display: flex;
     flex-wrap: wrap;

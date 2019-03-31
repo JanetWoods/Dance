@@ -59,8 +59,8 @@ export default class Account extends Component {
     render() {
 
         return (
-            <div className="gradient-border">
                 <form className="form-container">
+            <div className="gradient-border">
                     <h2> {this.state.nameFirst} {this.state.nameLast}</h2>
 
                     <div className="form-group">
@@ -118,8 +118,8 @@ export default class Account extends Component {
                             Save Changes
             </button>
                     </div>
-                </form>
             </div>
+                </form>
         )
     }
 }

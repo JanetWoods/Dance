@@ -28,7 +28,6 @@ export default class NewLocationForm extends Component {
         city: this.state.city,
         zip: this.state.zip,
         stateId: this.state.stateId,
-        zip: this.state.zip,
         locationNotes: this.state.locationNotes
       }
       this.props.addLocation(newLocation)
@@ -40,7 +39,8 @@ export default class NewLocationForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <form className="form-newEvent">
+        <form className="form-editLocation">
+        <div className="gradient-border">
           <div className="form-group">
             <label htmlFor="nameLocation">Name of Location</label>
             <input type="text"
@@ -101,7 +101,7 @@ export default class NewLocationForm extends Component {
             onClick={this.makeNewLocation}
             className="list-button">Add
               </button>
-
+            </div>
         </form>
       </React.Fragment>
     )

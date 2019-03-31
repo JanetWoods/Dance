@@ -14,10 +14,8 @@ export default class FilterDances extends Component {
                     <div className="top-container">
                         <p><Link className="dance-link" to="/dance/new">Add Event</Link></p>
                     </div>
-
                     <h2 className="list-title">Dances</h2>
-                    <div>
-
+                    <div className="container">
                         {
                             this.props.detailedDances
                                 .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
@@ -31,7 +29,6 @@ export default class FilterDances extends Component {
                                     return <section key={`dance-${dance.id}`} >
                                         <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} />
                                     </section>
-
                                 })
                         }
                     </div>
@@ -48,7 +45,6 @@ export default class FilterDances extends Component {
                             return <section>
                                 <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} powerUser={this.powerUser} />
                             </section>
-
                         })
                     }
                 </React.Fragment>

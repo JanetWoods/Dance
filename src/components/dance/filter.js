@@ -42,7 +42,7 @@ export default class Filter extends Component {
                         </div>
                     </form>
                     <h4 className="list-title">Dances</h4>
-                    <div >
+                    <div className="container">
                         {
                             this.props.detailedDances
                                 .filter(dance => dance.typeOfEventId === parseInt(this.state.typeOfEvent))

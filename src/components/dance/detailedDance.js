@@ -33,6 +33,7 @@ export default class DanceDetail extends Component {
         return (
             <React.Fragment >
                 <div className="card-detailed">
+                <div className="gradient-border">
 
                     <p className="list-title"> <strong>{this.state.typeOfEvent.nameType}</strong></p>
                     <p className="list-item">  When: <strong> {"  "} {`${this.state.whenDate}`}</strong> </p>
@@ -46,13 +47,13 @@ export default class DanceDetail extends Component {
                     <p className="list-item">{this.state.location.street}, {" "}{this.state.location.city},{" "} {this.state.location.stateId}{" "} {this.state.location.zip}</p>
 
 
-                    <p className="list-item"><a list-item href={`${this.state.eventSite}`} target="new">{"  "}{this.state.eventSite}
+                    <p className="list-item"><a list-item href={`${this.state.eventSite}`} target="blank">{"  "}{this.state.eventSite}
                              </a></p>
 
                     <p className="list-item">  Note: {" "} {this.state.danceNotes}</p>
                     <p className="list-item"> ${this.state.cost}{"  "} <br/></p>
                     <p className="list-item">(Note: Club dances are free for club members dancing at their home club.)</p>
-
+                </div>
                 </div>
             </React.Fragment>
 

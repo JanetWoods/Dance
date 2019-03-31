@@ -63,6 +63,7 @@ export default class EditClubForm extends Component {
     return (
       <React.Fragment>
         <form className="form-container">
+        <div className="gradient-border">
           <div className="form-group">
             <label htmlFor="clubName">Name of Club</label>
             <input type="text"
@@ -81,7 +82,7 @@ export default class EditClubForm extends Component {
               <option value="stateId">Select state</option>
               {this.props.states.map(state => (
                 <option key={state.id} id={state.id} value={state.id}>{state.stateLong}</option>
-              ))}
+                ))}
             </select>
           </div>
 
@@ -96,7 +97,7 @@ export default class EditClubForm extends Component {
               <option value="locationId"> Preferred dance location</option>
               {this.props.locations.map(location => (
                 <option key={location.id} id={location.id} value={location.id}> {location.nameLocation} </option>
-              ))}
+                ))}
             </select>
           </div>
 
@@ -105,7 +106,7 @@ export default class EditClubForm extends Component {
             onClick={this.makeUpdatedClub}
             className="list-button">Save
               </button>
-
+            </div>
         </form>
       </React.Fragment>
     )

@@ -14,11 +14,9 @@ export default class LocationCard extends Component {
                     </p>
                     {this.props.location.street} ,  {this.props.location.city},  {this.props.location.stateId}<br />
                     {this.props.location.locationNotes}<br />
-
                     <br />
 
                     <p>
-
                         <button className="list-button"
                             onClick={() => {
                                 this.props.history.push(`/locations/edit/${this.props.location.id}`)

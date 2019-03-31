@@ -5,8 +5,12 @@
     flex-direction: column;
 }
 .form-newEvent{
-flex-basis: 70%;
 flex-direction: column;
+flex-wrap: wrap;
+margin-left: 20%;
+margin-right: 20%;
+padding: 5px 5px 5px 5px;
+justify-content:left;
 }
 .form-register{
     flex-basis: 50%;
@@ -39,57 +43,27 @@ flex-direction: column;
     flex-wrap: wrap;
     flex-direction: row;
     margin-left: 30px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    /* margin-top: 5%; */
+    /* margin-bottom: 5%; */
     justify-content:left;
     width: 90%;
     margin-bottom: 40px;
-    border-color: blue;
     border-radius: 5%;
 }
-.location-card{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 20px;
-    margin-top: 5px;
-    padding: 5px 5px 5px 5px;
-    justify-content:left;
-    width: 75%;
-    border-style: solid;
-    border-color: blue;
-    border-radius: 5%;
-}
+
 .card-dance{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    padding: 5px 5px 5px 5px;
+    /* margin-top: 1px; */
+    /* margin-bottom: 1px; */
+    /* padding: 5px 5px 5px 5px; */
     justify-content:left;
-    width: auto;
+    width: 100%;
     overflow: hidden;
     border-width: 5px;
     border-style: ridge;
-    border-block-start-color: #815988;
-    border-block-start-color: #7e4b7e;
-}
-.card-detailed{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 5px;
-    margin-bottom: 5%;
-    padding: 5px 5px 5px 5px;
-    justify-content:left;
-    width: 60%;
-    border-style: ridge;
-    border-radius: 5%;
+    border-color: #815988;;
 }
 .list-item{
 display: flex;
@@ -114,6 +88,7 @@ justify-content: flex-start;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 .form-container{
 display: flex;
@@ -129,7 +104,6 @@ box-sizing: content-box;
 .form-group{
 align-content: left;
 width: auto;
-margin-top: 1%;
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;
@@ -149,16 +123,33 @@ display: flex;
 flex-direction: column;
 align-content: left;
 width:90%;
-border-color: blue;
 margin-left: 10%;
 margin-right: 10%;
 margin-bottom: 10%;
 box-sizing: content-box;
+border-width: 5px;
+border-style: ridge;
+border-color: #815988;
+}
+.card-detailed{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5px;
+    margin-bottom: 5%;
+    padding: 5px 5px 5px 5px;
+    justify-content:left;
+    width: 60%;
+    border-width: 5px;
+    border-style: ridge;
+    border-color: #815988;
+    box-sizing: content-box;
 }
 .list-button-row{
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
-
 }
 .form-filter{
     display: flex;
@@ -174,10 +165,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-      background: linear-gradient(to right, rgb(247, 245, 248), #f1eaf3) ;
+    background: rgb(247, 245, 248) ;
   }
   .gradient-border {
-    --borderWidth: 3px;
+    --borderWidth: 5px;
+    width: 100%;
     position: relative;
     border-radius: var(--borderWidth);
     background: linear-gradient(60deg, #9c8c9e, #9e88a1, #a181a7, #906697);
@@ -212,3 +204,12 @@ body {
   }
 
 
+  section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
