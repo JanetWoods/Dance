@@ -83,7 +83,7 @@ export default class Filter extends Component {
                                 .sort(function compare(a, b) {
                                     var dateA = new Date(a.whenDate);
                                     var dateB = new Date(b.whenDate);
-                                    return dateB - dateA;
+                                    return dateA - dateB;
                                 })
                                 .map(dance => {
                                     return <section key={`dance-${dance.id}`}>
