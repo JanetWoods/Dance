@@ -44,8 +44,8 @@
     },
     {
       "id": 9,
-      "danceNotes": "The real cruise left already",
-      "whenDate": "2019-04-05",
+      "danceNotes": "The real cruise left already, sorry. ",
+      "whenDate": "2019-04-02",
       "throughDate": "2019-04-12",
       "dinnerTime": "19:00",
       "danceTime": "19:30",
@@ -71,18 +71,18 @@
       "eventSite": ""
     },
     {
+      "id": 11,
       "danceNotes": "",
       "whenDate": "2019-04-05",
+      "throughDate": "",
       "dinnerTime": "19:00",
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "7.00",
       "typeOfEventId": 7,
-      "locationId": 7,
+      "locationId": 4,
       "clubId": 2,
-      "eventSite": "",
-      "throughDate": "",
-      "id": 11
+      "eventSite": ""
     },
     {
       "id": 12,
@@ -195,6 +195,62 @@
       "locationId": 24,
       "clubId": 21,
       "eventSite": "http://www.69nsdc.org/"
+    },
+    {
+      "id": 20,
+      "danceNotes": "",
+      "whenDate": "2019-04-11",
+      "throughDate": "",
+      "dinnerTime": "",
+      "danceTime": "19:00",
+      "endTime": "21:00",
+      "cost": "5.00",
+      "typeOfEventId": 8,
+      "locationId": 9,
+      "clubId": 6,
+      "eventSite": ""
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-04-05",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 7,
+      "locationId": 7,
+      "clubId": 6,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 21
+    },
+    {
+      "id": 22,
+      "danceNotes": "Post Convention cruise!  Transportation is available from convention to the cruise port.",
+      "whenDate": "2020-06-21",
+      "throughDate": "2020-06-28",
+      "dinnerTime": "",
+      "danceTime": "",
+      "endTime": "",
+      "cost": "1024.0",
+      "typeOfEventId": 4,
+      "locationId": 25,
+      "clubId": 12,
+      "eventSite": "https://ciazumanotravel.com/plan/all-offers/holland-america-line/square-dancers/alaska/cruises"
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-04-01",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 4,
+      "locationId": 4,
+      "clubId": 12,
+      "eventSite": "https://squaredancecaribbean2019.blogspot.com/",
+      "throughDate": "2019-04-04",
+      "id": 23
     }
   ],
   "typeOfEvents": [
@@ -320,7 +376,7 @@
       "typeOfUserId": 2,
       "nameFirst": "Janet",
       "nameLast": "Woods",
-      "clubId": "2",
+      "clubId": "1",
       "phone": "8593609552",
       "email": "janetnwoods@gmail.com"
     }
@@ -843,6 +899,15 @@
       "stateId": "WA",
       "locationNotes": "Entrance to parking is on West Spokane Falls Boulevard.",
       "id": 24
+    },
+    {
+      "nameLocation": "Pier 91",
+      "street": "Elliot Bay Waterfront",
+      "city": "Seattle",
+      "zip": "",
+      "stateId": "WA",
+      "locationNotes": "",
+      "id": 25
     }
   ],
   "states": [
