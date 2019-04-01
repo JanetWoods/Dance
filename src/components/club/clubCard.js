@@ -28,7 +28,12 @@ export default class ClubCard extends Component {
                                 <p className="list-item">
                                     {this.props.club.clubName}
                                 </p>
-                                <p>
+
+                                 <p>
+                                    <a href={`${this.props.club.clubSite}`} target="new">{this.props.club.clubSite}</a>
+                                  </p>
+
+                                 <p>
 
                                     <button className="list-button"
                                         type="button"
@@ -50,6 +55,11 @@ export default class ClubCard extends Component {
                             <p>
                                 {this.props.club.clubName}
                             </p>
+
+                          <p>
+                                <a href={`${this.props.club.clubSite}`} target="new">{this.props.club.clubSite}</a>
+                              </p>
+
                         </div>
                 </div>
                     </section>

@@ -13,7 +13,7 @@ export default class NewEventForm extends Component {
     danceNotes: "",
     typeOfEventId: 0,
     locationId: 0,
-    clubId: 1,
+    clubId: 12,
     eventSite: ""
   }
   handleFieldChange = evt => {
@@ -88,7 +88,9 @@ render() {
             onChange={this.handleFieldChange}
             value={this.state.typeOfEventId}>
             <option required value="">Select Event/Dance Type</option>
-            {this.props.typeOfEvents.map(typeE => (
+            {this.props.typeOfEvents
+            .sort((a, b) => (a.nameType > b.nameType) ? 1 : -1)
+            .map(typeE => (
               <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
               ))}
           </select>
@@ -103,7 +105,9 @@ render() {
             required
             value={this.state.locationId}>
             <option value="">Select Location</option>
-            {this.props.locations.map(loc => (
+            {this.props.locations
+            .sort((a, b) => (a.nameLocation > b.nameLocation) ? 1 : -1)
+            .map(loc => (
               <option key={loc.id} id={loc.id} value={loc.id}> {loc.nameLocation} </option>
               ))}
           </select>
@@ -120,7 +124,9 @@ render() {
             required>
 
             <option value="">Select club</option>
-            {this.props.clubs.map(club => (
+            {this.props.clubs
+            .sort((a, b) => (a.clubName > b.clubName) ? 1 : -1)
+            .map(club => (
               <option key={club.id} id={club.id} value={club.id}> {club.clubName} </option>
               ))}
           </select>
