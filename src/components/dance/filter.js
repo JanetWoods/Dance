@@ -43,7 +43,6 @@ export default class Filter extends Component {
                         </div>
                     </form>
                     {/* <h4 className="list-title">Dances</h4> */}
-                    <div className="container">
                         {
                             this.props.detailedDances
                                 .filter(dance => dance.typeOfEventId === parseInt(this.state.typeOfEvent))
@@ -59,7 +58,7 @@ export default class Filter extends Component {
                                     </section>
                                 })
                         }
-                    </div>
+                    {/* </div> */}
                 </React.Fragment>
                 :
                 <React.Fragment>
@@ -77,7 +76,6 @@ export default class Filter extends Component {
                             </select>
                         </div>
                     </form>
-                    <div >
                         {
                             this.props.detailedDances
                                 .filter(dance => dance.typeOfEventId === parseInt(this.state.typeOfEvent))
@@ -85,7 +83,7 @@ export default class Filter extends Component {
                                 .sort(function compare(a, b) {
                                     var dateA = new Date(a.whenDate);
                                     var dateB = new Date(b.whenDate);
-                                    return dateB - dateA;
+                                    return dateA - dateB;
                                 })
                                 .map(dance => {
                                     return <section key={`dance-${dance.id}`}>
@@ -93,7 +91,6 @@ export default class Filter extends Component {
                                     </section>
                                 })
                         }
-                    </div>
                 </React.Fragment>
         )
     }

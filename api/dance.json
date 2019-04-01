@@ -142,13 +142,13 @@
     },
     {
       "id": 16,
-      "danceNotes": "aaaaaaaaaaaaaaaaa",
-      "whenDate": "2019-04-04",
+      "danceNotes": "Meet at blue tent by Subway - Volunteers needed.",
+      "whenDate": "2019-04-06",
       "throughDate": "",
-      "dinnerTime": "19:00",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "7.00",
+      "dinnerTime": "",
+      "danceTime": "13:00",
+      "endTime": "15:00",
+      "cost": "0",
       "typeOfEventId": 5,
       "locationId": 5,
       "clubId": 1,
@@ -442,15 +442,15 @@
       "id": 13
     },
     {
+      "id": 14,
       "clubName": "Singles And Doubles",
       "stateId": "AL",
-      "presidentId": "",
-      "vicePresidentId": "",
-      "secretaryId": "",
-      "otherOfficerId": "",
-      "regionId": "",
-      "usualLocationId": "",
-      "id": 14
+      "presidentId": null,
+      "vicePresidentId": null,
+      "secretaryId": null,
+      "otherOfficerId": null,
+      "regionId": null,
+      "usualLocationId": null
     },
     {
       "id": 15,

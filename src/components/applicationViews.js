@@ -349,8 +349,6 @@ export default class ApplicationViews extends Component {
                         {...props} />
                 }} />
 
-
-
                 <Route exact path="/newClub" render={props => {
                     return <NewClubForm {...props}
                         clubs={this.state.clubs}

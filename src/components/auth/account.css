@@ -12,8 +12,8 @@ overflow: hidden;
 }
 .form-group{
   align-content: left;
-  width: auto;
-  margin-top: 1%;
+  width: 50%;
+  margin-top: .5%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -32,12 +32,27 @@ margin-bottom: 10%;
 box-sizing: content-box;
 border-width: 5px;
 }
-.form-login
+.form-login{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: left;
+  width:50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  /* box-sizing: content-box; */
+  border-width: 5px;
+  padding: 5px 5px 5px 5px;
+  justify-content:left;
+  overflow: hidden;
+  border-width: 5px;
+}
+
 .form-register{
   display: flex;
 flex-wrap: wrap;
 align-content: left;
-width:100%;
+width:50%;
 margin-left: 25%;
 margin-right: 25%;
 margin-bottom: 10%;
@@ -49,16 +64,13 @@ justify-content:left;
 overflow: hidden;
 border-width: 5px;
 }
-.list-button-row{
-    justify-content: space-around;
-    width: 100%;
-}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  background: linear-gradient(to right,  #b09cb3, rgb(147, 125, 153)) ;
+  background: linear-gradient(to right,  #fffeff, rgb(246, 240, 248)) ;
 }
 .gradient-border {
   --borderWidth: 3px;
@@ -92,10 +104,19 @@ body {
 	}
 }
 
-/*
+
 .container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 80%;
-} */
+  width: 50%;
+}
+section{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: left;
+  margin-left: 25%;
+  margin-right: 25%;
+  width:50%;
+}

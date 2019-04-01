@@ -7,7 +7,9 @@ export default class LocationCard extends Component {
     render() {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
-                <div key={`location-${this.props.location.id}`} className="location-card">
+            <React.Fragment>
+
+                <div  className="location-card">
                 <div className="gradient-border">
                     <p className="list-button-row">
                         <strong>{this.props.location.nameLocation}</strong>
@@ -19,8 +21,9 @@ export default class LocationCard extends Component {
                     {this.props.location.city},  {this.props.location.stateId}
                     </p>
                     <p className="list-button-row">
-                    {this.props.location.locationNotes}<br />
+                     Note: {`     ${this.props.location.locationNotes} `}<br />
                     </p>
+
                     <p className="list-button-row">
                         <button className="list-button"
                             onClick={() => {
@@ -38,6 +41,7 @@ export default class LocationCard extends Component {
                     </p>
                 </div>
                 </div>
+                            </React.Fragment>
                 :
                 <div key={`location-${this.props.location.id}`} className="location-card">
                    <div className="gradient-border">

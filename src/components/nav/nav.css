@@ -3,13 +3,14 @@
     color: blueviolet;
     align-content: space-around;
     flex-basis: row;
-    width: 900%;
+    width: 90%;
     align-content: center;
     margin-left: 10%;
+    flex-wrap: wrap;
 }
 .nav-item{
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-content: space-evenly;
 }
 .nav-link{
