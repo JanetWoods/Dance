@@ -2,7 +2,7 @@
   "dances": [
     {
       "id": 4,
-      "danceNotes": "Wear Pink",
+      "danceNotes": "",
       "whenDate": "2019-04-06",
       "throughDate": "",
       "dinnerTime": "19:00",
@@ -10,8 +10,8 @@
       "endTime": "22:00",
       "cost": "11",
       "typeOfEventId": 7,
-      "locationId": 9,
-      "clubId": 1,
+      "locationId": 23,
+      "clubId": 12,
       "eventSite": ""
     },
     {
@@ -167,6 +167,34 @@
       "eventSite": "https://squaredancecaribbean2019.blogspot.com/",
       "throughDate": "",
       "id": 17
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-08-23",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 6,
+      "locationId": 6,
+      "clubId": 1,
+      "eventSite": "",
+      "throughDate": "2019-08-24",
+      "id": 18
+    },
+    {
+      "id": 19,
+      "danceNotes": "",
+      "whenDate": "2020-06-17",
+      "throughDate": "2020-06-20",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 3,
+      "locationId": 24,
+      "clubId": 21,
+      "eventSite": "http://www.69nsdc.org/"
     }
   ],
   "typeOfEvents": [
@@ -539,6 +567,53 @@
       "otherOfficerId": null,
       "regionId": null,
       "usualLocationId": null
+    },
+    {
+      "clubName": "Blue Grass Motivators",
+      "stateId": "KY",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "id": 23
+    },
+    {
+      "clubName": "Kentucky Federation of Square Dancing",
+      "stateId": "KY",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "clubSite": "https://squaredanceky.com/",
+      "id": 24
+    },
+    {
+      "clubName": "Park City Ramblers",
+      "stateId": "KY",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "clubSite": "",
+      "id": 25
+    },
+    {
+      "clubName": "Red Hot Stompers",
+      "stateId": "KY",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "clubSite": "",
+      "id": 26
     }
   ],
   "regions": [
@@ -572,13 +647,13 @@
       "locationNotes": "Upstairs"
     },
     {
-      "nameLocation": "Presbyterian Church",
-      "street": "Higbee Mill Rd.",
+      "id": 3,
+      "nameLocation": "Beaumont Presbyterian",
+      "street": "1070 Lane Allen Road",
       "city": "Lexington",
       "zip": "",
       "stateId": "KY",
-      "locationNotes": "Use side parking lot or you won't see the entrance to the hall.",
-      "id": 3
+      "locationNotes": ""
     },
     {
       "nameLocation": "50+ Senior Center",
@@ -599,13 +674,13 @@
       "id": 5
     },
     {
-      "nameLocation": "Lexington First Baptist Church",
-      "street": "500 Wickamore Street",
+      "id": 6,
+      "nameLocation": "Springdale Baptist ",
+      "street": "1380 Higbee Mill Road",
       "city": "Lexington",
       "zip": "",
       "stateId": "KY",
-      "locationNotes": "Use entrance under the green awning.",
-      "id": 6
+      "locationNotes": ""
     },
     {
       "id": 7,
@@ -705,6 +780,69 @@
       "stateId": "TN",
       "locationNotes": "Note a real location",
       "id": 17
+    },
+    {
+      "nameLocation": "Tates Creek Rec Center",
+      "street": "1400 Gainesway Drive",
+      "city": "Lexington",
+      "zip": "",
+      "stateId": "KY",
+      "locationNotes": "",
+      "id": 18
+    },
+    {
+      "nameLocation": "Jessamine County Fairgrounds",
+      "street": "",
+      "city": "Nicholasville ",
+      "zip": "",
+      "stateId": "KY",
+      "locationNotes": "At the big blue building",
+      "id": 19
+    },
+    {
+      "id": 20,
+      "nameLocation": "Park City Lyon's Club",
+      "street": "2025 J Brown Road",
+      "city": "Park City",
+      "zip": "",
+      "stateId": "KY",
+      "locationNotes": ""
+    },
+    {
+      "id": 21,
+      "nameLocation": "First Southern Veteran's Park",
+      "street": "567 Goshen Road",
+      "city": "Stanford",
+      "zip": "",
+      "stateId": "KY",
+      "locationNotes": ""
+    },
+    {
+      "nameLocation": "Community Center (Shepherdsville)",
+      "street": "176 Frank E. Simon Blvd.",
+      "city": "Shepherdsville",
+      "zip": "",
+      "stateId": "KY",
+      "locationNotes": "",
+      "id": 22
+    },
+    {
+      "nameLocation": "Dale Hollow Lake",
+      "street": "",
+      "city": "",
+      "zip": "",
+      "stateId": "TN",
+      "locationNotes": "",
+      "id": 23
+    },
+    {
+      "nameLocation": "Convention Center (Spokane)",
+      "street": "334 West Spokane Falls Blvd",
+      "city": "Spokane",
+      "zip": "99201",
+      "stateId": "WA",
+      "locationNotes": "Entrance to parking is on West Spokane Falls Boulevard.",
+      "id": 24
     }
   ],
   "states": [

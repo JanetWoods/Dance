@@ -11,6 +11,7 @@ export default class NewClubForm extends Component {
     otherOfficerId: "",
     regionId: "",
     usualLocationId: "",
+    clubSite:""
   }
   handleFieldChange = evt => {
     const stateToChange = {};
@@ -33,6 +34,7 @@ export default class NewClubForm extends Component {
         otherOfficerId: this.state.otherOfficerId,
         regionId: this.state.regionId,
         usualLocationId: this.state.usualLocationId,
+        clubSite: this.state.clubSite
       }
       this.props.addClub(newClub)
         .then(() => {
@@ -44,15 +46,15 @@ export default class NewClubForm extends Component {
     return (
       <React.Fragment>
         <form className="form-newEvent">
+        <div className="gradient-border">
           <div className="form-group">
             <label htmlFor="clubName">Name of Club</label>
             <input type="text"
               onChange={this.handleFieldChange}
               id="clubName"
               value={this.state.className}/>
-
-
           </div>
+
           <div className="form-group">
             <label htmlFor="stateId">State</label>
             <select
@@ -63,7 +65,7 @@ export default class NewClubForm extends Component {
               <option value="stateId">Select state</option>
               {this.props.states.map(state => (
                 <option key={state.id} id={state.id} value={state.id}>{state.stateLong}</option>
-              ))}
+                ))}
             </select>
           </div>
 
@@ -78,16 +80,23 @@ export default class NewClubForm extends Component {
               <option value="locationId">Select preferred dance location</option>
               {this.props.locations.map(location => (
                 <option key={location.id} id={location.id} value={location.id}> {location.nameLocation} </option>
-              ))}
+                ))}
             </select>
           </div>
+          <div className="form-group">
+            <label htmlFor="clubSite">Club Web Site</label>
+            <input type="url"
+              onChange={this.handleFieldChange}
+              id="clubSite"
+              value={this.state.clubSite}/>
+              </div>
 
           <button
             type="submt"
             onClick={this.makeNewClub}
             className="list-button">Add Club
               </button>
-
+             </div>
         </form>
       </React.Fragment>
     )

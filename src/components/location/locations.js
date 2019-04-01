@@ -15,14 +15,13 @@ export default class Locations extends Component {
                     </div>
                     <h2 className="list-title">Locations</h2>
                     {
-
-                        this.props.locations.map(location => {
+                        this.props.locations
+                        .sort((a, b) => (a.nameLocation > b.nameLocation) ? 1 : -1)
+                        .map(location => {
 
                             return <section>
 
-
                                 <LocationCard key={`location-${this.props.location.id}`}{...this.props} location={location} powerUser={this.powerUser} />
-
 
                             </section>
 
@@ -33,7 +32,9 @@ export default class Locations extends Component {
                 <React.Fragment>
                     <h2 className="list-title">Locations</h2>
                     {
-                        this.props.locations.map(location => {
+                        this.props.locations
+                        .sort((a, b) => (a.nameLocation > b.nameLocation) ? 1 : -1)
+                        .map(location => {
 
                             return <section>
 

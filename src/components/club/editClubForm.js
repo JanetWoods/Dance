@@ -12,7 +12,8 @@ export default class EditClubForm extends Component {
     secretaryId: 1,
     otherOfficerId: 1,
     regionId: 1,
-    usualLocationId: 1
+    usualLocationId: 1,
+    clubeSite:""
   }
   handleFieldChange = evt => {
     const stateToChange = {};
@@ -99,6 +100,14 @@ export default class EditClubForm extends Component {
                 <option key={location.id} id={location.id} value={location.id}> {location.nameLocation} </option>
                 ))}
             </select>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="clubSite">Website</label>
+            <input type="url"
+              onChange={this.handleFieldChange}
+              id="clubSite"
+              value={this.state.clubSite}/>
           </div>
 
           <button
