@@ -43,16 +43,16 @@ export default class ClubCard extends Component {
                         </div>
                 </section>
                 :
-                <div className="gradient-border">
                     <section className="club-card">
+                <div className="gradient-border">
                         {this.props.club.stateId}
                         <div key={`club-${this.props.club.id}`}>
                             <p>
                                 {this.props.club.clubName}
                             </p>
                         </div>
-                    </section>
                 </div>
+                    </section>
         )
     }
 

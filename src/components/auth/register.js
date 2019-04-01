@@ -7,12 +7,12 @@ export default class Register extends Component {
         password: "",
         username: "",
         typeOfUserId: 1,
-        nameFirst:"",
-        nameLast:"",
+        nameFirst: "",
+        nameLast: "",
         clubId: 0,
         phone: "",
-        email:"",
-        clubs:[]
+        email: "",
+        clubs: []
     }
     handleFieldChange = evt => {
         const stateToChange = {}
@@ -25,11 +25,11 @@ export default class Register extends Component {
             username: this.state.username,
             password: this.state.password,
             typeOfUserId: this.state.typeOfUserId,
-            nameFirst:this.state.nameFirst,
-            nameLast:this.state.nameLast,
+            nameFirst: this.state.nameFirst,
+            nameLast: this.state.nameLast,
             clubId: this.state.clubId,
             phone: this.state.phone,
-            email:this.state.email
+            email: this.state.email
         }
         if (this.state.username && this.state.password) {
             userMgr.searchUserName(this.state.username).then(users => {
@@ -81,60 +81,74 @@ export default class Register extends Component {
     }
     render() {
         return (
-
-               <div className="gradient-border">
-                <h1 className="h3 mb-3 font-weight-normal">Register: </h1>
+            <div className="container">
+                <div className="gradient-border">
+                    <h1 className="h3 mb-3 font-weight-normal">Register: </h1>
 
                     <form className="form-register">
-                <label htmlFor="inputUserName">Username</label>
-                <input onChange={this.handleFieldChange}
-                    type="username"
-                    id="username"
-                    placeholder={`username`}
-                    autoFocus=""
-                    required=""/>
 
-                <label htmlFor="inputPassword">Password</label>
-                <input onChange={this.handleFieldChange}
-                    type="password"
-                    id="password"
-                    placeholder={`password`}
-                    autoFocus=""
-                    required="" />
+                        <div className="form-group">
+                            <label htmlFor="inputUserName">Username</label>
+                            <input onChange={this.handleFieldChange}
+                                type="username"
+                                id="username"
+                                placeholder={`username`}
+                                autoFocus=""
+                                required="" />
+                        </div>
 
-                <label htmlFor="inputNameFirst">First Name</label>
-                <input onChange={this.handleFieldChange}
-                    type="nameFirst"
-                    id="nameFirst"
-                    placeholder={`First Name`}
-                    autoFocus=""
-                    required="" />
+                        <div className="form-group">
+                            <label htmlFor="inputPassword">Password</label>
+                            <input onChange={this.handleFieldChange}
+                                type="password"
+                                id="password"
+                                placeholder={`password`}
+                                autoFocus=""
+                                required="" />
+                        </div>
 
-                <label htmlFor="inputNameLast">Last Name</label>
-                <input onChange={this.handleFieldChange}
-                    type="nameLast"
-                    id="nameLast"
-                    placeholder={`Last Name`}
-                    autoFocus=""
-                    required="" />
+                        <div className="form-group">
 
-                <label htmlFor="inputPhone">Phone Number</label>
-                <input onChange={this.handleFieldChange}
-                    type="phone"
-                    id="phone"
-                    placeholder={`Phone Number`}
-                    autoFocus=""/>
-
-                <label htmlFor="email">email</label>
-                <input onChange={this.handleFieldChange}
-                    type="email"
-                    id="email"
-                    placeholder={`Email Address`}
-                    autoFocus=""/>
+                            <label htmlFor="inputNameFirst">First Name</label>
+                            <input onChange={this.handleFieldChange}
+                                type="nameFirst"
+                                id="nameFirst"
+                                placeholder={`First Name`}
+                                autoFocus=""
+                                required="" />
+                        </div>
 
 
-                    {/* <div className="form-group"> */}
-                    {/* <label htmlFor="club"> Select your club </label>
+                        <div className="form-group">
+                            <label htmlFor="inputNameLast">Last Name</label>
+                            <input onChange={this.handleFieldChange}
+                                type="nameLast"
+                                id="nameLast"
+                                placeholder={`Last Name`}
+                                autoFocus=""
+                                required="" />
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="inputPhone">Phone Number</label>
+                            <input onChange={this.handleFieldChange}
+                                type="phone"
+                                id="phone"
+                                placeholder={`Phone Number`}
+                                autoFocus="" />
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="email">email</label>
+                            <input onChange={this.handleFieldChange}
+                                type="email"
+                                id="email"
+                                placeholder={`Email Address`}
+                                autoFocus="" />
+                        </div>
+
+                        {/* <div className="form-group"> */}
+                        {/* <label htmlFor="club"> Select your club </label>
                     <select
                         name="clubId"
                         id="clubId"
@@ -148,11 +162,14 @@ export default class Register extends Component {
                     </select>
                 </div> */}
 
-                <button type="submit" onClick={this.handleRegistration}>
-                    Register
+                        <div className="form-group">
+                            <button type="submit" onClick={this.handleRegistration}>
+                                Register
             </button>
+                        </div>
 
-            </form>
+                    </form>
+                </div>
             </div>
         )
     }

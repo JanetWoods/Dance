@@ -14,7 +14,6 @@ export default class DanceEvent extends Component {
                 <div className="gradient-border" >
                         <p > <strong>{this.props.dance.typeOfEvent.nameType}</strong></p>
                     <p> <strong className="list-item"> {this.props.dance.whenDate} </strong> </p>
-                            {/* <br /> */}
                            <p><strong> <span><Link to={`/locations/${this.props.dance.location.id}`} {...this.props}>                                {this.props.dance.location.city}{",   "}     {this.props.dance.location.stateId} </Link></span>
 
 

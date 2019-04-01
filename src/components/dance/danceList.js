@@ -16,7 +16,6 @@ export default class FilterDances extends Component {
                     </div>
 
                     <h2 className="list-title">Dances</h2>
-                    {/* <div className="container"> */}
                         {
                             this.props.detailedDances
                                 .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
@@ -31,7 +30,6 @@ export default class FilterDances extends Component {
                                     </section>
                                 })
                         }
-                    {/* </div> */}
                 </React.Fragment>
                 :
                 <React.Fragment>
@@ -42,7 +40,7 @@ export default class FilterDances extends Component {
                         .sort(function compare(a, b) {
                             var dateA = new Date(a.whenDate);
                             var dateB = new Date(b.whenDate);
-                            return dateB - dateA;
+                            return dateA - dateB;
                         }).map(dance => {
                             return <section>
                                 <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance}/>

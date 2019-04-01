@@ -80,34 +80,40 @@ export default class Login extends Component {
     }
     render() {
         return (
-            <div className="gradient-border">
-            <h1 className="h3 mb-3 font-weight-normal">Sign in</h1>
-                    <form className="form-login">
-                        <div className="form-group">
-                        <label htmlFor="inputUserName">Username</label>
-                        <input onChange={this.handleFieldChange}
-                            type="username"
-                            id="username"
-                            placeholder={`username`}
-                            autoFocus=""
-                            required=""
-                            />
-                        </div>
-                        <div className="form-group">
-                        <label htmlFor="inputPassword">Password</label>
-                        <input onChange={this.handleFieldChange}
-                            type="password"
-                            id="password"
-                            placeholder={`password`}
-                            autoFocus=""
-                            required="" />
+            <React.Fragment>
+                <section className="container">
+                    <div className="gradient-border">
+                <h1 className="h3 mb-3 font-weight-normal">Sign in</h1>
+                        <form className="form-login">
+
+                            <div className="form-group">
+                                <label htmlFor="inputUserName">Username</label>
+                                <input onChange={this.handleFieldChange}
+                                    type="username"
+                                    id="username"
+                                    placeholder={`username`}
+                                    autoFocus=""
+                                    required=""/>
                             </div>
 
-                        <button type="submit" onClick={this.handleLogin}>
-                            Sign in
+                            <div className="form-group">
+                                <label htmlFor="inputPassword">Password</label>
+                                <input onChange={this.handleFieldChange}
+                                    type="password"
+                                    id="password"
+                                    placeholder={`password`}
+                                    autoFocus=""
+                                    required="" />
+                            </div>
+                                <div className="form-group">
+                            <button type="submit" onClick={this.handleLogin}>
+                                   Sign in
                         </button>
-                    </form>
-                </div>
+                                </div>
+                        </form>
+                    </div>
+                </section>
+            </React.Fragment>
         )
     }
 }
