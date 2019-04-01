@@ -2,6 +2,7 @@
 #root{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .form-newEvent{
@@ -46,7 +47,8 @@ p{
     margin-bottom: 1px;
     padding: 5px 5px 5px 5px;
     justify-content:left;
-    width: auto;
+    width: 90%;
+    margin-right: 10%;
     overflow: hidden;
     border-width: 5px;
     border-style: ridge;
@@ -60,7 +62,8 @@ p{
     margin-bottom: 1px;
     padding: 5px 5px 5px 5px;
     justify-content:left;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
     overflow: hidden;
     border-width: 5px;
     border-style: ridge;
@@ -137,8 +140,9 @@ body {
     position: relative;
     width: 100%;
     border-radius: var(--borderWidth);
-    border-image:   linear-gradient(60deg, #9c8c9e, #9e88a1, #a181a7, #906697);
+    background: linear-gradient(60deg, #a398a5, #ab95ad, #a181a7, #a877b1);
   }
+
   .gradient-border:after {
     content: '';
     position: relative;

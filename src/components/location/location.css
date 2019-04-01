@@ -12,8 +12,8 @@ section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* margin-left: 25%; */
-    /* margin-right: 25%; */
+    margin-left: 25%;
+    margin-right: 25%;
     margin-top: 5px;
     padding: 5px 5px 5px 5px;
     justify-content:left;

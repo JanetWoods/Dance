@@ -41,9 +41,8 @@ export default class Filter extends Component {
                                 ))}
                             </select>
                         </div>
-
                     </form>
-                    <h4 className="list-title">Dances</h4>
+                    {/* <h4 className="list-title">Dances</h4> */}
                     <div className="container">
                         {
                             this.props.detailedDances

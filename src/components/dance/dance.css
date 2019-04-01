@@ -2,7 +2,8 @@
 
 #root{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width:100%;
 }
 .form-newEvent{
 flex-direction: column;
@@ -46,11 +47,7 @@ border-color: #815988;;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 30px;
-    /* margin-top: 5%; */
-    /* margin-bottom: 5%; */
     justify-content:left;
-    width: 90%;
     margin-bottom: 40px;
     border-radius: 5%;
 }
@@ -59,9 +56,10 @@ border-color: #815988;;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* padding: 5px 5px 5px 5px; */
     justify-content:left;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     overflow: hidden;
     border-width: 5px;
     border-style: ridge;
@@ -155,9 +153,8 @@ border-color: #815988;
 .form-filter{
     display: flex;
     flex-direction: row;
-    margin-bottom: 1%;
     border-style: none;
-    width: 80%;
+    width: 100%;
     justify-content: space-around;
 }
 
@@ -173,7 +170,7 @@ body {
     width: 100%;
     position: relative;
     border-radius: var(--borderWidth);
-    background: linear-gradient(60deg, #9c8c9e, #9e88a1, #a181a7, #906697);
+    background: linear-gradient(60deg, #a398a5, #ab95ad, #a181a7, #a877b1);
   }
   .gradient-border:after {
     content: '';
