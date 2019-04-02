@@ -34,7 +34,7 @@ export default class NewEventForm extends Component {
           endTime: this.state.endTime,
           cost: this.state.cost,
           typeOfEventId: parseInt(this.state.typeOfEventId),
-          locationId: parseInt(this.state.typeOfEventId),
+          locationId: parseInt(this.state.locationId),
           clubId: parseInt(this.state.clubId),
           eventSite: this.state.eventSite,
           throughDate: this.state.throughDate
@@ -125,7 +125,7 @@ render() {
 
             <option value="">Select club</option>
             {this.props.clubs
-            .sort((a, b) => (a.clubName > b.clubName) ? 1 : -1)
+             .sort((a,b)=> (a.clubName > b.clubName) ? 1 : -1)
             .map(club => (
               <option key={club.id} id={club.id} value={club.id}> {club.clubName} </option>
               ))}

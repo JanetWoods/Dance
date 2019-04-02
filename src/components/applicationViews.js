@@ -211,15 +211,18 @@ export default class ApplicationViews extends Component {
         //get everything from the managers.
         //then set state
         danceMgr.getAll()
-            .then(dances => newState.dances = dances)
+        .then(dances => newState.dances = dances)
 
             .then(() => clubMgr.getAll())
             .then(clubs => newState.clubs = clubs)
+            // .sort((a,b)=> (a.clubName > b.clubName) ? 1 : -1)
 
             .then(() => eventTypeMgr.getAll())
+            // .sort((a, b) => (a.nameType > b.nameType) ? 1 : -1)
             .then(typeOfEvents => newState.typeOfEvents = typeOfEvents)
 
             .then(() => locationMgr.getAll())
+            // .sort((a, b) => (a.nameLocation > b.nameLocation) ? 1 : -1)
             .then(locations => newState.locations = locations)
 
             .then(() => regionMgr.getAll())

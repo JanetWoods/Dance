@@ -211,18 +211,18 @@
       "eventSite": "https://ciazumanotravel.com/plan/all-offers/holland-america-line/square-dancers/alaska/cruises"
     },
     {
-      "danceNotes": "",
+      "id": 23,
+      "danceNotes": "Somebody's house burned down",
       "whenDate": "2019-05-04",
+      "throughDate": "",
       "dinnerTime": "",
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "7.00",
-      "typeOfEventId": 6,
-      "locationId": 6,
-      "clubId": 12,
-      "eventSite": "",
-      "throughDate": "",
-      "id": 23
+      "typeOfEventId": 1,
+      "locationId": 18,
+      "clubId": 4,
+      "eventSite": ""
     },
     {
       "danceNotes": "All ages welcome",
@@ -281,23 +281,9 @@
       "eventSite": ""
     },
     {
-      "id": 29,
-      "danceNotes": "",
-      "whenDate": "2019-04-02",
-      "throughDate": "",
-      "dinnerTime": "19:00",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "7.00",
-      "typeOfEventId": 8,
-      "locationId": 17,
-      "clubId": 12,
-      "eventSite": ""
-    },
-    {
       "id": 30,
       "danceNotes": "",
-      "whenDate": "2019-04-04",
+      "whenDate": "2019-04-16",
       "throughDate": "",
       "dinnerTime": "19:00",
       "danceTime": "19:30",
@@ -311,13 +297,13 @@
     {
       "danceNotes": "",
       "whenDate": "2019-04-02",
-      "dinnerTime": "19:00",
-      "danceTime": "19:30",
+      "dinnerTime": "14:00",
+      "danceTime": "17:00",
       "endTime": "22:00",
       "cost": "7.00",
-      "typeOfEventId": 1,
-      "locationId": 1,
-      "clubId": 12,
+      "typeOfEventId": 8,
+      "locationId": 17,
+      "clubId": 5,
       "eventSite": "",
       "throughDate": "",
       "id": 31

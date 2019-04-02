@@ -22,7 +22,7 @@ export default class NavBar extends Component {
                             <Link className="nav-link" to="/DanceList">Dances</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/filteredList">Filtered Dances</Link>
+                            <Link className="nav-link" to="/filteredList">Filter Dances</Link>
                         </li>
 
                         <li className="nav-item">
@@ -52,9 +52,11 @@ export default class NavBar extends Component {
                             <Link className="nav-link" to="/DanceList">Dances</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/filteredList">Filtered Dances</Link>
+                            <Link className="nav-link" to="/filteredList">Filter Dances</Link>
                         </li>
-
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/clubs"> Clubs </Link>
+                        </li>
                         <li className="nav-item">
                             <Link className="nav-link" to={`/account/user/${this.props.activeUser.id}`}>Your Account</Link>
                         </li>
