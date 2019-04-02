@@ -44,7 +44,7 @@ export default class NewEventForm extends Component {
           this.props.history.push("/DanceList")
         })
       }
-      else if (this.state.locationId === "0" || this.state.locationId === "") {
+      else if (this.state.locationId === 0 || this.state.locationId === "") {
         alert("You forgot to enter the location. Where is it?")
       }
       else if (this.state.whenDate === "" || this.state.whenDate === null){

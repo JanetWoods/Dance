@@ -1,20 +1,6 @@
 {
   "dances": [
     {
-      "id": 4,
-      "danceNotes": "",
-      "whenDate": "2019-04-06",
-      "throughDate": "",
-      "dinnerTime": "19:00",
-      "danceTime": "19:30",
-      "endTime": "22:00",
-      "cost": "11",
-      "typeOfEventId": 7,
-      "locationId": 23,
-      "clubId": 12,
-      "eventSite": ""
-    },
-    {
       "id": 7,
       "danceNotes": "Bring your boots",
       "whenDate": "2019-06-26",
@@ -45,8 +31,8 @@
     {
       "id": 9,
       "danceNotes": "The real cruise left already, sorry. ",
-      "whenDate": "2019-04-02",
-      "throughDate": "2019-04-12",
+      "whenDate": "2019-03-13",
+      "throughDate": "2019-03-29",
       "dinnerTime": "19:00",
       "danceTime": "19:30",
       "endTime": "22:00",
@@ -80,21 +66,7 @@
       "endTime": "22:00",
       "cost": "7.00",
       "typeOfEventId": 7,
-      "locationId": 4,
-      "clubId": 2,
-      "eventSite": ""
-    },
-    {
-      "id": 12,
-      "danceNotes": "",
-      "whenDate": "2019-04-04",
-      "throughDate": "",
-      "dinnerTime": "",
-      "danceTime": "19:00",
-      "endTime": "21:00",
-      "cost": "5",
-      "typeOfEventId": 8,
-      "locationId": 8,
+      "locationId": 9,
       "clubId": 2,
       "eventSite": ""
     },
@@ -211,18 +183,18 @@
       "eventSite": ""
     },
     {
+      "id": 21,
       "danceNotes": "",
       "whenDate": "2019-04-05",
+      "throughDate": "",
       "dinnerTime": "19:00",
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "7.00",
-      "typeOfEventId": 7,
+      "typeOfEventId": 3,
       "locationId": 7,
       "clubId": 6,
-      "eventSite": "",
-      "throughDate": "",
-      "id": 21
+      "eventSite": ""
     },
     {
       "id": 22,
@@ -240,17 +212,115 @@
     },
     {
       "danceNotes": "",
-      "whenDate": "2019-04-01",
+      "whenDate": "2019-05-04",
+      "dinnerTime": "",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 6,
+      "locationId": 6,
+      "clubId": 12,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 23
+    },
+    {
+      "danceNotes": "All ages welcome",
+      "whenDate": "2019-04-13",
       "dinnerTime": "19:00",
       "danceTime": "19:30",
       "endTime": "22:00",
       "cost": "7.00",
-      "typeOfEventId": 4,
-      "locationId": 4,
+      "typeOfEventId": 7,
+      "locationId": 7,
       "clubId": 12,
-      "eventSite": "https://squaredancecaribbean2019.blogspot.com/",
-      "throughDate": "2019-04-04",
-      "id": 23
+      "eventSite": "",
+      "throughDate": "",
+      "id": 24
+    },
+    {
+      "danceNotes": "Wear RED",
+      "whenDate": "2019-04-12",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "5",
+      "typeOfEventId": 7,
+      "locationId": 7,
+      "clubId": 27,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 26
+    },
+    {
+      "id": 27,
+      "danceNotes": "",
+      "whenDate": "2019-08-03",
+      "throughDate": "",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 11,
+      "locationId": 17,
+      "clubId": 9,
+      "eventSite": ""
+    },
+    {
+      "id": 28,
+      "danceNotes": "Free ",
+      "whenDate": "2019-04-17",
+      "throughDate": "",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 8,
+      "locationId": 17,
+      "clubId": 5,
+      "eventSite": ""
+    },
+    {
+      "id": 29,
+      "danceNotes": "",
+      "whenDate": "2019-04-02",
+      "throughDate": "",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 8,
+      "locationId": 17,
+      "clubId": 12,
+      "eventSite": ""
+    },
+    {
+      "id": 30,
+      "danceNotes": "",
+      "whenDate": "2019-04-04",
+      "throughDate": "",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 8,
+      "locationId": 17,
+      "clubId": 5,
+      "eventSite": ""
+    },
+    {
+      "danceNotes": "",
+      "whenDate": "2019-04-02",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 1,
+      "locationId": 1,
+      "clubId": 12,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 31
     }
   ],
   "typeOfEvents": [
@@ -670,6 +740,18 @@
       "usualLocationId": "",
       "clubSite": "",
       "id": 26
+    },
+    {
+      "clubName": "My NSS CLUB",
+      "stateId": "TN",
+      "presidentId": "",
+      "vicePresidentId": "",
+      "secretaryId": "",
+      "otherOfficerId": "",
+      "regionId": "",
+      "usualLocationId": "",
+      "clubSite": "",
+      "id": 27
     }
   ],
   "regions": [
@@ -712,13 +794,13 @@
       "locationNotes": ""
     },
     {
+      "id": 4,
       "nameLocation": "50+ Senior Center",
-      "street": "953 Clark Street",
+      "street": "953 Clark St",
       "city": "Clarksville",
       "zip": "",
       "stateId": "TN",
-      "locationNotes": "",
-      "id": 4
+      "locationNotes": "Not just for seniors!!!  All ages welcome!!!"
     },
     {
       "nameLocation": "Downtown Georgetown",
@@ -829,13 +911,13 @@
       "id": 16
     },
     {
+      "id": 17,
       "nameLocation": "Bashville Rec Center ",
-      "street": "100 Main Street",
+      "street": "1000 Main Street",
       "city": "Bashville",
       "zip": "30411",
       "stateId": "TN",
-      "locationNotes": "Note a real location",
-      "id": 17
+      "locationNotes": "Not a real location"
     },
     {
       "nameLocation": "Tates Creek Rec Center",
