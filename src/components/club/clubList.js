@@ -25,7 +25,7 @@ export default class Clubs extends Component {
                                <h4 className="list-title-left"> {state.stateLong}</h4>
                                     {
                                         this.props.clubs
-                                        .sort((a, b) => (a.clubName > b.clubName) ? 1 : -1)
+                                        .sort((a,b)=> (a.clubName > b.clubName) ? 1 : -1)
                                         .filter(
                                             club => club.stateId === state.id
                                         )
@@ -52,7 +52,7 @@ export default class Clubs extends Component {
                             <section key={state.stateId} >
                                     {
                                         this.props.clubs
-                                        .sort((a, b) => (a.clubName > b.clubName) ? 1 : -1)
+                                        .sort((a,b)=> (a.clubName > b.clubName) ? 1 : -1)
                                         .filter(
                                             club => club.stateId === state.id
                                         ).map(

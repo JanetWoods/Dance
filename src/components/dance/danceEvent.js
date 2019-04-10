@@ -13,7 +13,9 @@ export default class DanceEvent extends Component {
                 <div key={`dance-${this.props.dance.id}`} className="card-dance">
                 <div className="gradient-border" >
                         <p > <strong>{this.props.dance.typeOfEvent.nameType}</strong></p>
-                    <p> <strong className="list-item"> {this.props.dance.whenDate} </strong> </p>
+                    <p> <strong className="list-button-row"> {this.props.dance.whenDate}  {"   -   "} {this.props.dance.location.nameLocation}</strong> </p>
+
+
                            <p><strong> <span><Link to={`/locations/${this.props.dance.location.id}`} {...this.props}>                                {this.props.dance.location.city}{",   "}     {this.props.dance.location.stateId} </Link></span>
                                 <a href={`${this.props.dance.eventSite}`} target="new">{this.props.dance.eventSite}</a>
                             </strong>
@@ -51,7 +53,8 @@ export default class DanceEvent extends Component {
                 <div className="gradient-border" >
                     <React.Fragment>
                         <p className="list-item"> <strong>{this.props.dance.typeOfEvent.nameType}</strong>,
-                        <strong className="list-item"> {this.props.dance.whenDate} </strong>
+
+                        <p> <strong className="list-button-row"> {this.props.dance.whenDate}  {"   -   "} {this.props.dance.location.nameLocation}</strong> </p>
 
                             <br />
                             </p>
@@ -59,6 +62,7 @@ export default class DanceEvent extends Component {
                         <p className="list-item">
 
                             <span><Link to={`/locations/${this.props.dance.location.id}`} {...this.props}>
+
                                 {this.props.dance.location.city}{",  "} {this.props.dance.location.stateId} </Link></span>
 
                             <a href={`${this.props.dance.eventSite}`} target="new">{this.props.dance.eventSite}

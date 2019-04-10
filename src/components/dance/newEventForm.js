@@ -11,8 +11,8 @@ export default class NewEventForm extends Component {
     endTime: "22:00",
     cost: "7.00",
     danceNotes: "",
-    typeOfEventId: 0,
-    locationId: 0,
+    typeOfEventId: "",
+    locationId: "",
     clubId: 12,
     eventSite: ""
   }
@@ -24,7 +24,7 @@ export default class NewEventForm extends Component {
   makeNewEvent = evt => {
     evt.preventDefault()
 
-    if((this.state.whenDate !== " ") && (this.state.locationId !== " ")){
+    if((this.state.whenDate !== "") && (this.state.locationId !== "") && (this.state.typeOfEventId !== "")){
 
         const newEvent = {
           danceNotes: this.state.danceNotes,
@@ -34,7 +34,7 @@ export default class NewEventForm extends Component {
           endTime: this.state.endTime,
           cost: this.state.cost,
           typeOfEventId: parseInt(this.state.typeOfEventId),
-          locationId: parseInt(this.state.typeOfEventId),
+          locationId: parseInt(this.state.locationId),
           clubId: parseInt(this.state.clubId),
           eventSite: this.state.eventSite,
           throughDate: this.state.throughDate
@@ -44,11 +44,14 @@ export default class NewEventForm extends Component {
           this.props.history.push("/DanceList")
         })
       }
-      else if (this.state.locationId === "0" || this.state.locationId === "") {
+      else if (this.state.locationId === "" || this.state.locationId === null) {
         alert("You forgot to enter the location. Where is it?")
       }
       else if (this.state.whenDate === "" || this.state.whenDate === null){
       alert("You forgot to enter the date. When is it?")
+    }
+        else if (this.state.typeOfEventId === "" || this.state.typeOfEventId === null){
+        alert("You forgot to enter the type of event. Is it a class? A demonstration? What is it? it?")
     }
   }
 render() {
@@ -125,7 +128,7 @@ render() {
 
             <option value="">Select club</option>
             {this.props.clubs
-            .sort((a, b) => (a.clubName > b.clubName) ? 1 : -1)
+             .sort((a,b)=> (a.clubName > b.clubName) ? 1 : -1)
             .map(club => (
               <option key={club.id} id={club.id} value={club.id}> {club.clubName} </option>
               ))}

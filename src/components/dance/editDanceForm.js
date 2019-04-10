@@ -13,8 +13,8 @@ export default class NewEventForm extends Component {
     endTime: "",
     cost: " ",
     danceNotes: "",
-    typeOfEventId: 0,
-    locationId: 0,
+    typeOfEventId: "",
+    locationId: "",
     eventSite: ""
   }
   handleFieldChange = evt => {
@@ -24,7 +24,7 @@ export default class NewEventForm extends Component {
   }
   editThisEvent = evt => {
     evt.preventDefault()
-
+    if((this.state.whenDate !== "") && (this.state.locationId !== "") && (this.state.typeOfEventId !== "")){
     const updatedEvent = {
       id: parseInt(this.state.id),
       danceNotes: this.state.danceNotes,
@@ -43,7 +43,16 @@ export default class NewEventForm extends Component {
       .then(() => {
         this.props.history.push("/")
       })
-
+    }
+    else if (this.state.locationId === "" || this.state.locationId === null) {
+      alert("You forgot to enter the location. Where is it?")
+    }
+    else if (this.state.whenDate === "" || this.state.whenDate === null){
+    alert("You forgot to enter the date. When is it?")
+  }
+      else if (this.state.typeOfEventId === "" || this.state.typeOfEventId === null){
+      alert("You forgot to enter the type of event. Is it a class? A demonstration? What is it? it?")
+  }
   }
 
   componentDidMount(dance) {
@@ -121,7 +130,7 @@ export default class NewEventForm extends Component {
 
                   <option value="">Select club</option>
                   {this.props.clubs
-                  .sort((a, b) => (a.clubName > b.clubName) ? 1 : -1)
+                  .sort((a,b)=> (a.clubName > b.clubName) ? 1 : -1)
                   .map(club => (
                     <option key={club.id} id={club.id} value={club.id}> {club.clubName} </option>
                   ))}
