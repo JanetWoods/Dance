@@ -761,13 +761,13 @@
       "locationNotes": "Not just for seniors!!!  All ages welcome!!!"
     },
     {
+      "id": 5,
       "nameLocation": "Downtown Georgetown",
       "street": "Main Street & Broadway",
-      "city": "Lexington",
+      "city": "Georgetown",
       "zip": "",
       "stateId": "KY",
-      "locationNotes": "",
-      "id": 5
+      "locationNotes": ""
     },
     {
       "id": 6,
