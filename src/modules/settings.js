@@ -1,4 +1,4 @@
 export default {
-    remoteURL: "https://git.heroku.com/wheresthedanceapi.git"
+    remoteURL: "https://wheresthedanceapi.herokuapp.com/"
     // remoteURL: "http://localhost:8088"
 }
