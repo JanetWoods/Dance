@@ -354,48 +354,15 @@
       "email": "rob@yahoo.com"
     },
     {
-      "id": 3,
-      "username": "Margo",
-      "password": "123",
-      "typeOfUserId": 1,
-      "nameFirst": "Margo",
-      "nameLast": "MacFarlane",
-      "clubId": 1,
-      "phone": "555-111-4444",
-      "email": "margo@yahoo.com"
-    },
-    {
-      "id": 4,
-      "username": "Ann",
-      "password": "123",
-      "typeOfUserId": 2,
-      "nameFirst": "Ann",
-      "nameLast": "Woods",
-      "clubId": 1,
-      "phone": "555-227-1111",
-      "email": "ann@yahoo.com"
-    },
-    {
       "id": 5,
-      "username": "Wanda",
-      "password": "123",
+      "username": "Bill",
+      "password": "Morris",
       "typeOfUserId": 2,
-      "nameFirst": "Wana TO YOU",
-      "nameLast": "Lemon",
+      "nameFirst": "Bill",
+      "nameLast": "Morris",
       "clubId": "2",
       "phone": "555-555-1111",
-      "email": "Wanda@yahoo.com"
-    },
-    {
-      "id": 6,
-      "username": "John",
-      "password": "123",
-      "typeOfUserId": 1,
-      "nameFirst": "John",
-      "nameLast": "Mudd",
-      "clubId": "2",
-      "phone": "000-123-1111",
-      "email": "nunya@gmail.com"
+      "email": "BILL@yahoo.com"
     },
     {
       "id": 7,
