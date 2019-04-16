@@ -1,1 +1,1 @@
-[ListOfEventsPowerView](/src/images/ListOfEventsPowerView.png)
+![ListOfEventsPowerView](/src/images/ListOfEventsPowerView.png "List of events, power view")
