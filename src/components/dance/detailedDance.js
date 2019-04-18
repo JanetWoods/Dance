@@ -19,17 +19,17 @@ export default class DanceDetail extends Component {
         eventSite: "",
         typeOfEvent: {},
         location: {},
-        club: {}
+        club: {},
     }
+
     componentDidMount(dance) {
         danceMgr.getTHISDanceDetail(this.props.match.params.id)
-            .then((dance) => {
-                this.setState(dance)
-            })
-            let now = new Date()
+        .then((dance) => {
+            this.setState(dance)
+        })
     }
-    render() {
 
+    render() {
         return (
             <React.Fragment >
                 <div className="card-detailed">
@@ -40,6 +40,7 @@ export default class DanceDetail extends Component {
                     <p className="list-item">Through:{this.state.throughDate}  (if a multi-day event)</p>
                     <p className="list-item">Dinner:{" "}  {this.state.dinnerTime}</p>
                     <p className="list-item">Dance:{" "}  {this.state.danceTime}</p>
+                    <p className="list-item">End:{" "}  {this.state.endTime}</p>
 
                     <p className="list-item">Host Club:{" "}   {this.state.club.clubName}</p>
 
