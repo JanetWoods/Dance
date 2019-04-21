@@ -5,6 +5,10 @@ export default {
         return fetch(`${settings.remoteURL}/states/${id}`)
             .then(e => e.json())
     },
+    getWith(id) {
+        return fetch(`${settings.remoteURL}/locations?stateId=${id}&embed=dances`)
+            .then(e => e.json())
+    },
     searchState(state) {
         return fetch(
             `${settings.remoteURL}/states?stateShort=${state}`
