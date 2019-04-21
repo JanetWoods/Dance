@@ -64,6 +64,13 @@ export default class ApplicationViews extends Component {
                 dances: dances
             }))
     }
+    deleteClub = (id) => {
+        return clubMgr.deleteClub(id)
+            .then(()=> clubMgr.getAll())
+            .then(clubs => this.setState({
+                clubs: clubs
+            }))
+    }
 
     deleteLocation = (locationId) => {
         return locationMgr.deleteLocation(locationId)
@@ -171,15 +178,6 @@ export default class ApplicationViews extends Component {
             }))
     }
 
-    deleteClub = (clubId) => {
-        return clubMgr.deleteclub(clubId)
-            .then(() => {
-                return clubMgr.getAll()
-            })
-            .then(clubs => this.setState({
-                clubs: clubs
-            }))
-    }
     updateLocation = (location) => {
         return locationMgr.updatelocation(location)
             .then(() => {
@@ -408,6 +406,7 @@ export default class ApplicationViews extends Component {
                         users={this.state.users}
                         states={this.state.states}
                         locations={this.state.locations}
+                        deleteClub={this.deleteClub}
                         clubs={this.state.clubs} />
                 }} />
 

@@ -95,7 +95,7 @@ export default class EditClubForm extends Component {
               onChange={this.handleFieldChange}
               value={this.state.locationId}>
 
-              <option value="locationId"> Preferred dance location</option>
+              <option value=""> Preferred dance location</option>
               {this.props.locations.map(location => (
                 <option key={location.id} id={location.id} value={location.id}> {location.nameLocation} </option>
                 ))}
