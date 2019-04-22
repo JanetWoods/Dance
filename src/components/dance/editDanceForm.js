@@ -127,7 +127,6 @@ export default class NewEventForm extends Component {
                   id="clubId"
                   onChange={this.handleFieldChange}
                   value={this.state.clubId}>
-
                   <option value="">Select club</option>
                   {this.props.clubs
                   .sort((a,b)=> (a.clubName > b.clubName) ? 1 : -1)

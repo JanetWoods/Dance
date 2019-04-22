@@ -13,7 +13,7 @@ export default class Filter extends Component {
         dances: [],
         states: [],
         stateId: "",
-
+        detailedDances: []
     }
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -21,9 +21,21 @@ export default class Filter extends Component {
         this.setState(stateToChange);
     }
     handleStateSelection = stateId => {
-        this.filterByState(stateId);
+        this.setState(stateId);
+        this.props.detailedDances
+            .filter(dance => dance.location.stateId === this.state.state)
+            .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
+            .sort(function compare(a, b) {
+                var dateA = new Date(a.whenDate);
+                var dateB = new Date(b.whenDate);
+                return dateA - dateB;
+            })
+            .map(dance => {
+                return <section key={`dance-${dance.id}`}>
+                    <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} />
+                </section>
+            })
     }
-
     powerUser = sessionStorage.getItem("Type")
 
     render() {
@@ -75,7 +87,7 @@ export default class Filter extends Component {
                                 </section>
                             })
                     }
-                    {/* </div> */}
+
                 </React.Fragment>
                 :
                 <React.Fragment>

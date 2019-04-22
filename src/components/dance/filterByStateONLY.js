@@ -7,12 +7,12 @@ import "../dance/dance.css"
 export default class FilterByState extends Component {
 
     state = {
-        typeOfEventId: "",
         locationId: "",
         typeOfEvents: [],
         dances: [],
         states: [],
         stateId: "",
+        detailedDances:[]
 
     }
     handleFieldChange = evt => {
@@ -21,9 +21,23 @@ export default class FilterByState extends Component {
         this.setState(stateToChange);
     }
     handleStateSelection = stateId => {
-        this.filterByState(stateId);
-    }
+        this.setState(stateId);
 
+            this.props.detailedDances
+            .filter(dance => dance.location.stateId === this.state.state.id)
+                .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
+                .sort(function compare(a, b) {
+                    var dateA = new Date(a.whenDate);
+                    var dateB = new Date(b.whenDate);
+                    return dateA - dateB;
+                })
+                .map(dance => {
+                    return <section key={`dance-${dance.id}`}>
+                        <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} />
+                    </section>
+                })
+
+    }
     powerUser = sessionStorage.getItem("Type")
 
     render() {
@@ -38,7 +52,7 @@ export default class FilterByState extends Component {
                             <select
                                 name="state"
                                 id="state"
-                                onChange={this.handleFieldChange}
+                                onChange={this.handleStateSelection}
                                 value={this.state.state}>
                                 <option required value="">Select State</option>
                                 {this.props.states.map(sx => (
@@ -46,24 +60,8 @@ export default class FilterByState extends Component {
                                 ))}
                             </select>
                         </div>
-
                     </form>
-                    {
-                        this.props.detailedDances
-                            .filter(dance => dance.location.stateId === this.state.state)
-                            .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
-                            .sort(function compare(a, b) {
-                                var dateA = new Date(a.whenDate);
-                                var dateB = new Date(b.whenDate);
-                                return dateA - dateB;
-                            })
-                            .map(dance => {
-                                return <section key={`dance-${dance.id}`}>
-                                    <DanceEvent key={`dance-${dance.id}`}{...this.props} dance={dance} />
-                                </section>
-                            })
-                    }
-                    {/* </div> */}
+
                 </React.Fragment>
                 :
                 <React.Fragment>
@@ -75,7 +73,7 @@ export default class FilterByState extends Component {
                             <select
                                 name="state"
                                 id="state"
-                                onChange={this.handleFieldChange}
+                                onChange={this.handleStateSelection}
                                 value={this.state.state}>
                                 <option required value="">Select State</option>
                                 {this.props.states.map(sx => (
@@ -100,7 +98,6 @@ export default class FilterByState extends Component {
                                 </section>
                             })
                     }
-                    {/* </div> */}
                 </React.Fragment>
         )
     }

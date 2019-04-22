@@ -16,9 +16,6 @@ export default {
             method: "DELETE"
         })
     },
-    // getAll() {
-    //     return fetch(`${settings.remoteURL}/dances`).then(e => e.json())
-    //   },
     getAll() {
         return fetch(`${settings.remoteURL}/dances`)
         .then(e => e.json())

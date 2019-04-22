@@ -23,6 +23,7 @@ import EditClubForm from "./club/editClubForm"
 import Clubs from "./club/clubList"
 import Filter from "./dance/filter"
 import DanceDetail from "./dance/detailedDance"
+import FilterByState from "./dance/filterByStateONLY"
 
 export default class ApplicationViews extends Component {
     state = {
@@ -337,8 +338,23 @@ export default class ApplicationViews extends Component {
                         editDance={this.editDance}
                         {...props} />
                 }} />
+
                 <Route exact path="/filteredList" render={props => {
                     return <Filter
+                        dances={this.state.dances}
+                        deleteDance={this.deleteDance}
+                        userPower={this.props.userPower}
+                        detailedDances={this.state.detailedDances}
+                        typeOfEvents={this.state.typeOfEvents}
+                        addDance={this.addDance}
+                        editDance={this.editDance}
+                        states={this.state.states}
+                        Filter={this.state.filter}
+                        filterByState={this.filterByState}
+                        {...props} />
+                }} />
+                <Route exact path="/FilterByState" render={props => {
+                    return <FilterByState
                         dances={this.state.dances}
                         deleteDance={this.deleteDance}
                         userPower={this.props.userPower}
@@ -396,9 +412,11 @@ export default class ApplicationViews extends Component {
                 <Route exact path="/clubs/edit/:id(\d+)" render={props => {
                     return <EditClubForm  {...props}
                         updateClub={this.updateClub}
+                        clubs={this.props.clubs}
                         users={this.state.users}
                         states={this.state.states}
-                        locations={this.state.locations} />
+                        locations={this.state.locations}
+                        club={this.state.club} />
                 }} />
                 <Route exact path="/clubs" render={props => {
                     return <Clubs  {...props}
