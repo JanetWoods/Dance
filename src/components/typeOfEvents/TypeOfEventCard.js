@@ -1,18 +1,18 @@
 import React, { Component } from "react"
-import clubMgr from "../../modules/clubMgr";
+import typeOfEventMgr from "../../modules/clubMgr";
 import "../club/club.css"
 export default class ClubCard extends Component {
 
-    club = this.props.clubs.find(club =>
-        club.id === parseInt(this.props.match.params.id))
+    typeOfEvent = this.props.typeOfEvents.find(typeOfEvent =>
+        typeOfEvent.id === parseInt(this.props.match.params.id))
     state = {
-        club: {}
+        typeOfEvent: {}
     }
     componentDidMount() {
-        clubMgr.get(this.props.match.params.id)
-            .then((club) => {
+        typeOfEventMgr.get(this.props.match.params.id)
+            .then((typeOfEvent) => {
                 this.setState({
-                    club: club
+                    typeOfEvent: typeOfEvent
                 })
             })
     }
@@ -21,16 +21,16 @@ export default class ClubCard extends Component {
             (sessionStorage.getItem("Type") === "PowerUser") ?
 
                 <section >
-                    <div key={`club-${this.props.club.id}`} className="club-card">
+                    <div key={`typeOfEvent-${this.props.typeOfEvent.id}`} className="typeOfEvent-card">
                         <React.Fragment>
                             <div className="gradient-border">
 
                                 <p className="list-item">
-                                    {this.props.club.clubName}
+                                    {this.props.typeOfEvent.typeOfEventName}
                                 </p>
 
                                 <p>
-                                    <a href={`${this.props.club.clubSite}`} target="new">{this.props.club.clubSite}</a>
+                                    <a href={`${this.props.typeOfEvent.typeOfEventSite}`} target="new">{this.props.typeOfEvent.typeOfEventSite}</a>
                                 </p>
 
                                 <p>
@@ -38,14 +38,14 @@ export default class ClubCard extends Component {
                                     <button className="list-button"
                                         type="button"
                                         onClick={() => {
-                                            this.props.history.push(`/clubs/edit/${this.props.club.id}`)
+                                            this.props.history.push(`/typeOfEvents/edit/${this.props.typeOfEvent.id}`)
                                         }} >
                                         Edit
                             </button>
                                     <button className="list-button"
                                         type="button"
                                         onClick={() => {
-                                            this.props.deleteClub(this.props.club.id)
+                                            this.props.deletetypeOfEvent(this.props.typeOfEvent.id)
                                         }} >
                                         Delete
                             </button>
@@ -55,16 +55,16 @@ export default class ClubCard extends Component {
                     </div>
                 </section>
                 :
-                <section className="club-card">
+                <section className="typeOfEvent-card">
                     <div className="gradient-border">
-                        {this.props.club.stateId}
-                        <div key={`club-${this.props.club.id}`}>
+                        {this.props.typeOfEvent.stateId}
+                        <div key={`typeOfEvent-${this.props.typeOfEvent.id}`}>
                             <p>
-                                {this.props.club.clubName}
+                                {this.props.typeOfEvent.typeOfEventName}
                             </p>
 
                             <p>
-                                <a href={`${this.props.club.clubSite}`} target="new">{this.props.club.clubSite}</a>
+                                <a href={`${this.props.typeOfEvent.typeOfEventSite}`} target="new">{this.props.typeOfEvent.typeOfEventSite}</a>
                             </p>
 
                         </div>

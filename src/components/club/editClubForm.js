@@ -12,8 +12,8 @@ export default class EditClubForm extends Component {
     secretaryId: 1,
     otherOfficerId: 1,
     regionId: 1,
-    usualLocationId: 1,
-    clubeSite:""
+    locationId: 1,
+    clubSite:""
   }
   handleFieldChange = evt => {
     const stateToChange = {};
@@ -31,12 +31,13 @@ export default class EditClubForm extends Component {
         id: parseInt(this.state.id),
         clubName: this.state.clubName,
         stateId: this.state.stateId,
+        clubSite: this.state.clubSite,
         presidentId: parseInt(this.state.presidentId),
         vicePresidentId: parseInt(this.state.vicePresidentId),
         secretaryId: parseInt(this.state.secretaryId),
         otherOfficerId: parseInt(this.state.otherOfficerId),
         regionId: parseInt(this.state.regionId),
-        usualLocationId: parseInt(this.state.usualLocationId),
+        LocationId: parseInt(this.state.LocationId),
       }
       this.props.updateClub(updatedClub)
         .then(() => {
@@ -51,12 +52,13 @@ export default class EditClubForm extends Component {
             id: parseInt(club.id),
             clubName: club.clubName,
             stateId: club.stateId,
-            presidentId: parseInt(club.presidentId),
-            vicePresidentId: parseInt(club.vicePresidentId),
-            secretaryId: parseInt(club.secretaryId),
-            otherOfficerId: parseInt(club.otherOfficerId),
-            regionId: parseInt(club.regionId),
-            usualLocationId: parseInt(club.usualLocationId),
+            presidentId: club.presidentId,
+            vicePresidentId: club.vicePresidentId,
+            secretaryId: club.secretaryId,
+            otherOfficerId: club.otherOfficerId,
+            regionId: club.regionId,
+            locationId: club.locationId,
+            clubSite: club.clubSite
           })
       })
   }
@@ -94,9 +96,9 @@ export default class EditClubForm extends Component {
               id="locationId"
               onChange={this.handleFieldChange}
               value={this.state.locationId}>
-
-              <option value="locationId"> Preferred dance location</option>
-              {this.props.locations.map(location => (
+              <option value=""> Preferred dance location</option>
+              {this.props.locations
+              .map(location => (
                 <option key={location.id} id={location.id} value={location.id}> {location.nameLocation} </option>
                 ))}
             </select>
@@ -111,7 +113,7 @@ export default class EditClubForm extends Component {
           </div>
 
           <button
-            type="submt"
+            type="submit"
             onClick={this.makeUpdatedClub}
             className="list-button">Save
               </button>

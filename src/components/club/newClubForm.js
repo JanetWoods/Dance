@@ -10,7 +10,7 @@ export default class NewClubForm extends Component {
     secretaryId: "",
     otherOfficerId: "",
     regionId: "",
-    usualLocationId: "",
+    locationId: "",
     clubSite:""
   }
   handleFieldChange = evt => {
@@ -33,7 +33,7 @@ export default class NewClubForm extends Component {
         secretaryId: this.state.secretaryId,
         otherOfficerId: this.state.otherOfficerId,
         regionId: this.state.regionId,
-        usualLocationId: this.state.usualLocationId,
+        locationId: this.state.locationId,
         clubSite: this.state.clubSite
       }
       this.props.addClub(newClub)

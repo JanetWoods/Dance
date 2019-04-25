@@ -6,23 +6,29 @@ import { Route } from "react-router-dom"
 
 export default class NavBar extends Component {
     logOut = () => {
-            sessionStorage.clear("credentials")
-            sessionStorage.clear("Type")
-            sessionStorage.clear("username")
-            this.props.setAuth()
+        sessionStorage.clear("credentials")
+        sessionStorage.clear("Type")
+        sessionStorage.clear("username")
+        this.props.setAuth()
     }
     powerUser = sessionStorage.getItem("Type")
 
     render() {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
+
                 <nav className="navBar navbar-light light-blue p-0 shadow">
                     <ul className="nav nav-pills">
+
                         <li className="nav-item">
                             <Link className="nav-link" to="/DanceList">Dances</Link>
                         </li>
+
                         <li className="nav-item">
-                            <Link className="nav-link" to="/filteredList">Filter Dances</Link>
+                            <Link className="nav-link" to="/FilterByState">Filter By State</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/filteredList">DeepFilter</Link>
                         </li>
 
                         <li className="nav-item">
@@ -33,9 +39,6 @@ export default class NavBar extends Component {
                             <Link className="nav-link" to="/clubs"> Clubs </Link>
                         </li>
 
-                        <li className="nav-item">
-                            <Link className="nav-link" to={`/account/user/${this.props.activeUser.id}`}>Your Account</Link>
-                        </li>
                     </ul>
                     <p className="nav-link"> Hi {this.props.activeUser.username}</p>
                     <button
@@ -49,16 +52,16 @@ export default class NavBar extends Component {
                 <nav className="navBar navbar-light light-blue p-0 shadow">
                     <ul className="nav nav-pills">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/DanceList">Dances</Link>
+                            <Link className="nav-link" to="/DanceList">All</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/filteredList">Filter Dances</Link>
+                            <Link className="nav-link" to="/FilterByState">Filter By State</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/filteredList">FilterByEvent</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/clubs"> Clubs </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to={`/account/user/${this.props.activeUser.id}`}>Your Account</Link>
                         </li>
                     </ul>
                     <p className="nav-link"> Hi {this.props.activeUser.username}</p>
