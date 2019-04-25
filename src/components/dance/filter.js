@@ -94,10 +94,22 @@ export default class Filter extends Component {
                     <form className="form-filter">
                         <div>
                             <select
+                                name="state"
+                                id="state"
+                                onChange={this.handleFieldChange}
+                                value={this.state.state}>
+                                <option required value="">Select State</option>
+                                {this.props.states.map(sx => (
+                                    <option key={sx.id} id={sx.id} value={sx.id}>{sx.stateLong}</option>
+                                ))}
+                            </select>
+                        </div>
+                        <div>
+                            <select
                                 name="typeOfEvent"
                                 id="typeOfEvent"
                                 onChange={this.handleFieldChange}
-                                value={this.state.typeOfEvent}>
+                                value={this.state.typeOfE}>
                                 <option required value="">Select Event/Dance Type</option>
                                 {this.props.typeOfEvents.map(typeE => (
                                     <option key={typeE.id} id={typeE.id} value={typeE.id}>{typeE.nameType}</option>
@@ -108,6 +120,7 @@ export default class Filter extends Component {
                     {
                         this.props.detailedDances
                             .filter(dance => dance.typeOfEventId === parseInt(this.state.typeOfEvent))
+                            .filter(dance => dance.location.stateId === this.state.state)
                             .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
                             .sort(function compare(a, b) {
                                 var dateA = new Date(a.whenDate);
