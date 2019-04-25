@@ -363,7 +363,7 @@ export default class ApplicationViews extends Component {
                         addDance={this.addDance}
                         editDance={this.editDance}
                         states={this.state.states}
-                        Filter={this.state.filter}
+                        Filter={this.filter}
                         filterByState={this.filterByState}
                         {...props} />
                 }} />
