@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import DanceEvent from "./danceEvent"
 import "../dance/dance.css"
 
-export default class FilterByState extends Component {
+export default class Filter extends Component {
 
     state = {
         typeOfEventId: "",
@@ -58,7 +58,6 @@ export default class FilterByState extends Component {
                                 ))}
                             </select>
                         </div>
-
                     </form>
                     {
                         this.props.detailedDances
@@ -95,7 +94,7 @@ export default class FilterByState extends Component {
                     </form>
                     {
                         this.props.detailedDances
-                        .filter(dance => dance.location.stateId === this.state.state)
+                            .filter(dance => dance.location.stateId === this.state.state)
                             .filter(dance => dance.whenDate >= moment().format("YYYY-MM-DD"))
                             .sort(function compare(a, b) {
                                 var dateA = new Date(a.whenDate);

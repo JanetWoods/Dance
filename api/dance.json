@@ -279,6 +279,20 @@
       "locationId": 17,
       "clubId": 5,
       "eventSite": ""
+    },
+    {
+      "danceNotes": "not real",
+      "whenDate": "2019-05-02",
+      "dinnerTime": "19:00",
+      "danceTime": "19:30",
+      "endTime": "22:00",
+      "cost": "7.00",
+      "typeOfEventId": 1,
+      "locationId": 4,
+      "clubId": 14,
+      "eventSite": "",
+      "throughDate": "",
+      "id": 29
     }
   ],
   "typeOfEvents": [
