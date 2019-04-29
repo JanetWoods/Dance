@@ -264,6 +264,12 @@ export default class ApplicationViews extends Component {
                         deleteDance={this.deleteDance}
                         editDance={this.editDance}
                         detailedDances={this.state.detailedDances}
+                        userPower={this.props.userPower}
+                        typeOfEvents={this.state.typeOfEvents}
+                        addDance={this.addDance}
+                        states={this.state.states}
+                        Filter={this.filter}
+                        filterByState={this.filterByState}
                     />
                 }} />
                 <Route exact path="/account/user/:id(\d+)" render={props => {

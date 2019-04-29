@@ -19,16 +19,15 @@ export default class NavBar extends Component {
 
                 <nav className="navBar navbar-light light-blue p-0 shadow">
                     <ul className="nav nav-pills">
-
                         <li className="nav-item">
-                            <Link className="nav-link" to="/DanceList">Dances</Link>
+                            <Link className="nav-link" to="/DanceList">All</Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link className="nav-link" to="/FilterByState">Filter By State</Link>
+                            <Link className="nav-link" to="/FilterByState">Search State</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/filteredList">DeepFilter</Link>
+                            <Link className="nav-link" to="/filteredList">Advanced Filter</Link>
                         </li>
 
                         <li className="nav-item">
@@ -55,10 +54,10 @@ export default class NavBar extends Component {
                             <Link className="nav-link" to="/DanceList">All</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/FilterByState">Filter By State</Link>
+                            <Link className="nav-link" to="/FilterByState">Search By State</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/filteredList">FilterByEvent</Link>
+                            <Link className="nav-link" to="/filteredList">Advanced Search</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/clubs"> Clubs </Link>
