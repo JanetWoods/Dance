@@ -1,11 +1,10 @@
 .navBar{
     display: flex;
     color: blueviolet;
-    align-content: space-around;
+    align-content: space-evenly;
     flex-basis: row;
-    width: 90%;
+    width: 100%;
     align-content: center;
-    margin-left: 10%;
     flex-wrap: wrap;
 }
 .nav-item{
@@ -15,7 +14,7 @@ align-content: space-evenly;
 }
 .nav-link{
     flex-direction: column;
-    align-content: space-between;
+    align-content: space-evenly;
 }
 .visited{
     color: aqua;

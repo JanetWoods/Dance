@@ -38,14 +38,14 @@ export default class NavBar extends Component {
                             <Link className="nav-link" to="/clubs"> Clubs </Link>
                         </li>
 
-                    </ul>
-                    <p className="nav-link"> Hi {this.props.activeUser.username}</p>
+                    {/* <p className="nav-link"> Hi {this.props.activeUser.username}</p> */}
                     <button
                         type="button"
                         className="btn btn-outline-info"
                         onClick={this.logOut}>
-                        Logout
+                        Not {this.props.activeUser.username}?
                 </button>
+                        </ul>
                 </nav>
                 :
                 <nav className="navBar navbar-light light-blue p-0 shadow">
@@ -62,14 +62,13 @@ export default class NavBar extends Component {
                         <li className="nav-item">
                             <Link className="nav-link" to="/clubs"> Clubs </Link>
                         </li>
-                    </ul>
-                    <p className="nav-link"> Hi {this.props.activeUser.username}</p>
                     <button
                         type="button"
                         className="btn btn-outline-info"
                         onClick={this.logOut}>
-                        Logout
+                        Not {this.props.activeUser.username}?
         </button>
+                        </ul>
                 </nav>
 
         )
