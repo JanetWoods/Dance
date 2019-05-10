@@ -7,5 +7,6 @@ Events with dates prior to today will not be displayed so at some point you will
 
 
 
-![ListOfEventsPowerView](/src/images/powerViewListEvents.png "List of events, power view")
-![ListOfEventsPowerView](/src/images/RegularViewListEvents.png "List of events, regular view")
+<!-- ![ListOfEventsPowerView](/src/images/powerViewListEvents.png "List of events, power view") -->
+
+<!-- ![ListOfEventsPowerView](/src/images/RegularViewListEvents.png "List of events, regular view") -->
