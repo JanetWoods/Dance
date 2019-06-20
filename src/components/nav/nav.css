@@ -19,3 +19,7 @@ align-content: space-evenly;
 .visited{
     color: aqua;
 }
+.container{
+    justify-content: center;
+    width: 50%;
+}

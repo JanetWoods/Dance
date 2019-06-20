@@ -16,61 +16,65 @@ export default class NavBar extends Component {
     render() {
         return (
             (sessionStorage.getItem("Type") === "PowerUser") ?
+                <container className="container">
 
-                <nav className="navBar navbar-light light-blue p-0 shadow">
-                    <ul className="nav nav-pills">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/DanceList">All</Link>
-                        </li>
+                    <nav className="navBar navbar-light light-blue p-0 shadow ">
+                        <ul className="nav nav-pills justify-content-center">
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/DanceList">All</Link>
+                            </li>
 
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/FilterByState">Search State</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/filteredList">Advanced Filter</Link>
-                        </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/FilterByState">Search State</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/filteredList">Advanced Filter</Link>
+                            </li>
 
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/locations"> Locations </Link>
-                        </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/locations"> Locations </Link>
+                            </li>
 
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/clubs"> Clubs </Link>
-                        </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/clubs"> Clubs </Link>
+                            </li>
 
-                    {/* <p className="nav-link"> Hi {this.props.activeUser.username}</p> */}
-                    <button
-                        type="button"
-                        className="btn btn-outline-info"
-                        onClick={this.logOut}>
-                        Not {this.props.activeUser.username}?
+                            {/* <p className="nav-link"> Hi {this.props.activeUser.username}</p> */}
+                            <button
+                                type="button"
+                                className="btn btn-outline-info"
+                                onClick={this.logOut}>
+                                Not {this.props.activeUser.username}?
                 </button>
                         </ul>
-                </nav>
+                    </nav>
+                </container>
                 :
-                <nav className="navBar navbar-light light-blue p-0 shadow">
-                    <ul className="nav nav-pills">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/DanceList">All</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/FilterByState">Search By State</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/filteredList">Advanced Search</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/clubs"> Clubs </Link>
-                        </li>
-                    <button
-                        type="button"
-                        className="btn btn-outline-info"
-                        onClick={this.logOut}>
-                        Not {this.props.activeUser.username}?
-        </button>
-                        </ul>
-                </nav>
+                <container className="container">
 
+                    <nav className="navBar navbar-light light-blue p-0 shadow">
+                        <ul className="nav nav-pills">
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/DanceList">All</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/FilterByState">Search By State</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/filteredList">Advanced Search</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/clubs"> Clubs </Link>
+                            </li>
+                            <button
+                                type="button"
+                                className="btn btn-outline-info"
+                                onClick={this.logOut}>
+                                Not {this.props.activeUser.username}?
+                            </button>
+                        </ul>
+                    </nav>
+                </container>
         )
     }
 
