@@ -16,9 +16,9 @@ Events with dates prior to today will not be displayed so at some point you will
 
 
 
-![ListOfEventsPowerView](/src/images/powerViewListEvents.png "List of events, power view")
+![ListOfEventsPowerView](src/images/powerviewListEvents.png "List of events, power view")
 
-![ListOfEventsRegularView](/src/images/RegularViewListOfEvents.PNG "List of events, regular view")
+![ListOfEventsRegularView](/src/images/RegularViewListOfEvents.png "List of events, regular view")
 
 ![ListOfClubsPowerView](src/images/ListOfClubsPowerView.png "List of clubs, power view")
 
