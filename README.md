@@ -19,7 +19,7 @@ Events with dates prior to today will not be displayed so at some point you will
 ![List of events, power view](/src/images/ListOfEventsPowerView.png)
 
 ### List of events, regular view:
-![List of events](/src/images/RegularViewListOfEvents.png)
+![List of events](/src/images/RegularViewListOfEvents.PNG)
 
 ### List of clubs, power view:
 ![List of clubs, power view](/src/images/ListOfClubsPowerView.png)
