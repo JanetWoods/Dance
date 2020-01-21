@@ -7,7 +7,7 @@ I created this app because I wish I had it when I started square dancing.
   Run: 'npm start' in the window at the root Dance directory level
   Run: 'json-server -p 8080 -w dance.json' in the window at the API directory
 
-###
+
 
 <!--
 [View Deployed Site](https://wheresthedance.herokuapp.com/) **This is not a secure site. It is for demo purposes only.  You can register as a new user or loggin as an existing user. Users 'Janet' and 'Rob' both have the password '123'.  Janet is power-user.  Loggin as Janet to add new events and see how that works. Events will be visible in all user views until the date has passed.
@@ -15,11 +15,14 @@ Events with dates prior to today will not be displayed so at some point you will
 -->
 
 
+List of events, power view:
+![List of events, power view](/src/images/powerviewListEvents.png)
 
-![powerviewListEvents](/src/images/powerviewListEvents.png "List of events, power view")
+List of events, regular view:
+![List of events, regular view](/src/images/RegularViewListOfEvents.png)
 
-![RegularViewListOfEvents](/src/images/RegularViewListOfEvents.png "List of events, regular view")
+List of clubs, power view:
+![List of clubs, power view](/src/images/ListOfClubsPowerView.png)
 
-![ListOfClubsPowerView](/src/images/ListOfClubsPowerView.png "List of clubs, power view")
-
-![ListOfClubsRestrictedView](/src/images/ListOfClubsRestrictedView.png "List of clubs, regular view")
+List of clubs, regular view:
+![List of clubs, Regular view](/src/images/ListOfClubsRestrictedView.png)
