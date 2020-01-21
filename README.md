@@ -15,14 +15,13 @@ Events with dates prior to today will not be displayed so at some point you will
 -->
 
 
-List of events, power view:
+### List of events, power view:
 ![List of events, power view](/src/images/ListOfEventsPowerView.png)
 
-List of events, regular view:
+### List of events, regular view:
 ![List of events, regular view](/src/images/RegularViewListOfEvents.png)
-
-List of clubs, power view:
+### List of clubs, power view:
 ![List of clubs, power view](/src/images/ListOfClubsPowerView.png)
 
-List of clubs, regular view:
+### List of clubs, regular view:
 ![List of clubs, Regular view](/src/images/ListOfClubsRestrictedView.png)
