@@ -7,7 +7,7 @@ I created this app because I wish I had it when I started square dancing.
   Run: 'npm start' in the window at the root Dance directory level
   Run: 'json-server -p 8080 -w dance.json' in the window at the API directory
 
-
+You can register as a new user or loggin as an existing user. Users 'Janet' and 'Rob' both have the password '123'.  Janet is power-user.  Loggin as Janet to add new events and see how that works. Events will be visible in all user views until the date has passed.
 
 <!--
 [View Deployed Site](https://wheresthedance.herokuapp.com/) **This is not a secure site. It is for demo purposes only.  You can register as a new user or loggin as an existing user. Users 'Janet' and 'Rob' both have the password '123'.  Janet is power-user.  Loggin as Janet to add new events and see how that works. Events will be visible in all user views until the date has passed.
